@@ -60,25 +60,24 @@ for archivo in archivos:
         fecha_formateada = f"{fecha_obj.day} {meses[fecha_obj.month-1]}, {fecha_obj.year}"
         
         # 3. Crear el código HTML de la tarjeta para la portada
-        tarjeta_html = f"""
-        <article class="flex flex-col bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <a href="/blog/{slug_con_html}" class="block aspect-video overflow-hidden">
-                <img src="{meta['image']}" alt="{meta['title']}" class="w-full h-full object-cover transition-transform duration-300 hover:scale-105">
-            </a>
-            <div class="p-6 flex flex-col flex-grow">
-                <div class="flex items-center gap-3 mb-3">
-                    <span class="text-xs font-bold px-3 py-1 bg-green-100 text-green-800 rounded-full">Marketing</span>
-                    <span class="text-xs text-gray-500 font-semibold flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> {fecha_formateada}</span>
-                </div>
-                <a href="/blog/{slug_con_html}" class="block group">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors line-clamp-2">{meta['title']}</h3>
-                    <p class="text-gray-600 line-clamp-3 text-sm">{meta['description']}</p>
-                </a>
-                <div class="mt-auto pt-4">
-                    <a href="/blog/{slug_con_html}" class="text-green-600 font-bold text-sm hover:underline inline-flex items-center gap-1">Leer artículo <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                </div>
-            </div>
-        </article>"""
+        tarjeta_html = f"""<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+    <a href="/blog/{slug_con_html}" class="block h-52 overflow-hidden relative bg-brota-light">
+        <img src="{meta['image']}" alt="{meta['title']}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+    </a>
+    <div class="p-8 flex-grow flex flex-col">
+        <div class="flex items-center gap-3 mb-4">
+            <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit">Marketing</span>
+            <span class="text-xs text-gray-500 font-semibold flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> {fecha_formateada}</span>
+        </div>
+        <a href="/blog/{slug_con_html}">
+            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">{meta['title']}</h2>
+        </a>
+        <p class="text-gray-500 text-sm mb-6 line-clamp-3">{meta['description']}</p>
+        <a href="/blog/{slug_con_html}" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+    </div>
+</article>"""
         
         # 4. Inyectar la tarjeta en index.html (busca la primera etiqueta <article y la pone justo antes)
         with open(INDEX_FILE, "r", encoding="utf-8") as f:
