@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo usar LinkedIn para empresas y conseguir clientes B2B en 2026 | Brota Marketing</title>
+    <meta name="description" content="Descubre por qué LinkedIn es el canal de captación B2B más potente en 2026 y cómo optimizar tu perfil de empresa para conseguir clientes sin pagar publicidad.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brota-green': '#A3E635',
+                        'brota-dark': '#1C1C1C',
+                        'brota-light': '#F4F5F0'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1C1C1C 0%, #2A2A2A 100%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Estilos específicos para el contenido del blog */
+        .prose h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1C1C1C;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .prose h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1C1C1C;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prose p {
+            margin-bottom: 1.5rem;
+            color: #4B5563;
+            font-size: 1.125rem;
+            line-height: 1.75;
+        }
+        .prose ul {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+            list-style-type: none;
+        }
+        .prose li {
+            margin-bottom: 0.75rem;
+            color: #4B5563;
+            font-size: 1.125rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .prose li::before {
+            content: "•";
+            color: #A3E635;
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        .prose strong {
+            color: #1C1C1C;
+            font-weight: 600;
+        }
+        .prose blockquote {
+            border-left: 4px solid #A3E635;
+            padding-left: 1.5rem;
+            font-style: italic;
+            color: #1C1C1C;
+            background-color: #F4F5F0;
+            padding: 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body class="bg-brota-light text-gray-800 font-sans antialiased selection:bg-brota-green selection:text-brota-dark">
+
+    <!-- Navegación -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0">
+                        <img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-8 w-auto">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/#servicios" class="text-gray-600 hover:text-brota-dark font-medium transition-colors">Servicios</a>
+                    <a href="/#casos-exito" class="text-gray-600 hover:text-brota-dark font-medium transition-colors">Casos de Éxito</a>
+                    <a href="/#metodologia" class="text-gray-600 hover:text-brota-dark font-medium transition-colors">Metodología</a>
+                    <a href="/blog/" class="text-brota-dark font-bold">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-bold hover:bg-brota-green hover:text-brota-dark transition-all transform hover:scale-105 shadow-sm">
+                        Auditoría Gratuita
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brota-dark" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <a href="/#servicios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brota-green hover:bg-gray-50 rounded-lg">Servicios</a>
+                <a href="/#casos-exito" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brota-green hover:bg-gray-50 rounded-lg">Casos de Éxito</a>
+                <a href="/#metodologia" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brota-green hover:bg-gray-50 rounded-lg">Metodología</a>
+                <a href="/blog/" class="block px-3 py-3 text-base font-bold text-brota-green bg-gray-50 rounded-lg">Blog</a>
+                <a href="/#contacto" class="block w-full text-center mt-4 bg-brota-dark text-white px-6 py-3 rounded-full font-bold hover:bg-brota-green hover:text-brota-dark transition-colors">
+                    Auditoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progreso de lectura -->
+    <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-gray-100">
+        <div id="progress-bar" class="h-full bg-brota-green w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Cabecera del Artículo -->
+    <header class="pt-32 pb-16 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brota-green/20 via-transparent to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <a href="/blog/" class="inline-flex items-center text-sm font-bold text-gray-500 hover:text-brota-green transition-colors mb-8">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Volver al blog
+            </a>
+            
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-brota-green/20 text-brota-dark font-bold px-3 py-1 rounded-full text-sm">Redes Sociales B2B</span>
+                <span class="text-gray-500 text-sm flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-1"></i> 5 min de lectura</span>
+            </div>
+            
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brota-dark leading-tight mb-6 reveal">
+                Cómo usar LinkedIn para empresas y conseguir clientes B2B en 2026
+            </h1>
+            
+            <p class="text-xl text-gray-600 mb-10 reveal delay-100">
+                El 80% de los leads B2B generados en redes sociales provienen de LinkedIn. Descubre la estrategia para captar clientes reales sin pagar publicidad.
+            </p>
+
+            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl reveal delay-200">
+                <img src="/blog/images/linkedin_b2b_ai.jpg" alt="Estrategia LinkedIn B2B" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="py-16 bg-brota-light">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="prose prose-lg max-w-none reveal">
+                <p>El 80% de los leads B2B generados en redes sociales provienen de LinkedIn. No de Instagram. No de TikTok. De LinkedIn.</p>
+
+                <p>Y, sin embargo, la mayoría de las pymes españolas tienen un perfil de empresa abandonado, sin estrategia, con cuatro publicaciones del año pasado y cero resultados.</p>
+
+                <p>Si tu negocio vende a otras empresas, trabaja con autónomos o presta servicios profesionales, <strong>LinkedIn no es opcional en 2026: es el canal de captación B2B más potente que existe.</strong> Y en este artículo te explicamos exactamente cómo usarlo para conseguir clientes reales, sin pagar publicidad.</p>
+
+                <h2>¿Por qué LinkedIn es diferente al resto de redes sociales para empresas?</h2>
+
+                <p>Instagram y TikTok son escaparates. LinkedIn es una sala de reuniones.</p>
+
+                <p>Cuando alguien entra en LinkedIn, no está buscando entretenimiento. Está buscando soluciones a problemas profesionales, proveedores de confianza, colaboradores y referencias del sector. La intención de compra de un usuario de LinkedIn es <strong>entre 3 y 5 veces superior</strong> a la de cualquier otra red social.</p>
+
+                <p>Además, el algoritmo de LinkedIn premia el contenido de valor de forma orgánica. Eso significa que una buena publicación puede llegar a miles de personas de tu sector <strong>sin invertir un solo euro en publicidad.</strong></p>
+
+                <p>Para una pyme con presupuesto limitado, eso es oro.</p>
+
+                <h2>Paso 1: Optimiza la página de empresa antes de publicar nada</h2>
+
+                <p>El error más común es empezar a publicar contenido sin tener una página de empresa bien construida. Si alguien llega a tu perfil y no entiende en 5 segundos qué haces, para quién y por qué eres diferente, se va.</p>
+
+                <p>Estos son los elementos que no pueden faltar en tu <strong>perfil de empresa en LinkedIn:</strong></p>
+
+                <ul>
+                    <li><strong>Imagen de portada profesional.</strong> No uses el fondo azul genérico de LinkedIn. La portada es tu primer anuncio. Incluye tu propuesta de valor, tu web y algún elemento visual que refleje tu marca.</li>
+                    <li><strong>Descripción clara y con keywords.</strong> El texto "Acerca de" debe responder tres preguntas en las primeras dos líneas: qué haces, a quién ayudas y qué resultado consigues. LinkedIn indexa este texto, así que incluye las palabras clave por las que quieres que te encuentren.</li>
+                    <li><strong>URL personalizada.</strong> LinkedIn permite personalizar la URL de tu página. Usa el nombre de tu empresa, sin números ni caracteres raros. Es un detalle pequeño que transmite profesionalidad y ayuda al SEO.</li>
+                    <li><strong>Botón de acción activado.</strong> LinkedIn permite añadir un botón (visitar web, contactar, solicitar demo...). Actívalo y llévalo directamente a tu página de contacto o a tu mejor oferta.</li>
+                </ul>
+
+                <h2>Paso 2: Define qué tipo de contenido publicar en LinkedIn</h2>
+
+                <p>LinkedIn no es Instagram. El contenido que funciona aquí tiene características muy concretas: aporta valor real, es directo y demuestra expertise sin alardear.</p>
+
+                <p>Estos son los formatos que mejor funcionan en 2026 para páginas de empresa:</p>
+
+                <ul>
+                    <li><strong>Publicaciones de texto con gancho.</strong> Las primeras dos líneas son decisivas porque son las que se ven antes de "ver más". Si no enganchan, nadie sigue leyendo. Empieza siempre con una pregunta, una afirmación provocadora o un dato que sorprenda.</li>
+                    <li><strong>Carruseles en PDF.</strong> Son el formato con mayor alcance orgánico en LinkedIn ahora mismo. Un PDF de 6 a 10 diapositivas con un titular potente y contenido accionable puede multiplicar tu visibilidad por 10 respecto a una publicación normal.</li>
+                    <li><strong>Casos de éxito y resultados reales.</strong> "Ayudamos a [tipo de cliente] a conseguir [resultado concreto] en [tiempo]." Sin datos inventados, sin exageraciones. Un caso real con números específicos genera más confianza que cualquier campaña de imagen.</li>
+                    <li><strong>Contenido del equipo y cultura de empresa.</strong> Las publicaciones que muestran personas reales generan entre un 40% y un 60% más de interacción que las publicaciones corporativas. Presenta a tu equipo, comparte momentos del día a día, humaniza la marca.</li>
+                </ul>
+
+                <h2>Paso 3: La estrategia de publicación que sí funciona</h2>
+
+                <p>Publicar sin criterio en LinkedIn es tan inútil como no publicar. Estas son las reglas básicas de una estrategia de contenidos para LinkedIn que genera resultados:</p>
+
+                <ul>
+                    <li><strong>Frecuencia recomendada:</strong> entre 3 y 4 publicaciones semanales. Menos de eso y el algoritmo no te distribuye. Más de eso y empiezas a saturar a tu audiencia.</li>
+                    <li><strong>El mejor momento para publicar:</strong> martes, miércoles y jueves entre las 8:00 y las 10:00 de la mañana, o entre las 12:00 y las 14:00. Los lunes por la mañana y los fines de semana tienen un rendimiento significativamente menor.</li>
+                    <li><strong>Responde siempre los comentarios en la primera hora.</strong> El algoritmo de LinkedIn interpreta la interacción temprana como señal de calidad y amplifica el alcance de esa publicación. Cada comentario que recibes y respondes puede doblar el número de personas que ven tu contenido.</li>
+                    <li><strong>No publiques links en el cuerpo del post.</strong> LinkedIn penaliza las publicaciones que llevan al usuario fuera de la plataforma. Si quieres añadir un enlace a tu web o a un artículo, ponlo en los comentarios, no en el texto principal.</li>
+                </ul>
+
+                <h2>Paso 4: Cómo conseguir clientes en LinkedIn sin publicidad</h2>
+
+                <p>Aquí está la parte que más interesa a las pymes: captar clientes reales en LinkedIn sin gastar en LinkedIn Ads.</p>
+
+                <ul>
+                    <li><strong>Conecta de forma selectiva y estratégica.</strong> No se trata de tener miles de contactos. Se trata de conectar con personas que son clientes potenciales reales: directores de empresa, gerentes, responsables de compras del sector al que te diriges. Personaliza siempre el mensaje de conexión. Un "Hola, me gustaría añadirte a mi red" tiene una tasa de aceptación muy baja.</li>
+                    <li><strong>SSI (Social Selling Index):</strong> LinkedIn te da una puntuación de 0 a 100 que mide qué tan bien estás usando la plataforma para vender. Puedes consultarla gratis en linkedin.com/sales/ssi. Una puntuación por encima de 70 correlaciona directamente con más visibilidad y más oportunidades de negocio.</li>
+                    <li><strong>Interactúa antes de vender.</strong> Comenta con valor en publicaciones de tus clientes potenciales antes de enviarles ningún mensaje comercial. Cuando después les escribas, ya te conocen. La tasa de respuesta es entre 3 y 4 veces mayor.</li>
+                    <li><strong>El mensaje de prospección que funciona:</strong> corto, personalizado, sin PDF adjunto en el primer mensaje y con una pregunta al final que sea fácil de responder. Nada de "te escribo porque creo que podemos ayudarte". Sí a "He visto que trabajáis en [sector], ¿cómo estáis gestionando actualmente [problema concreto]?"</li>
+                </ul>
+
+                <h2>Paso 5: LinkedIn y SEO, una combinación que muy pocas pymes aprovechan</h2>
+
+                <p>Tu página de empresa en LinkedIn aparece en los resultados de Google. Cuando alguien busca el nombre de tu empresa o tu sector en Google, LinkedIn suele aparecer en la primera página de resultados.</p>
+
+                <p>Eso significa que tener un perfil de empresa optimizado en LinkedIn <strong>refuerza tu autoridad de marca en Google</strong>, aunque no tengas una web perfectamente posicionada todavía.</p>
+
+                <p>Además, cada artículo que publicas en LinkedIn Pulse es indexado por Google. Es contenido que puede traerte tráfico orgánico de buscadores, completamente gratis.</p>
+
+                <h2>Conclusión: LinkedIn no es una red social más para tu empresa</h2>
+
+                <p>LinkedIn es la única red social donde el usuario tiene mentalidad de compra profesional. Donde el contenido de valor orgánico todavía tiene alcance real. Donde una pyme sin presupuesto puede competir de tú a tú con empresas diez veces más grandes.</p>
+
+                <p>La diferencia entre las pymes que consiguen clientes en LinkedIn y las que no, no es el tamaño ni el presupuesto. Es la estrategia y la constancia.</p>
+
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm mt-12 text-center">
+                    <h3 class="font-heading text-2xl font-bold mb-4">¿Tu empresa no aparece donde están tus clientes?</h3>
+                    <p class="mb-6">En Brota Marketing gestionamos tu presencia digital como si fuera la nuestra: con estrategia real, contenido que posiciona y resultados medibles.</p>
+                    <a href="https://brotamarketing.es/#contacto" class="inline-flex items-center justify-center bg-brota-dark text-white px-8 py-4 rounded-full font-bold hover:bg-brota-green hover:text-brota-dark transition-all transform hover:scale-105">
+                        📞 Pide tu consultoría gratuita
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-brota-dark text-white pt-16 pb-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-3 gap-8 pt-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-8 w-auto hover:opacity-80 transition-opacity"></a>
+                    </div>
+                    <p class="text-gray-500 text-sm">Tu departamento de Marketing externo. Acompañando a las pymes de nuestra Región.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brota-green shrink-0"></i> info@brotamarketing.es</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brota-green shrink-0"></i> +34 641 44 22 87</li>
+                        <li class="flex items-center gap-2 mt-4 pt-4 border-t border-white/10"><i data-lucide="instagram" class="w-4 h-4 text-brota-green shrink-0"></i> <a href="https://instagram.com/brota.marketing" target="_blank" rel="noopener noreferrer" class="hover:text-brota-green transition-colors">@brota.Marketing</a></li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brota-green shrink-0 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                            <a href="https://tiktok.com/@brota.marketing" target="_blank" rel="noopener noreferrer" class="hover:text-brota-green transition-colors">@brota.Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-brota-green transition-colors">Aviso Legal</a></li>
+                        <li><a href="/privacidad/" class="hover:text-brota-green transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/cookies/" class="hover:text-brota-green transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm mt-12 border-t border-white/10 pt-8">
+                &copy; <span id="year"></span> Brota Marketing. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp Flotante Animado -->
+    <a href="https://wa.me/34641442287" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all z-50 group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.551 4.152 1.597 5.96L.103 23.864l5.992-1.493a11.97 11.97 0 005.936 1.57h.005c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.942c-1.802 0-3.565-.484-5.112-1.401l-.367-.217-3.801.947.962-3.706-.239-.379a9.981 9.981 0 01-1.536-5.268c0-5.505 4.48-9.985 9.985-9.985 2.668 0 5.176 1.04 7.062 2.926A9.92 9.92 0 0122.016 12c0 5.505-4.48 9.985-9.985 9.985zm5.475-7.48c-.3-.15-1.776-.877-2.05-.978-.275-.1-.476-.15-.676.15-.2.3-.776.978-.952 1.178-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.488-.89-.794-1.49-1.775-1.666-2.075-.175-.3-.02-.463.13-.613.136-.136.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.587-.492-.507-.676-.516-.175-.009-.375-.009-.575-.009s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.875 1.225 3.075c.15.2 2.1 3.2 5.087 4.487.712.306 1.267.488 1.7.625.714.225 1.365.194 1.877.118.572-.084 1.776-.725 2.026-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Intersection Observer para las animaciones Reveal
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Lógica para el Menú Móvil
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        // Barra de progreso de lectura
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

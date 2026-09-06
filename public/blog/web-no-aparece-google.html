@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por qué tu página web no aparece en Google (y cómo solucionarlo) | Brota Marketing</title>
+    <meta name="description" content="Descubre los 5 motivos técnicos y estratégicos por los que tu página web no aparece en Google y aprende cómo solucionarlo hoy mismo para captar más clientes.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Por qué tu página web no aparece en Google (y cómo solucionarlo hoy mismo)">
+    <meta property="og:description" content="A Google no le importa lo bonita que sea tu web, le importa ofrecer la mejor respuesta. Diagnostica y soluciona tu problema de visibilidad.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Auditoría SEO</span>
+                    <span class="text-gray-400 text-sm font-semibold">5 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Por qué tu página web <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">no aparece en Google</span> (y cómo solucionarlo hoy mismo)
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Persona frustrada buscando información en internet" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Has invertido tiempo, ilusión y dinero en diseñar la página web de tu negocio. Ha quedado preciosa, las fotos se ven increíbles y tu logo brilla en la cabecera. Sin embargo, pasan las semanas, entras a Google, tecleas tus servicios y... nada. Tu web es un pueblo fantasma. Ni rastro de ella en la primera página, ni en la segunda, ni en la tercera.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Como agencia SEO en Murcia, esta es la consulta número uno que recibimos a diario. La frustración es totalmente comprensible, pero hay una verdad incómoda que debes conocer: <strong>a Google no le importa lo bonita que sea tu web.</strong> A Google solo le importa ofrecer la mejor respuesta a sus usuarios.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si tu página no aparece en los resultados de búsqueda, es porque está fallando en uno (o varios) de los siguientes puntos técnicos o estratégicos. Vamos a diagnosticar el problema.
+                </p>
+            </section>
+
+            <!-- Error 1 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">1</span>
+                    Tu web no está indexada (Google ni siquiera sabe que existes)
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Este es el error de novato más común. Que tu web esté subida a internet no significa que Google la haya añadido a su base de datos (su "índice"). Si los robots rastreadores de Google no han pasado por tu sitio, literalmente eres invisible.
+                </p>
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 mb-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="search" class="text-brota-green mr-3 mt-1 flex-shrink-0 w-6 h-6"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed">
+                                <strong class="text-brota-dark font-heading">El test rápido:</strong> Ve a Google y busca exactamente esto: <code>site:tuempresa.com</code> (cambiando "tuempresa" por tu dominio real).
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="stethoscope" class="text-brota-green mr-3 mt-1 flex-shrink-0 w-6 h-6"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed">
+                                <strong class="text-brota-dark font-heading">El diagnóstico:</strong> Si no aparece ningún resultado, tu web no está indexada. Esto suele ocurrir porque la web es muy nueva, porque tienes activada por error una etiqueta de "no indexar" (muy común al hacer la web en WordPress), o porque no has enviado tu mapa del sitio (Sitemap) a través de Google Search Console.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Error 2 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">2</span>
+                    Sufres el "Síndrome de la Tarjeta de Visita" (Falta de Contenido SEO)
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Muchos empresarios se conforman con una web que solo dice: <em>"Somos una empresa con 20 años de experiencia. Contáctanos"</em>. Eso es una tarjeta de visita digital, no una web optimizada para captar clientes.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si tienes una clínica de fisioterapia en Murcia, la gente no va a buscar tu nombre directamente (a menos que ya te conozcan). Van a buscar "fisioterapeuta para dolor de espalda en Murcia" o "clínica de rehabilitación deportiva". Si esas palabras clave no están en los títulos (H1, H2) y en los textos de tu web de forma natural, el algoritmo jamás te relacionará con esa búsqueda.
+                </p>
+            </section>
+
+            <!-- Error 3 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">3</span>
+                    La velocidad de carga te está penalizando
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    En pleno 2026, la paciencia del usuario es cero. Google lo sabe, y por eso prioriza las webs que vuelan.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si tu página tarda más de 3 segundos en cargar porque subiste imágenes de 5 Megabytes sin comprimir o tienes un servidor de mala calidad, Google te enviará al fondo del pozo.
+                </p>
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm flex flex-col md:flex-row gap-4 items-start">
+                    <i data-lucide="smartphone" class="text-brota-green w-8 h-8 flex-shrink-0 mt-1"></i>
+                    <div>
+                        <strong class="font-heading text-2xl block mb-2 text-brota-dark">El dato clave:</strong> 
+                        Google utiliza el Mobile-First Indexing. Esto significa que evalúa y posiciona tu web basándose únicamente en cómo se ve y cómo de rápido carga en un teléfono móvil, no en un ordenador de escritorio.
+                    </div>
+                </blockquote>
+            </section>
+
+            <!-- Error 4 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">4</span>
+                    Falta de Autoridad (Nadie habla de ti)
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Imagina el algoritmo de Google como un concurso de popularidad. Si tu web es nueva, tu autoridad es cero. Google necesita saber que eres una fuente de confianza antes de ponerte en el número uno.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    ¿Cómo se consigue esa confianza? A través de los <strong>Backlinks</strong> (enlaces externos). Si periódicos digitales, blogs de tu sector o directorios de empresas enlazan hacia tu web, le están diciendo a Google: <em>"Esta empresa es real, relevante y de fiar"</em>. Sin una estrategia de Linkbuilding, es casi imposible superar a competidores que llevan años en internet.
+                </p>
+            </section>
+
+            <!-- Error 5 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">5</span>
+                    El problema de la Intención de Búsqueda
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    A veces, sí tienes las palabras clave, pero el formato es incorrecto. Si el usuario busca "cómo instalar aire acondicionado", espera leer un artículo de blog o ver un vídeo tutorial. Si tú intentas posicionar esa búsqueda con una página de venta directa de tu catálogo de aires acondicionados, Google no te mostrará porque no estás respondiendo a la intención educativa del usuario.
+                </p>
+            </section>
+
+            <!-- Tabla de Diagnóstico Rápido -->
+            <section class="mb-16">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    Diagnóstico rápido: ¿Qué le pasa a tu web?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Aquí tienes un resumen visual para que sepas por dónde empezar a arreglar el problema:
+                </p>
+
+                <div class="overflow-x-auto rounded-2xl shadow-sm border border-gray-200 mb-8">
+                    <table class="w-full text-left border-collapse bg-white min-w-[700px]">
+                        <thead>
+                            <tr class="bg-brota-dark text-white font-heading text-lg">
+                                <th class="p-4 border-b border-gray-700 w-1/3">Síntoma de tu web</th>
+                                <th class="p-4 border-b border-gray-700 w-1/3">Problema SEO probable</th>
+                                <th class="p-4 border-b border-gray-700 bg-brota-green w-1/3">Solución inmediata</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-base">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark flex items-start gap-2">
+                                    <i data-lucide="eye-off" class="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5"></i> 
+                                    No sales ni buscando el nombre de tu marca.
+                                </td>
+                                <td class="p-4 text-gray-600">Problema técnico grave o bloqueo de indexación.</td>
+                                <td class="p-4 font-semibold">Revisar Google Search Console y archivo robots.txt.</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark flex items-start gap-2">
+                                    <i data-lucide="file-x" class="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5"></i> 
+                                    Sales por tu marca, pero no por tus servicios.
+                                </td>
+                                <td class="p-4 text-gray-600">Falta de palabras clave y contenido pobre.</td>
+                                <td class="p-4 font-semibold">Redactar textos optimizados para SEO y crear un blog.</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark flex items-start gap-2">
+                                    <i data-lucide="trending-down" class="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5"></i> 
+                                    Aparecías bien, pero has caído de golpe.
+                                </td>
+                                <td class="p-4 text-gray-600">Penalización de Google o web hackeada.</td>
+                                <td class="p-4 font-semibold text-brota-green">Auditoría técnica urgente para detectar el problema.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark flex items-start gap-2">
+                                    <i data-lucide="arrow-up-circle" class="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5"></i> 
+                                    Apareces en página 3 o 4 y no subes.
+                                </td>
+                                <td class="p-4 text-gray-600">Falta de Autoridad y mucha competencia.</td>
+                                <td class="p-4 font-semibold">Estrategia de Linkbuilding (conseguir enlaces externos).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- CTA / Conclusión -->
+            <section class="bg-brota-light p-8 md:p-12 rounded-3xl mt-16 border border-brota-green/20 text-center shadow-sm relative overflow-hidden">
+                <!-- Decorative background shapes -->
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-10 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-10 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Deja de ser invisible y empieza a captar clientes orgánicos</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    El SEO no es magia negra ni cuestión de suerte; es ingeniería inversa. Entender qué quiere Google y dárselo en bandeja de plata. Si tu web no está generando llamadas, formularios o ventas, no es más que un gasto mensual en tu cuenta bancaria.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto relative z-10">
+                    En nuestra <strong>agencia SEO en Murcia</strong>, no jugamos a las adivinanzas. Analizamos el código de tu web, estudiamos a tu competencia y diseñamos una hoja de ruta técnica para llevarte a la primera página de Google de forma estable y segura.
+                </p>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-gray-100 max-w-xl mx-auto relative z-10">
+                    <p class="text-lg text-brota-dark font-bold mb-4">
+                        ¿Te gustaría que hagamos una Auditoría SEO en vídeo de tu página web (totalmente gratuita y sin compromiso)? 
+                    </p>
+                    <p class="text-base text-gray-600 mb-6">
+                        Te diremos exactamente por qué no estás apareciendo en Google y cómo solucionarlo.
+                    </p>
+                    <a href="https://brotamarketing.es/contacto/" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark transition-all duration-300 shadow-lg inline-flex items-center gap-2">
+                        Solicitar Auditoría en Vídeo
+                        <i data-lucide="video" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

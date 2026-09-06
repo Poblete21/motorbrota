@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuromarketing: Multiplica tus ventas digitales | Brota Marketing</title>
+    <meta name="description" content="Descubre por qué el neuromarketing es clave para conectar con tus clientes en los primeros 3 segundos, optimizar tu web y disparar tus ventas digitales.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Neuromarketing: Multiplica tus ventas digitales">
+    <meta property="og:description" content="Descubre cómo el neuromarketing te ayuda a conectar con tus clientes, optimizar tu web y generar más ventas sin trucos mágicos.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Neuromarketing</span>
+                    <span class="text-gray-400 text-sm font-semibold">4 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Qué es el neuromarketing y cómo ayuda a <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">aumentar tus ventas digitales</span>
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200" 
+                         alt="Persona trabajando con estrategia digital y neuromarketing" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    En internet, todo el mundo hace ruido. Tienes competencia hasta debajo de las piedras. Y captar la atención de tu cliente parece misión imposible.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Pero, piénsalo por un momento: las marcas que realmente venden no son las que más gritan. Son las que conectan. Las que te hacen sentir algo en cuanto entras a su web.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Aquí es donde entra el neuromarketing. Olvídate de trucos mágicos o "humo". Hablamos de ciencia y psicología aplicadas al marketing digital para entender cómo reacciona el cerebro de tu cliente y optimizar su experiencia de usuario (UX) para disparar las conversiones.
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    ¿Por qué es fundamental el neuromarketing hoy en día?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Hazte un favor y sé sincero contigo mismo. ¿Tu web transmite confianza en los primeros 3 segundos? ¿Tus clientes te recuerdan o se van a la competencia?
+                </p>
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    La mayoría de las decisiones de compra se toman de forma <strong>emocional e inconsciente</strong>. Si tu web no despierta nada, estás perdiendo ventas.
+                </blockquote>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Aplicar psicología del consumidor te permite:
+                </p>
+                <ul class="list-none space-y-3 mb-8">
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brota-green mt-1 flex-shrink-0"></i><span class="text-lg text-gray-600">Captar la atención de tu cliente ideal al instante.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brota-green mt-1 flex-shrink-0"></i><span class="text-lg text-gray-600">Crear textos (copys) que de verdad persuadan y vendan.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brota-green mt-1 flex-shrink-0"></i><span class="text-lg text-gray-600">Incrementar radicalmente tus ventas y conversiones.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-brota-green mt-1 flex-shrink-0"></i><span class="text-lg text-gray-600">Diferenciarte de esa competencia que solo sabe hablar de sus "15 años de experiencia".</span></li>
+                </ul>
+            </section>
+
+            <!-- 4 Tipos -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    Los 4 tipos de neuromarketing táctico
+                </h2>
+
+                <figure class="mb-10">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" 
+                         alt="Análisis de datos y optimización digital" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-lg border border-gray-100">
+                </figure>
+                
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">1</span>
+                        Neuromarketing Visual
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Entra por los ojos. El uso de colores, imágenes, diseño y tipografías para aumentar conversiones. Un buen diseño web estratégico cambia por completo cómo te percibe el cliente.
+                    </p>
+                </div>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">2</span>
+                        Neuromarketing Auditivo
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Música y sonidos para evocar emociones. Piensa en la música de tu tienda física favorita o en los jingles que no te puedes sacar de la cabeza (audio branding).
+                    </p>
+                </div>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">3</span>
+                        Neuromarketing Kinestésico
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Conexión mediante el tacto o el olfato. Texturas en un producto físico o aromas corporativos en tu local que hacen que el cliente se sienta como en casa.
+                    </p>
+                </div>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">4</span>
+                        Neuromarketing Digital
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Optimización pura en tu web. Mapas de calor, botones de acción (CTA) y estudio del comportamiento para que el usuario no se pierda y termine comprando o dejando su contacto.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Caso de éxito -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Caso real: Cómo los primeros 3 segundos cambian todo
+                </h2>
+
+                <figure class="mb-10">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1200" 
+                         alt="Interior de una casa elegante tras una reforma" 
+                         class="w-full h-auto object-cover aspect-[21/9] rounded-3xl shadow-lg border border-gray-100">
+                </figure>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Te pongo un ejemplo real de nuestra agencia. Una empresa de reformas invertía en Ads y tenía visitas. ¿Contactos? Cero. Su negocio era excelente, pero su web lo ocultaba.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    El usuario entraba, no sentía confianza y cerraba la pestaña. Estaban perdiendo clientes por culpa de un mal mensaje inicial.
+                </p>
+                
+                <div class="bg-red-50 border-l-4 border-red-500 p-6 md:p-8 rounded-r-2xl shadow-sm my-8 flex flex-col md:flex-row items-center gap-6">
+                    <div class="bg-white p-4 rounded-full shadow-sm flex-shrink-0">
+                        <i data-lucide="x-circle" class="w-10 h-10 text-red-500"></i>
+                    </div>
+                    <div>
+                        <strong class="font-heading text-xl text-red-700 block mb-2">Lo que hacían ANTES:</strong>
+                        <p class="text-lg text-gray-800 italic">"Empresa con 15 años de experiencia en reformas"</p>
+                        <p class="text-sm text-gray-600 mt-1">Un texto aburrido, plano y egocéntrico.</p>
+                    </div>
+                </div>
+
+                <div class="bg-brota-light border-l-4 border-brota-green p-6 md:p-8 rounded-r-2xl shadow-sm my-8 flex flex-col md:flex-row items-center gap-6">
+                    <div class="bg-white p-4 rounded-full shadow-sm flex-shrink-0">
+                        <i data-lucide="check-circle-2" class="w-10 h-10 text-brota-green"></i>
+                    </div>
+                    <div>
+                        <strong class="font-heading text-xl text-brota-dark block mb-2">Lo que hicimos DESPUÉS:</strong>
+                        <p class="text-lg text-gray-800 italic font-bold">"Imagina entrar en casa y sentir que por fin es el hogar que siempre quisiste"</p>
+                        <p class="text-sm text-gray-600 mt-1">Un mensaje que activa la emoción instantánea del cliente.</p>
+                    </div>
+                </div>
+
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    ¿El resultado? Eliminamos fricciones, añadimos fotos reales y un botón directo que decía: "Pide tu presupuesto". Empezaron a llegar solicitudes. Magia no, psicología del consumidor aplicada.
+                </p>
+            </section>
+
+            <!-- CTA Final -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Tu web también puede vender, si entiendes la mente de tu cliente</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Esto no va solo de diseño bonito. Va de captar la atención, generar confianza y guiar la decisión de compra sin que el cliente lo note.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-semibold">
+                    Si tu web no está haciendo este trabajo por ti, estás perdiendo dinero todos los días. En <strong>Brota Marketing</strong> convertimos esos primeros 3 segundos en tu ventaja competitiva. ¿Hablamos?
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Solicitar Auditoría Gratuita
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

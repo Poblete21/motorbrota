@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brota Marketing | Tu departamento de Marketing en Murcia</title>
+    <meta name="description" content="Saca el Marketing de tu cabeza. Somos tu equipo externo de Marketing digital en la Región de Murcia. SEO, RRSS, y estrategias de crecimiento.">
+    
+    <!-- Mejoras SEO Avanzadas -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://brotamarketing.es/" />
+    
+    <!-- Favicon Corregido para Google Search -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    
+    <!-- Etiquetas Open Graph (Redes Sociales y WhatsApp) -->
+    <meta property="og:title" content="Brota Marketing | Tu departamento de Marketing en Murcia">
+    <meta property="og:description" content="Saca el Marketing de tu cabeza. Somos tu equipo externo de Marketing digital en la Región de Murcia. SEO, RRSS, y estrategias de crecimiento.">
+    <meta property="og:image" content="https://i.imgur.com/fWRgqFz.png">
+    <meta property="og:url" content="https://brotamarketing.es/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Animaciones de Scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Glassmorphism utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .glass-dark {
+            background: rgba(16, 24, 32, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+
+    <!-- Datos Estructurados JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MarketingAgency",
+      "name": "Brota Marketing",
+      "url": "https://brotamarketing.es/",
+      "logo": "https://i.imgur.com/fWRgqFz.png",
+      "image": "https://i.imgur.com/fWRgqFz.png",
+      "description": "Saca el Marketing de tu cabeza. Somos tu equipo externo de Marketing digital en la Región de Murcia.",
+      "telephone": "+34641442287",
+      "email": "info@brotamarketing.es",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Murcia",
+        "addressRegion": "Región de Murcia",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://instagram.com/brota.marketing",
+        "https://tiktok.com/@brota.marketing"
+      ],
+      "priceRange": "$$"
+    }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18089096523"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-18089096523');
+    </script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray overflow-x-hidden antialiased">
+
+    <!-- Background Blobs -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brota-green opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-teal-200 opacity-30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-yellow-100 opacity-40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0);">
+                    <img src="https://i.imgur.com/fWRgqFz.png" alt="Logo de Brota Marketing" class="h-10 w-auto">
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Blog</a>
+                    <a href="#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Abrir menú" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="#quienes-somos" onclick="toggleMobileMenu();" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" onclick="toggleMobileMenu();" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="#precios" onclick="toggleMobileMenu();" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" onclick="toggleMobileMenu();" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="#contacto" onclick="toggleMobileMenu();" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col items-center justify-center pt-20 pb-12 overflow-hidden bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brota-green/20 via-brota-light to-white">
+        <!-- Abstract background elements -->
+        <div class="absolute inset-0 w-full h-full pointer-events-none z-0">
+            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-teal-200/40 rounded-full mix-blend-multiply filter blur-[100px] animate-blob"></div>
+            <div class="absolute top-40 left-[-10%] w-[400px] h-[400px] bg-brota-green/30 rounded-full mix-blend-multiply filter blur-[80px] animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-0 right-20 w-[600px] h-[600px] bg-yellow-100/50 rounded-full mix-blend-multiply filter blur-[120px] animate-blob animation-delay-4000"></div>
+        </div>
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjEiIGZpbGw9InJnYmEoMTE4LCAxODgsIDMzLCAwLjE1KSIvPjwvc3ZnPg==')] opacity-50 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center z-10">
+            <div class="reveal max-w-4xl mx-auto">
+                
+                <h1 class="font-heading text-6xl lg:text-8xl font-black leading-[1.1] mb-8 tracking-tight text-brota-dark">
+                    Saca el Marketing <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green via-teal-400 to-brota-green inline-block" style="background-size: 200% auto; animation: shine 3s linear infinite;">de tu cabeza.</span>
+                </h1>
+                
+                <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Nos encargamos de que tu negocio crezca mientras tú te dedicas a lo que mejor sabes hacer: dirigirlo. Un Marketing sin humo, constante y transparente.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#precios" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-center hover:bg-brota-dark hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                        Ver planes y precios
+                    </a>
+                    <a href="#contacto" class="glass text-brota-dark px-8 py-4 rounded-full font-bold text-center flex items-center justify-center gap-2 hover:bg-white transition-all duration-300">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i> Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+            @keyframes shine {
+                to {
+                    background-position: 200% center;
+                }
+            }
+        </style>
+        
+        <!-- Flecha Scroll Down -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce text-gray-400 opacity-60 pointer-events-none">
+            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+        </div>
+    </section>
+
+    <!-- Confían en nosotros (Trusted by) -->
+    <section class="py-16 bg-brota-gray border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-10">Confían en nosotros</p>
+            <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-24 transition-all duration-500">
+                <img src="clientes/cliente1.png" alt="Cliente 1" class="h-28 sm:h-32 w-auto object-contain hover:scale-110 transition-transform">
+                <img src="clientes/cliente2.png" alt="Cliente 2" class="h-20 sm:h-24 w-auto object-contain hover:scale-110 transition-transform">
+                <img src="clientes/cliente3.png" alt="Cliente 3" class="h-20 sm:h-24 w-auto object-contain hover:scale-110 transition-transform">
+                <img src="clientes/cliente4.png" alt="Cliente 4" class="h-20 sm:h-24 w-auto object-contain hover:scale-110 transition-transform">
+                <img src="clientes/cliente5.png" alt="Cliente 5" class="h-20 sm:h-24 w-auto object-contain hover:scale-110 transition-transform">
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Banner -->
+    <div class="bg-brota-dark text-white py-4 overflow-hidden transform -rotate-1">
+        <div class="flex whitespace-nowrap animate-[marquee_20s_linear_infinite] items-center gap-8 font-heading text-xl font-bold tracking-widest opacity-80" aria-hidden="true">
+            <span>NACE, CRECE, BROTA 🌿</span>
+            <span>TU DEPARTAMENTO EXTERNO 🌿</span>
+            <span>SIN HUMO, SIN SORPRESAS 🌿</span>
+            <span>NACE, CRECE, BROTA 🌿</span>
+            <span>TU DEPARTAMENTO EXTERNO 🌿</span>
+            <span>SIN HUMO, SIN SORPRESAS 🌿</span>
+            <span>NACE, CRECE, BROTA 🌿</span>
+        </div>
+    </div>
+
+    <!-- Problemas Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="font-heading text-4xl lg:text-5xl font-black mb-6">¿Te suenan estas preguntas?</h2>
+                <p class="text-xl text-gray-600">Si en alguna respondes con un "NO", entonces somos la solución que estabas posponiendo.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 reveal">
+                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-500 mb-6">
+                        <i data-lucide="clock" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">¿Dedico TIEMPO a pensar estratégicamente?</h3>
+                    <p class="text-gray-600">O por el contrario, el día a día te come y el Marketing siempre se queda para "cuando tenga tiempo".</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 reveal delay-100">
+                    <div class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center text-orange-500 mb-6">
+                        <i data-lucide="alert-triangle" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">¿Tomo decisiones con claridad?</h3>
+                    <p class="text-gray-600">¿O publicas en redes sociales desde la urgencia, sin una estrategia real detrás solo por cumplir?</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 reveal delay-200">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-500 mb-6">
+                        <i data-lucide="target" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">¿Sé cómo alcanzar mis objetivos?</h3>
+                    <p class="text-gray-600">¿Estás invirtiendo adecuadamente en publicidad o sientes que estás tirando el dinero sin saber el retorno?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solución / Filosofía -->
+    <section id="quienes-somos" class="py-24 bg-brota-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#76bc21 1px, transparent 1px); background-size: 30px 30px;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="font-heading text-4xl lg:text-5xl font-black mb-6">No somos una agencia, <br>somos <span class="text-brota-green">tu equipo</span>.</h2>
+                    <p class="text-xl text-gray-300 mb-8 font-light">
+                        Creemos en un Marketing que se toca y que se nota, transparencia radical y sin tecnicismos innecesarios.
+                    </p>
+                    
+                    <div class="bg-white/5 rounded-2xl border border-white/10 overflow-hidden mt-8">
+                        <div class="grid grid-cols-2 text-sm md:text-base font-bold font-heading border-b border-white/10">
+                            <div class="p-4 text-gray-400 text-center bg-black/20">Empleado interno</div>
+                            <div class="p-4 text-white text-center bg-brota-green/20 border-l border-white/10">Brota Marketing</div>
+                        </div>
+                        <div class="grid grid-cols-2 text-sm text-center">
+                            <div class="p-4 text-gray-400 border-b border-white/5 bg-black/20">Sueldo completo</div>
+                            <div class="p-4 font-bold text-brota-green border-b border-white/5 bg-brota-green/5 border-l border-white/10">Desde 99€/mes</div>
+
+                            <div class="p-4 text-gray-400 border-b border-white/5 bg-black/20">1 sola especialidad</div>
+                            <div class="p-4 font-bold text-white border-b border-white/5 bg-brota-green/5 border-l border-white/10">Equipo multidisciplinar</div>
+
+                            <div class="p-4 text-gray-400 border-b border-white/5 bg-black/20">Sin visión externa</div>
+                            <div class="p-4 font-bold text-white border-b border-white/5 bg-brota-green/5 border-l border-white/10">Estrategia global</div>
+
+                            <div class="p-4 text-gray-400 bg-black/20">Riesgo laboral</div>
+                            <div class="p-4 font-bold text-white bg-brota-green/5 border-l border-white/10">Sin permanencia</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal delay-200">
+                    <div class="glass-dark p-8 rounded-3xl border border-white/10 relative">
+                        <div class="absolute -top-6 -right-6 w-12 h-12 bg-brota-green rounded-full blur-xl opacity-50"></div>
+                        
+                        <div class="flex items-center gap-4 mb-8 pb-8 border-b border-white/10">
+                            <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center border-2 border-brota-green overflow-hidden p-2">
+                                <img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing Equipo" class="w-full h-auto object-contain" loading="lazy">
+                            </div>
+                            <div>
+                                <h3 class="font-heading text-2xl font-bold">El Equipo Brota</h3>
+                                <p class="text-gray-400">Mentes creativas + 1 mentor experto</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 italic text-lg leading-relaxed">
+                            "Combinamos la energía, las ideas frescas y el dominio de las tendencias actuales con la supervisión estratégica de profesionales con años de experiencia en ventas. Tienes lo mejor de ambos mundos."
+                        </p>
+                        
+                        <div class="mt-8 pt-6 border-t border-white/5">
+                            <a href="/equipo/" class="inline-flex items-center gap-2 px-6 py-3 bg-brota-green text-white font-bold rounded-xl hover:bg-white hover:text-brota-dark transition-all duration-300 group shadow-lg shadow-brota-green/20 w-full sm:w-auto justify-center">
+                                Conoce a nuestro equipo
+                                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Planes -->
+    <section id="precios" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-brota-green font-bold tracking-wider uppercase text-sm">Transparencia desde el minuto 1</span>
+                <h2 class="font-heading text-4xl lg:text-5xl font-black mt-2 mb-6">Tu departamento, sin sorpresas en la factura</h2>
+                <p class="text-xl text-gray-600">Escoge el nivel de implicación que tu negocio necesita ahora mismo. Sin permanencia obligatoria.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                
+                <!-- PLAN NACE -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all reveal">
+                    <div class="mb-6">
+                        <h3 class="font-heading text-2xl font-bold mb-2">NACE</h3>
+                        <p class="text-gray-500 text-sm">¡Ya tienes equipo de Marketing!</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-gray-100">
+                        <span class="text-4xl font-black text-brota-dark">99€</span><span class="text-gray-500">/mes</span>
+                        <p class="text-[10px] text-gray-400 mt-1 uppercase font-bold tracking-wider">(IVA incluido)</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-600 text-sm">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Gestión 1 red social (8 posts)</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> 1 Artículo de Blog mensual</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Diseño gráfico básico</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Optimización Google My Business</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Informe y reunión mensual</li>
+                    </ul>
+                    <button onclick="prepararContacto('Contratar planes')" class="w-full py-3 rounded-xl font-bold border-2 border-brota-dark text-brota-dark hover:bg-brota-dark hover:text-white transition-colors">Elegir NACE</button>
+                </div>
+
+                <!-- PLAN CRECE -->
+                <div class="bg-brota-dark rounded-3xl p-8 border border-brota-green/30 shadow-2xl transform lg:-translate-y-4 relative reveal delay-100">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-brota-green text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                        EL MÁS ELEGIDO
+                    </div>
+                    <div class="mb-6 text-white">
+                        <h3 class="font-heading text-2xl font-bold mb-2">CRECE</h3>
+                        <p class="text-gray-400 text-sm">Genera visibilidad y leads</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-gray-700 text-white">
+                        <span class="text-4xl font-black">299€</span><span class="text-gray-400">/mes</span>
+                        <p class="text-[10px] text-gray-400 mt-1 uppercase font-bold tracking-wider">(IVA incluido)</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Gestión 2 redes (12 posts)</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> 2 Artículos de Blog / mes</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Campañas Ads (gestión básica)</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> SEO local continuo</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Reunión estratégica mensual</li>
+                    </ul>
+                    <button onclick="prepararContacto('Contratar planes')" class="w-full py-3 rounded-xl font-bold bg-brota-green text-white hover:bg-white hover:text-brota-dark transition-colors">Elegir CRECE</button>
+                </div>
+
+                <!-- PLAN BROTA -->
+                <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition-all reveal delay-200">
+                    <div class="mb-6">
+                        <h3 class="font-heading text-2xl font-bold mb-2">BROTA</h3>
+                        <p class="text-gray-500 text-sm">Expansión de mercado</p>
+                    </div>
+                    <div class="mb-6 pb-6 border-b border-gray-100">
+                        <span class="text-4xl font-black text-brota-dark">599€</span><span class="text-gray-500">/mes</span>
+                        <p class="text-[10px] text-gray-400 mt-1 uppercase font-bold tracking-wider">(IVA incluido)</p>
+                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-600 text-sm">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Hasta 4 redes (16 posts + Reels)</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> 4 Artículos de Blog / mes</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Google & Meta Ads completo</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Optimización web básica</li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-brota-green shrink-0"></i> Asesoría quincenal</li>
+                    </ul>
+                    <button onclick="prepararContacto('Contratar planes')" class="w-full py-3 rounded-xl font-bold border-2 border-brota-dark text-brota-dark hover:bg-brota-dark hover:text-white transition-colors">Elegir BROTA</button>
+                </div>
+
+            </div>
+
+            <!-- Bonos Incluidos -->
+            <div class="mt-16 bg-brota-dark text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden reveal">
+                <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#76bc21 1px, transparent 1px); background-size: 20px 20px;"></div>
+                <div class="relative z-10">
+                    <div class="text-center mb-10">
+                        <span class="inline-block bg-brota-green text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-4">Añadimos aún más valor</span>
+                        <h3 class="font-heading text-3xl font-bold">Bonos incluidos en tu plan</h3>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:-translate-y-1 transition-transform">
+                            <i data-lucide="gift" class="w-8 h-8 text-brota-green mb-4"></i>
+                            <h4 class="font-bold mb-2">Auditoría inicial gratuita</h4>
+                            <p class="text-sm text-gray-400">Análisis completo de tu negocio.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:-translate-y-1 transition-transform">
+                            <i data-lucide="map" class="w-8 h-8 text-brota-green mb-4"></i>
+                            <h4 class="font-bold mb-2">Plan estratégico personalizado</h4>
+                            <p class="text-sm text-gray-400">Hoja de ruta exclusiva para alcanzar tus objetivos.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:-translate-y-1 transition-transform">
+                            <i data-lucide="crosshair" class="w-8 h-8 text-brota-green mb-4"></i>
+                            <h4 class="font-bold mb-2">Diagnóstico competitivo local</h4>
+                            <p class="text-sm text-gray-400">Análisis de tu competencia directa.</p>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl hover:-translate-y-1 transition-transform">
+                            <i data-lucide="book-open" class="w-8 h-8 text-brota-green mb-4"></i>
+                            <h4 class="font-bold mb-2">Guía de mejora interna</h4>
+                            <p class="text-sm text-gray-400">Manual para optimizar los procesos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mt-16 text-center reveal border-t border-gray-200 pt-16">
+                <h3 class="font-heading text-3xl font-bold mb-6">¿Necesitas algo más específico fuera de los planes?</h3>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto text-lg">También desarrollamos webs, ecommerces, auditorías SEO y todo lo que tu negocio necesite a medida.</p>
+                <a href="/servicios/" class="inline-flex items-center gap-3 px-8 py-4 bg-brota-dark text-white rounded-full font-bold text-lg hover:bg-brota-green transition-all shadow-xl hover:-translate-y-1">
+                    Ver todos los servicios a medida
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact CTA -->
+    <footer id="contacto" class="bg-brota-dark text-white pt-24 pb-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto mb-20 reveal bg-white text-brota-dark p-8 md:p-12 rounded-[2.5rem] shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="font-heading text-4xl font-black mb-4">¿Hablamos de tu negocio?</h2>
+                    <p class="text-gray-600 text-lg">Déjanos tus datos, pide tu auditoría gratuita o contrata el servicio que necesitas.</p>
+                </div>
+                
+                <form action="https://formspree.io/f/mlgwzoqg" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="name">Nombre y apellidos *</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brota-green outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="company">Empresa *</label>
+                            <input type="text" id="company" name="company" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brota-green outline-none transition-all">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="email">Correo electrónico *</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brota-green outline-none transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold mb-2 text-gray-700" for="phone">Teléfono *</label>
+                            <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brota-green outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-gray-700" for="asuntoFormulario">Asunto *</label>
+                        <select id="asuntoFormulario" name="subject" required onchange="toggleMotivo()" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brota-green outline-none transition-all bg-white cursor-pointer">
+                            <option value="" disabled selected>Selecciona un asunto</option>
+                            <option value="Información">Información</option>
+                            <option value="Contratar planes">Contratar planes</option>
+                            <option value="Servicios fuera de paquete">Servicios fuera de paquete</option>
+                            <option value="Reclamaciones">Reclamaciones</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+
+                    <div id="motivoOculto" class="hidden transition-all duration-300">
+                        <label class="block text-sm font-bold mb-2 text-gray-700" for="inputMotivo">Especifica el motivo *</label>
+                        <input type="text" id="inputMotivo" name="specific_reason" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brota-green outline-none transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold mb-2 text-gray-700" for="message">Cuerpo del mensaje *</label>
+                        <textarea id="message" name="message" required rows="4" placeholder="Cuéntanos un poco más sobre lo que necesitas..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-brota-green outline-none transition-all resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-brota-green text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-brota-dark hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+
+            <!-- FOOTER LINKS -->
+            <div class="grid md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing Footer Logo" class="h-8 w-auto" loading="lazy">
+                    </div>
+                    <p class="text-gray-500 text-sm">Tu departamento de Marketing externo. Acompañando a las pymes de nuestra Región.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brota-green shrink-0"></i> info@brotamarketing.es</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brota-green shrink-0"></i> +34 641 44 22 87</li>
+                        <li class="flex items-center gap-2 mt-4 pt-4 border-t border-white/10">
+                            <a href="https://instagram.com/brota.marketing" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-brota-green transition-colors group">
+                                <svg class="w-5 h-5 text-brota-green shrink-0 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+                                <span class="group-hover:underline">@brota.marketing</span>
+                            </a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <a href="https://tiktok.com/@brota.marketing" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-brota-green transition-colors group">
+                                <svg class="w-5 h-5 text-brota-green shrink-0 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                                <span class="group-hover:underline">@brota.marketing</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-brota-green transition-colors">Aviso Legal</a></li>
+                        <li><a href="/privacidad/" class="hover:text-brota-green transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/cookies/" class="hover:text-brota-green transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm mt-12">
+                &copy; <span id="year"></span> Brota Marketing. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp Flotante -->
+    <a href="https://wa.me/34641442287" target="_blank" rel="noopener noreferrer" aria-label="Hablar por WhatsApp" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all z-50 group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.551 4.152 1.597 5.96L.103 23.864l5.992-1.493a11.97 11.97 0 005.936 1.57h.005c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.942c-1.802 0-3.565-.484-5.112-1.401l-.367-.217-3.801.947.962-3.706-.239-.379a9.981 9.981 0 01-1.536-5.268c0-5.505 4.48-9.985 9.985-9.985 2.668 0 5.176 1.04 7.062 2.926A9.92 9.92 0 0122.016 12c0 5.505-4.48 9.985-9.985 9.985zm5.475-7.48c-.3-.15-1.776-.877-2.05-.978-.275-.1-.476-.15-.676.15-.2.3-.776.978-.952 1.178-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.488-.89-.794-1.49-1.775-1.666-2.075-.175-.3-.02-.463.13-.613.136-.136.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.587-.492-.507-.676-.516-.175-.009-.375-.009-.575-.009s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.875 1.225 3.075c.15.2 2.1 3.2 5.087 4.487.712.306 1.267.488 1.7.625.714.225 1.365.194 1.877.118.572-.084 1.776-.725 2.026-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+        
+        document.head.insertAdjacentHTML('beforeend', `
+            <style>
+                @keyframes marquee {
+                    0% { transform: translateX(0%); }
+                    100% { transform: translateX(-50%); }
+                }
+            </style>
+        `);
+
+        function toggleMotivo() {
+            const select = document.getElementById('asuntoFormulario');
+            const motivoDiv = document.getElementById('motivoOculto');
+            const inputMotivo = document.getElementById('inputMotivo');
+            
+            if (select.value === 'Otros') {
+                motivoDiv.classList.remove('hidden');
+                inputMotivo.required = true;
+            } else {
+                motivoDiv.classList.add('hidden');
+                inputMotivo.required = false;
+            }
+        }
+
+        function prepararContacto(asunto) {
+            setTimeout(() => {
+                document.getElementById('contacto').scrollIntoView({ behavior: 'smooth' });
+                const select = document.getElementById('asuntoFormulario');
+                select.value = asunto;
+                toggleMotivo();
+                const form = select.closest('form');
+                form.classList.add('ring-4', 'ring-brota-green');
+                setTimeout(() => {
+                    form.classList.remove('ring-4', 'ring-brota-green');
+                }, 1000);
+            }, 50);
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        const rotatorTexts = document.querySelectorAll('.hero-rotator-text');
+        let currentTextIndex = 0;
+
+        if (rotatorTexts.length > 0) {
+            setInterval(() => {
+                const current = rotatorTexts[currentTextIndex];
+                const nextIndex = (currentTextIndex + 1) % rotatorTexts.length;
+                const next = rotatorTexts[nextIndex];
+
+                current.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                current.classList.add('opacity-0', '-translate-y-8', 'pointer-events-none');
+
+                next.classList.remove('transition-all', 'duration-700', '-translate-y-8');
+                next.classList.add('translate-y-8');
+                
+                void next.offsetWidth;
+
+                next.classList.add('transition-all', 'duration-700');
+                next.classList.remove('opacity-0', 'translate-y-8', 'pointer-events-none');
+                next.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+
+                currentTextIndex = nextIndex;
+            }, 5000);
+        }
+
+        
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

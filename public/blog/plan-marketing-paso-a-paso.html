@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo elaborar un plan de marketing paso a paso | Brota Marketing</title>
+    <meta name="description" content="Aprende a elaborar un plan de marketing paso a paso con la guía definitiva. Descubre cómo analizar tu situación, definir tu Buyer Persona y establecer objetivos SMART.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Guía Práctica</span>
+                    <span class="text-gray-400 text-sm font-semibold">5 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Cómo elaborar un plan de marketing paso a paso: <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">La guía definitiva</span> para hacer crecer tu negocio
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/plan-marketing.png" 
+                         alt="Personas planificando una estrategia de marketing en una pizarra" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Muchos empresarios sienten que están invirtiendo tiempo y dinero en redes sociales, publicidad o diseño web, pero sin ver un retorno real. ¿Te suena familiar? Esto suele ocurrir por una sencilla razón: se están ejecutando acciones sin una estrategia detrás.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Empezar a hacer marketing sin un plan es como intentar construir un edificio empezando por el tejado. Desde nuestra agencia de marketing en Murcia, vemos a diario cómo empresas con muchísimo potencial se estancan por falta de rumbo. Hoy vamos a ponerle solución a eso.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    A continuación, te explico de forma directa y sin tecnicismos innecesarios cómo elaborar un buen plan de marketing para tu negocio.
+                </p>
+            </section>
+
+            <!-- Punto 1 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-green text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md">1</span>
+                    Análisis de la situación: ¿Dónde estamos?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Antes de trazar una ruta, necesitas saber exactamente desde dónde partes. Este análisis debe ser doble:
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-lg text-gray-600 leading-relaxed">
+                            <strong class="text-brota-dark font-heading">Análisis Interno:</strong> Analiza tu propia empresa. ¿Cuáles son tus recursos actuales? ¿Qué está fallando en tus ventas?
+                        </span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-lg text-gray-600 leading-relaxed">
+                            <strong class="text-brota-dark font-heading">Análisis Externo:</strong> Estudia a tu competencia (qué están haciendo bien y qué mal) y el estado de tu sector.
+                        </span>
+                    </li>
+                </ul>
+
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    <strong>Herramienta clave: La Matriz DAFO.</strong> Identifica tus Debilidades y Fortalezas (internas), así como las Amenazas y Oportunidades (externas). Sé brutalmente honesto en este paso; de nada sirve engañarse a uno mismo.
+                </blockquote>
+            </section>
+
+            <!-- Punto 2 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-green text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md">2</span>
+                    Definición del Buyer Persona: ¿A quién le vendemos?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    "Vender a todo el mundo" es sinónimo de no venderle a nadie. Necesitas definir a tu cliente ideal o Buyer Persona. No te quedes solo en "hombres y mujeres de 30 a 50 años". Profundiza:
+                </p>
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 mb-6">
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i data-lucide="help-circle" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed">¿Cuáles son sus mayores problemas o puntos de dolor?</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="help-circle" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed">¿Qué dudas tienen antes de comprar tu producto o servicio?</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="help-circle" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed">¿En qué canales digitales pasan su tiempo (Google, Instagram, LinkedIn, Tik Tok)?</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Punto 3 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-green text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md">3</span>
+                    Establecer Objetivos SMART: ¿Qué queremos conseguir?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Tus objetivos deben ser el faro que guíe tu plan de marketing. Para que sean útiles, deben cumplir con la regla SMART (Específicos, Medibles, Alcanzables, Relevantes y Temporales).
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Aquí tienes un ejemplo de cómo transformar un objetivo mediocre en uno profesional:
+                </p>
+
+                <!-- Tabla/Cards SMART -->
+                <div class="grid gap-4 mt-8 mb-8">
+                    <!-- Fila 1 -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 items-center">
+                        <div class="flex-1 w-full bg-red-50 p-4 rounded-xl">
+                            <span class="text-xs font-bold text-red-600 uppercase flex items-center gap-1 mb-2">
+                                <i data-lucide="x" class="w-4 h-4"></i> Objetivo Tradicional
+                            </span>
+                            <p class="text-gray-700 italic">"Quiero conseguir más seguidores."</p>
+                        </div>
+                        <div class="hidden md:flex text-gray-300">
+                            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1 w-full bg-brota-light p-4 rounded-xl">
+                            <span class="text-xs font-bold text-brota-green uppercase flex items-center gap-1 mb-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4"></i> Objetivo SMART
+                            </span>
+                            <p class="text-brota-dark font-bold">"Aumentar los seguidores en Instagram un 15% en los próximos 3 meses."</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 2 -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 items-center">
+                        <div class="flex-1 w-full bg-red-50 p-4 rounded-xl">
+                            <span class="text-xs font-bold text-red-600 uppercase flex items-center gap-1 mb-2">
+                                <i data-lucide="x" class="w-4 h-4"></i> Objetivo Tradicional
+                            </span>
+                            <p class="text-gray-700 italic">"Necesito vender más."</p>
+                        </div>
+                        <div class="hidden md:flex text-gray-300">
+                            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1 w-full bg-brota-light p-4 rounded-xl">
+                            <span class="text-xs font-bold text-brota-green uppercase flex items-center gap-1 mb-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4"></i> Objetivo SMART
+                            </span>
+                            <p class="text-brota-dark font-bold">"Incrementar la facturación de la tienda online en 5.000€ para diciembre."</p>
+                        </div>
+                    </div>
+
+                    <!-- Fila 3 -->
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row gap-4 items-center">
+                        <div class="flex-1 w-full bg-red-50 p-4 rounded-xl">
+                            <span class="text-xs font-bold text-red-600 uppercase flex items-center gap-1 mb-2">
+                                <i data-lucide="x" class="w-4 h-4"></i> Objetivo Tradicional
+                            </span>
+                            <p class="text-gray-700 italic">"Quiero aparecer en Google."</p>
+                        </div>
+                        <div class="hidden md:flex text-gray-300">
+                            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1 w-full bg-brota-light p-4 rounded-xl">
+                            <span class="text-xs font-bold text-brota-green uppercase flex items-center gap-1 mb-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4"></i> Objetivo SMART
+                            </span>
+                            <p class="text-brota-dark font-bold">"Posicionar 3 palabras clave en el Top 3 de Google en los próximos 6 meses."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Punto 4 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-green text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md">4</span>
+                    Estrategia y Tácticas: ¿Cómo lo vamos a lograr?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Aquí es donde decides qué herramientas vas a utilizar para alcanzar los objetivos que marcaste en el paso anterior. Dependiendo de tu negocio, tu estrategia puede incluir:
+                </p>
+                <ul class="space-y-5 mb-6">
+                    <li class="flex items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-50">
+                        <i data-lucide="search" class="text-brota-green mr-4 mt-1 flex-shrink-0 w-6 h-6"></i>
+                        <div>
+                            <strong class="text-brota-dark font-heading block text-xl mb-1">SEO (Posicionamiento web)</strong>
+                            <span class="text-lg text-gray-600 leading-relaxed">Para captar a los clientes que ya están buscando tus servicios en Google (ideal para negocios locales y servicios B2B).</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-50">
+                        <i data-lucide="file-text" class="text-brota-green mr-4 mt-1 flex-shrink-0 w-6 h-6"></i>
+                        <div>
+                            <strong class="text-brota-dark font-heading block text-xl mb-1">Marketing de Contenidos</strong>
+                            <span class="text-lg text-gray-600 leading-relaxed">Crear artículos de blog, guías o vídeos que eduquen a tu cliente.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-50">
+                        <i data-lucide="mouse-pointer-click" class="text-brota-green mr-4 mt-1 flex-shrink-0 w-6 h-6"></i>
+                        <div>
+                            <strong class="text-brota-dark font-heading block text-xl mb-1">Publicidad Digital (Paid Media)</strong>
+                            <span class="text-lg text-gray-600 leading-relaxed">Campañas en Google Ads o Meta Ads (Facebook/Instagram) para obtener visibilidad y ventas a corto plazo.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start bg-white p-5 rounded-2xl shadow-sm border border-gray-50">
+                        <i data-lucide="smartphone" class="text-brota-green mr-4 mt-1 flex-shrink-0 w-6 h-6"></i>
+                        <div>
+                            <strong class="text-brota-dark font-heading block text-xl mb-1">Social Media</strong>
+                            <span class="text-lg text-gray-600 leading-relaxed">Estrategia de comunidad y visibilidad en redes sociales.</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Punto 5 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-green text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md">5</span>
+                    Presupuesto: ¿Cuánto vamos a invertir?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    El marketing no es un gasto, es una inversión, pero necesitas tener claro tu límite. Define cuánto dinero puedes destinar a herramientas, publicidad en plataformas y, por supuesto, a la contratación de una agencia de marketing o profesionales externos que ejecuten el plan con garantías.
+                </p>
+            </section>
+
+            <!-- Punto 6 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6 flex items-center gap-3">
+                    <span class="bg-brota-green text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md">6</span>
+                    Medición y KPIs: ¿Está funcionando?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Un plan de marketing no está escrito en piedra. Necesitas medir los resultados constantemente para saber si vas por buen camino o si tienes que pivotar. Define tus KPIs (Indicadores Clave de Rendimiento). Algunos ejemplos comunes son:
+                </p>
+                <ul class="space-y-4 mb-6">
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-lg text-gray-600 leading-relaxed">Tráfico web mensual.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Coste por Adquisición (CPA):</strong> ¿Cuánto te cuesta conseguir un cliente nuevo?</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i data-lucide="check" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-lg text-gray-600 leading-relaxed">Tasa de conversión de tu página web.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- CTA / Conclusión -->
+            <section class="bg-brota-light p-8 md:p-12 rounded-3xl mt-16 border border-brota-green/20 text-center shadow-sm relative overflow-hidden">
+                <!-- Decorative background shape -->
+                <div class="absolute top-0 right-0 -mr-8 -mt-8 w-32 h-32 rounded-full bg-brota-green opacity-10"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-4 relative z-10">Delega y escala tu negocio</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto relative z-10">
+                    Crear y ejecutar un plan de marketing digital completo requiere tiempo, herramientas y conocimientos técnicos muy específicos. Si prefieres centrarte en dirigir tu negocio y dejar tu crecimiento en manos de expertos, en nuestra <strong>agencia de marketing en Murcia</strong> estamos listos para ser tu departamento de marketing externo.
+                </p>
+                <a href="https://brotamarketing.es/contacto/" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Hablemos de tu proyecto
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios de Marketing a medida | Brota Marketing</title>
+    <meta name="description" content="Diseño web, Ecommerce, Auditorías SEO, Branding y Consultoría Estratégica en Murcia. Soluciones específicas para las necesidades concretas de tu negocio.">
+    
+    <!-- Mejoras SEO Avanzadas -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://brotamarketing.es/servicios/" />
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    
+    <meta property="og:title" content="Servicios de Marketing a medida | Brota Marketing">
+    <meta property="og:description" content="Diseño web, Ecommerce, Auditorías SEO, Branding y Consultoría Estratégica en Murcia.">
+    <meta property="og:image" content="https://i.imgur.com/fWRgqFz.png">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+
+    <!-- Datos Estructurados JSON-LD (Vital para SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Servicios de Marketing a medida",
+      "url": "https://brotamarketing.es/servicios/",
+      "provider": {
+        "@type": "MarketingAgency",
+        "name": "Brota Marketing"
+      }
+    }
+    </script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray overflow-x-hidden antialiased">
+
+    <!-- Background Blobs -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brota-green opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-teal-200 opacity-30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-yellow-100 opacity-40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 glass transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-green font-bold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" onclick="toggleMobileMenu();" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Servicios -->
+    <header class="pt-32 pb-16 lg:pt-48 lg:pb-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brota-light text-brota-dark font-semibold text-sm mb-6 border border-brota-green/20">
+                <i data-lucide="sparkles" class="w-4 h-4 text-brota-green"></i> A medida para tu negocio
+            </span>
+            <h1 class="font-heading text-5xl lg:text-7xl font-black mb-6">
+                Servicios <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">fuera de paquete</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Sabemos que cada empresa tiene sus propios ritmos y necesidades. Si nuestros planes no encajan exactamente con lo que buscas ahora mismo, aquí tienes nuestras soluciones concretas.
+            </p>
+        </div>
+    </header>
+
+    <!-- Packs Especiales -->
+    <section class="pb-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between md:items-end mb-12 reveal gap-4">
+                <div>
+                    <h2 class="font-heading text-4xl font-black mb-4">Packs Especiales</h2>
+                    <p class="text-xl text-gray-600">Soluciones focalizadas para impulsar áreas concretas de tu negocio.</p>
+                </div>
+                <a href="/#precios" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-brota-dark text-white rounded-full font-bold hover:bg-brota-green transition-all shadow-lg hover:-translate-y-1 whitespace-nowrap">
+                    Ver packs específicos
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- PACK POSICIONATE -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal flex flex-col h-full">
+                    <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex items-center justify-center text-brota-green mb-6 relative">
+                        <i data-lucide="globe" class="w-6 h-6"></i>
+                        <span class="absolute -bottom-2 font-bold text-[8px] uppercase tracking-wider bg-white px-1">SEO</span>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">PACK POSICIÓNATE</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Posicionamiento SEM, SEO y GEO. El objetivo es echar raíces en los buscadores y expandirse para que te encuentren.</p>
+                    <button onclick="prepararContacto('Pack Posiciónate')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+                <!-- PACK VIRALIZATE -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500 mb-6 relative">
+                        <i data-lucide="flame" class="w-6 h-6"></i>
+                        <i data-lucide="trending-up" class="w-3 h-3 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">PACK VIRALÍZATE</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Las redes sirven para interactuar, crear comunidad y mantener la marca viva y fresca. Alimentamos tus redes día a día.</p>
+                    <button onclick="prepararContacto('Pack Viralízate')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+                <!-- PACK 3W -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-200 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-500 mb-6 relative">
+                        <i data-lucide="monitor" class="w-6 h-6"></i>
+                        <i data-lucide="mouse-pointer-2" class="w-3 h-3 absolute bottom-2 right-2 text-brota-dark"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">PACK 3W</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Una web necesita mantenimiento constante, riego y cuidado para que no se marchite. Cuidamos y optimizamos tu plataforma digital para que no deje de dar frutos.</p>
+                    <button onclick="prepararContacto('Pack 3W')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+                <!-- PACK MUTACIÓN IA -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal flex flex-col h-full">
+                    <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-500 mb-6">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">PACK MUTACIÓN IA</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">La inteligencia artificial aplicada para acelerar los procesos de forma inteligente. Automatizamos tus procesos con IA para aumentar el ritmo de tu negocio sin perder tu esencia.</p>
+                    <button onclick="prepararContacto('Pack Mutación IA')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+                <!-- PACK FLASH -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center text-yellow-500 mb-6">
+                        <i data-lucide="aperture" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">PACK FLASH</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Capturamos la luz y la esencia de tu negocio para transformarla en contenido visual que conecta.</p>
+                    <button onclick="prepararContacto('Pack Flash')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+                <!-- PACK METAMORFOSIS -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-200 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-teal-50 rounded-xl flex items-center justify-center text-teal-500 mb-6">
+                        <i data-lucide="settings" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">PACK METAMORFOSIS</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">El nacimiento de una nueva etapa para la empresa. Rediseñamos la identidad de tu negocio para que florezca con fuerza.</p>
+                    <button onclick="prepararContacto('Pack Metamorfosis')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Servicios Extra -->
+    <section class="pb-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-heading text-4xl font-black mb-12 reveal">Servicios fuera de paquete</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Web corporativa -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal flex flex-col h-full">
+                    <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex items-center justify-center text-brota-green mb-6">
+                        <i data-lucide="layout" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Web corporativa</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Tu escaparate en el mundo digital. Páginas rápidas, modernas, optimizadas para móviles y pensadas para convertir visitas en clientes.</p>
+                    <button onclick="prepararContacto('Web corporativa')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+
+                <!-- Ecommerce -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex items-center justify-center text-brota-green mb-6">
+                        <i data-lucide="shopping-cart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Ecommerce</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Tiendas online robustas, seguras y autogestionables. Integramos métodos de pago, envíos y te enseñamos a gestionar tus propios pedidos.</p>
+                    <button onclick="prepararContacto('Ecommerce')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+
+                <!-- Auditoría SEO -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-200 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex items-center justify-center text-brota-green mb-6">
+                        <i data-lucide="search" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Auditoría SEO</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Analizamos las tripas de tu web para descubrir por qué no apareces en Google y te entregamos un plan de acción detallado para solucionarlo.</p>
+                    <button onclick="prepararContacto('Auditoría SEO')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+
+                <!-- Branding completo -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal flex flex-col h-full">
+                    <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex items-center justify-center text-brota-green mb-6">
+                        <i data-lucide="palette" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Branding completo</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Identidad corporativa desde cero o rediseño de marca. Logo, tipografías, manual de marca y todo lo necesario para destacar sobre tu competencia.</p>
+                    <button onclick="prepararContacto('Branding')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+
+                <!-- Consultoría estratégica -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-100 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex items-center justify-center text-brota-green mb-6">
+                        <i data-lucide="lightbulb" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Consultoría estratégica</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Sesiones 1 a 1 donde analizamos tu modelo de negocio, detectamos cuellos de botella y definimos la mejor estrategia a seguir sin ataduras.</p>
+                    <button onclick="prepararContacto('Consultoría')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+
+                <!-- Producción audiovisual -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all reveal delay-200 flex flex-col h-full">
+                    <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex items-center justify-center text-brota-green mb-6">
+                        <i data-lucide="video" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-2">Producción audiovisual</h3>
+                    <p class="text-gray-600 mb-6 text-sm flex-grow">Fotografía de producto, vídeo corporativo, cobertura de eventos y material optimizado para anuncios en redes sociales.</p>
+                    <button onclick="prepararContacto('Producción audiovisual')" class="w-full py-2.5 rounded-xl font-bold border border-gray-200 text-brota-dark hover:border-brota-green hover:text-brota-green transition-colors">Contactar</button>
+                </div>
+            </div>
+            
+            <!-- Banner CTA Alternativo Dividido -->
+            <div class="mt-16 grid md:grid-cols-2 gap-6 reveal">
+                
+                <!-- CTA Planes -->
+                <div class="bg-brota-dark text-white rounded-3xl p-8 sm:p-10 shadow-xl relative overflow-hidden flex flex-col justify-between items-center text-center group">
+                    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#76bc21 1px, transparent 1px); background-size: 20px 20px;"></div>
+                    <div class="relative z-10 mb-8">
+                        <h3 class="font-heading text-2xl sm:text-3xl font-bold mb-4">¿Prefieres delegarlo todo?</h3>
+                        <p class="text-gray-400">Descubre nuestros planes mensuales y deja que nos convirtamos en tu departamento de Marketing.</p>
+                    </div>
+                    <a href="/#precios" class="relative z-10 px-8 py-4 bg-brota-green text-white rounded-full font-bold flex items-center justify-center hover:bg-white hover:text-brota-dark transition-all shadow-lg w-full sm:w-auto group-hover:-translate-y-1">
+                        Ver planes mensuales
+                    </a>
+                </div>
+
+                <!-- CTA Contacto -->
+                <div class="bg-white border border-gray-200 text-brota-dark rounded-3xl p-8 sm:p-10 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between items-center text-center group">
+                    <div class="relative z-10 mb-8">
+                        <h3 class="font-heading text-2xl sm:text-3xl font-bold mb-4">¿No encuentras lo que buscas?</h3>
+                        <p class="text-gray-600">Cuéntanos qué necesitas exactamente y diseñaremos una solución a tu medida.</p>
+                    </div>
+                    <button onclick="prepararContacto('Otros')" class="relative z-10 px-8 py-4 bg-brota-dark text-white rounded-full font-bold flex items-center justify-center hover:bg-brota-green transition-all shadow-lg w-full sm:w-auto group-hover:-translate-y-1">
+                        Contáctanos y te ayudamos
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-brota-dark text-white pt-16 pb-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="grid md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-8 w-auto">
+                    </div>
+                    <p class="text-gray-500 text-sm">Tu departamento de Marketing externo. Acompañando a las pymes de nuestra Región.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brota-green shrink-0"></i> info@brotamarketing.es</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brota-green shrink-0"></i> +34 641 44 22 87</li>
+                        <li class="flex items-center gap-2 mt-4 pt-4 border-t border-white/10"><svg class="w-4 h-4 text-brota-green shrink-0 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg> <a href="https://instagram.com/brota.marketing" target="_blank" class="hover:text-brota-green transition-colors">@brota.Marketing</a></li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brota-green shrink-0 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                            <a href="https://tiktok.com/@brota.marketing" target="_blank" class="hover:text-brota-green transition-colors">@brota.Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-brota-green transition-colors">Aviso Legal</a></li>
+                        <li><a href="/privacidad/" class="hover:text-brota-green transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/cookies/" class="hover:text-brota-green transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm mt-12">
+                &copy; <span id="year"></span> Brota Marketing. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp Flotante -->
+    <a href="https://wa.me/34641442287" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all z-50 group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.551 4.152 1.597 5.96L.103 23.864l5.992-1.493a11.97 11.97 0 005.936 1.57h.005c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.942c-1.802 0-3.565-.484-5.112-1.401l-.367-.217-3.801.947.962-3.706-.239-.379a9.981 9.981 0 01-1.536-5.268c0-5.505 4.48-9.985 9.985-9.985 2.668 0 5.176 1.04 7.062 2.926A9.92 9.92 0 0122.016 12c0 5.505-4.48 9.985-9.985 9.985zm5.475-7.48c-.3-.15-1.776-.877-2.05-.978-.275-.1-.476-.15-.676.15-.2.3-.776.978-.952 1.178-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.488-.89-.794-1.49-1.775-1.666-2.075-.175-.3-.02-.463.13-.613.136-.136.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.587-.492-.507-.676-.516-.175-.009-.375-.009-.575-.009s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.875 1.225 3.075c.15.2 2.1 3.2 5.087 4.487.712.306 1.267.488 1.7.625.714.225 1.365.194 1.877.118.572-.084 1.776-.725 2.026-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        /**
+         * Redirige al usuario al formulario de contacto de la página principal.
+         * Podrías extender esto pasando el asunto por URL si el index principal
+         * tiene lógica para leer parámetros (ej: /#contacto?asunto=branding)
+         */
+        function prepararContacto(asunto) {
+            window.location.href = '/#contacto';
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

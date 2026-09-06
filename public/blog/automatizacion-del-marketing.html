@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización del Marketing para Pymes: Vende sin estar pegado al móvil | Brota Marketing</title>
+    <meta name="description" content="Descubre qué es la automatización del marketing, las herramientas clave para pymes y cómo dejar de perder clientes por no contestar a tiempo.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Automatización del Marketing: Cómo vender sin estar pegado al móvil 24h">
+    <meta property="og:description" content="Deja de perder tiempo y ventas. Descubre cómo las pymes utilizan la automatización del marketing para crecer en piloto automático.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center flex-wrap gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Estrategia</span>
+                    <span class="text-gray-400 text-sm font-semibold">6 min de lectura</span>
+                    <span class="text-gray-300 mx-1">•</span> 
+                    <span class="text-gray-400 text-sm font-semibold flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> 3 Ago, 2026</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Automatización del Marketing: Cómo una Pyme Puede Vender <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">Sin Estar Pendiente del Móvil</span> 24 Horas
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/automatizacion-del-marketing_ai.jpg" 
+                         alt="Dashboard de automatización de marketing en la pantalla de un ordenador portátil en una oficina moderna" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Hay un problema que casi todos los dueños de pequeñas empresas comparten: demasiadas tareas, demasiado poco tiempo y la sensación constante de que, si dejas de empujar un momento, el negocio se para en seco.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Responder consultas por WhatsApp, publicar en redes sociales, enviar presupuestos, hacer el temido seguimiento a los clientes que te han dejado en visto, enviar recordatorios de citas... Al final, todo el peso de tu negocio recae sobre las mismas dos manos: las tuyas.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    La <strong>automatización del marketing</strong> no es ciencia ficción ni es un lujo reservado para multinacionales. Es simplemente la forma en que una pyme inteligente puede conseguir que su proceso de captación de clientes fluya solo. 
+                </p>
+            </section>
+
+            <!-- Sección: Qué es y qué no es -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Qué es (y qué NO es) la automatización del marketing
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    La automatización del marketing o <em>marketing automation</em> es usar herramientas tecnológicas para ejecutar tareas rutinarias de forma automática. Todo se basa en el comportamiento del usuario.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-red-50 p-6 rounded-2xl border border-red-100">
+                        <h3 class="font-heading font-bold text-xl text-red-700 mb-3 flex items-center gap-2">
+                            <i data-lucide="x-circle" class="w-5 h-5"></i> Lo que NO es
+                        </h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex gap-2"><i data-lucide="minus" class="w-4 h-4 mt-1 text-red-500 shrink-0"></i> Mandar emails masivos sin personalización (eso es spam).</li>
+                            <li class="flex gap-2"><i data-lucide="minus" class="w-4 h-4 mt-1 text-red-500 shrink-0"></i> Publicar en redes sociales sin ninguna estrategia detrás.</li>
+                            <li class="flex gap-2"><i data-lucide="minus" class="w-4 h-4 mt-1 text-red-500 shrink-0"></i> Sustituir el trato humano con tu cliente.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-brota-light p-6 rounded-2xl border border-brota-green/30">
+                        <h3 class="font-heading font-bold text-xl text-brota-green mb-3 flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-5 h-5"></i> Lo que SÍ es
+                        </h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 mt-1 text-brota-green shrink-0"></i> Que alguien rellene un formulario y reciba un email inmediato.</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 mt-1 text-brota-green shrink-0"></i> Reactivar automáticamente a un cliente que lleva 3 meses sin comprar.</li>
+                            <li class="flex gap-2"><i data-lucide="check" class="w-4 h-4 mt-1 text-brota-green shrink-0"></i> Que cada contacto se guarde en tu agenda sin picar datos a mano.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <blockquote class="italic text-xl text-brota-dark bg-gray-50 border-l-4 border-gray-300 p-6 rounded-r-xl my-8 shadow-sm">
+                    El objetivo no es eliminar el factor humano, sino liberar tu tiempo para que te dediques a lo que realmente requiere tu atención personal (como cerrar esa gran venta).
+                </blockquote>
+            </section>
+
+            <!-- Sección: Por qué ahora -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    Por qué las pymes lo necesitan más que nadie
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    El argumento más habitual suele ser: <em>"Eso es para empresas grandes, yo tengo pocos clientes."</em>
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Es exactamente al revés. Cuantos menos recursos humanos tienes, más necesitas que los procesos funcionen solos. Una multinacional tiene 20 comerciales haciendo llamadas. Tú no. Si no automatizas tu seguimiento, los clientes potenciales se enfrían.
+                </p>
+                
+                <div class="bg-brota-dark text-white p-8 rounded-3xl my-8 shadow-lg">
+                    <div class="flex items-start gap-4">
+                        <i data-lucide="lightbulb" class="w-12 h-12 text-brota-green flex-shrink-0"></i>
+                        <div>
+                            <h4 class="font-heading font-bold text-2xl mb-2">El Dato Clave</h4>
+                            <p class="text-lg text-gray-300">El <strong class="text-white">78% de los compradores</strong> adquiere el producto o servicio al <strong>primer proveedor que le responde</strong>. La automatización reduce tu tiempo de respuesta de "un par de horas" a literalmente 5 segundos.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Sección: Qué procesos automatizar -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    ¿Qué procesos de marketing puedes automatizar hoy mismo?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    No todo necesita ni debe automatizarse. Estas son las áreas donde la automatización aporta más valor a corto plazo:
+                </p>
+
+                <!-- Área 1 -->
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <i data-lucide="zap" class="text-brota-green w-8 h-8"></i>
+                        1. Captación y primer contacto
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        En menos de 30 segundos tras recibir un formulario, puedes enviarle un email de confirmación al cliente, notificar a tu equipo por WhatsApp, y guardar el registro en tu base de datos con su origen exacto. Sin mover un dedo.
+                    </p>
+                </div>
+
+                <!-- Área 2 -->
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <i data-lucide="mail" class="text-brota-green w-8 h-8"></i>
+                        2. Secuencias Post-Contacto (Nutrición)
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        No todos están listos para comprar el primer día. Crea una secuencia automatizada:
+                    </p>
+                    <ul class="space-y-2 text-gray-700 bg-gray-50 p-4 rounded-xl">
+                        <li><strong>Día 0:</strong> Bienvenida y próximos pasos.</li>
+                        <li><strong>Día 2:</strong> Testimonio o caso de éxito.</li>
+                        <li><strong>Día 5:</strong> Respuesta a objeciones frecuentes.</li>
+                        <li><strong>Día 9:</strong> Oferta directa o llamada a la acción.</li>
+                    </ul>
+                </div>
+                
+                <!-- Área 3 -->
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <i data-lucide="calendar-clock" class="text-brota-green w-8 h-8"></i>
+                        3. Reducción de No-Shows
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Si tienes una clínica, peluquería o consultoría, un cliente que no aparece es dinero perdido. Enviando un SMS automático 24h y 2h antes de la cita, puedes reducir los "no-shows" entre un 30% y un 60%. Se paga solo.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Herramientas -->
+            <section class="mb-16">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Las mejores herramientas para pymes en España
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Olvídate de plataformas que cuestan miles de euros. Aquí tienes el arsenal básico:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white border border-gray-200 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl text-brota-dark mb-2">Brevo (antes Sendinblue)</h4>
+                        <p class="text-gray-600">Nuestra favorita para empezar. Combina email, automatizaciones y SMS. Cumple el RGPD y es hiper intuitiva.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl text-brota-dark mb-2">Zapier</h4>
+                        <p class="text-gray-600">El traductor universal. Conecta herramientas que no se hablan entre sí (por ejemplo, Typeform con Google Sheets o WhatsApp).</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl text-brota-dark mb-2">Metricool</h4>
+                        <p class="text-gray-600">Imprescindible para programar tus redes sociales para todo el mes en una sola tarde.</p>
+                    </div>
+                    <div class="bg-white border border-gray-200 p-6 rounded-2xl">
+                        <h4 class="font-bold text-xl text-brota-dark mb-2">ManyChat</h4>
+                        <p class="text-gray-600">Automatiza los mensajes directos de Instagram. "Comenta la palabra INFO y te mando un DM". Eso es ManyChat.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA / Conclusión -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <!-- Decorative background shapes -->
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Automatizar no es complicado, es necesario</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    El error más común es querer automatizarlo todo de golpe. Empieza por el proceso que más tiempo te consume (normalmente el primer contacto). Dedica dos tardes a configurarlo y recupera esas horas cada semana.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-semibold">
+                    ¿No tienes tiempo ni para configurar esto? En Brota Marketing auditamos tus procesos y montamos la maquinaria por ti, sin tecnicismos ni humos.
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Pide tu consultoría gratuita
+                    <i data-lucide="rocket" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

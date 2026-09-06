@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth scroll-pt-24">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brota Marketing - Haz crecer tu empresa</title>
+    <meta name="description" content="Agencia de marketing digital gestionada por expertos y estudiantes. SEO, SEM, Redes Sociales y Diseño Web.">
+    
+    <!-- Tailwind CSS (Framework de diseño) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconos Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Configuración personalizada de Colores y Fuentes -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            light: '#aad7c3',  // Verde claro
+                            bg: '#f7f7f6',     // Blanco roto/Crema
+                            main: '#53bd99',   // Verde vívido
+                            dark: '#2d6a55'    // Un verde más oscuro para textos
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos base y animaciones personalizadas */
+        body {
+            background-color: #f7f7f6;
+            color: #333;
+        }
+
+        /* Clase para ocultar elementos antes de la animación de scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        /* Clase activa cuando el elemento entra en pantalla */
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animación suave para el hover de las tarjetas */
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(83, 189, 153, 0.2);
+        }
+        
+        /* Estilos para Acordeones (FAQ y Servicios) */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out, padding 0.4s ease;
+        }
+        
+        /* Estilos específicos para Servicios */
+        .service-item.expanded .accordion-content {
+            max-height: 300px; /* Altura suficiente */
+            padding-top: 1rem;
+        }
+        .service-item.expanded .service-icon {
+            transform: rotate(180deg);
+        }
+        .service-item.expanded {
+            background-color: #f0fdf4; /* Un verde muy sutil al abrirse */
+            border-color: #53bd99;
+        }
+
+        /* Estilos específicos para FAQ */
+        .faq-item.expanded .accordion-content {
+            max-height: 200px;
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-item.expanded .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Animación del Tick de éxito */
+        .checkmark-circle {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            margin-bottom: 20px;
+        }
+        .checkmark-circle .background {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #53bd99;
+            position: absolute;
+            transform: scale(0);
+            animation: fill .4s ease-in-out .4s forwards;
+        }
+        .checkmark-circle .checkmark {
+            border-radius: 5px;
+        }
+        .checkmark-circle .checkmark.draw:after {
+            animation-delay: 1s;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-name: checkmark;
+            transform: scaleX(-1) rotate(135deg);
+        }
+        .checkmark-circle .checkmark:after {
+            opacity: 1;
+            height: 40px;
+            width: 20px;
+            transform-origin: left top;
+            border-right: 4px solid white;
+            border-top: 4px solid white;
+            content: '';
+            left: 20px;
+            top: 40px;
+            position: absolute;
+            display: none; 
+        }
+        
+        /* Clases para activar la animación */
+        .animate-success .background {
+            transform: scale(1);
+        }
+        .animate-success .checkmark:after {
+            display: block;
+        }
+
+        @keyframes fill {
+            100% {
+                box-shadow: inset 0px 0px 0px 50px #53bd99;
+            }
+        }
+        @keyframes checkmark {
+            0% {
+                height: 0;
+                width: 0;
+                opacity: 1;
+            }
+            20% {
+                height: 0;
+                width: 20px;
+                opacity: 1;
+            }
+            40% {
+                height: 40px;
+                width: 20px;
+                opacity: 1;
+            }
+            100% {
+                height: 40px;
+                width: 20px;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-700">
+
+    <!-- NAVEGACIÓN -->
+    <nav class="fixed w-full z-50 bg-[#f7f7f6]/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i data-lucide="sprout" class="text-brota-main w-8 h-8"></i>
+                    <span class="font-heading font-bold text-2xl tracking-tight text-brota-dark">Brota<span class="text-brota-main">.</span></span>
+                </div>
+                
+                <!-- Menú Desktop -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#quienes-somos" class="text-gray-600 hover:text-brota-main font-medium transition duration-300">Nosotros</a>
+                    <a href="#mision" class="text-gray-600 hover:text-brota-main font-medium transition duration-300">Valores</a>
+                    <a href="#servicios" class="text-gray-600 hover:text-brota-main font-medium transition duration-300">Servicios</a>
+                    <a href="#contacto" class="bg-brota-main text-white px-5 py-2 rounded-full font-medium hover:bg-brota-dark hover:scale-105 transition duration-300 shadow-md">
+                        Contactar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- LANDING / HERO SECTION -->
+    <header class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-heading font-bold text-brota-dark mb-6 reveal active">
+                Bienvenido a <br>
+                <span class="text-brota-main">Brota Marketing</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-500 font-light reveal active" style="transition-delay: 200ms;">
+                Donde tu empresa empieza a crecer
+            </p>
+            <div class="mt-10 flex justify-center gap-4 reveal active" style="transition-delay: 400ms;">
+                <a href="#servicios" class="px-8 py-3 bg-brota-main text-white text-lg font-semibold rounded-lg shadow-lg hover:bg-brota-dark transform hover:-translate-y-1 transition duration-300">
+                    Ver Servicios
+                </a>
+                <a href="#quienes-somos" class="px-8 py-3 border-2 border-brota-main text-brota-main text-lg font-semibold rounded-lg hover:bg-brota-light hover:text-brota-dark transition duration-300">
+                    Conócenos
+                </a>
+            </div>
+        </div>
+        
+        <!-- Elemento decorativo de fondo (Círculo difuminado) -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brota-light opacity-30 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 rounded-full bg-brota-main opacity-20 blur-3xl"></div>
+    </header>
+
+    <!-- QUIÉNES SOMOS -->
+    <section id="quienes-somos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brota-dark mb-6 relative">
+                        ¿Quiénes somos?
+                        <span class="block h-1 w-20 bg-brota-main mt-2 rounded-full"></span>
+                    </h2>
+                    <p class="text-lg leading-relaxed text-gray-600 mb-6">
+                        Somos un grupo de estudiantes apasionados que están finalizando su grado de Marketing y Publicidad. Pero no estamos solos; estamos liderados por un profesor con alta experiencia en el mundo empresarial, la atención al cliente y el trabajo de campo.
+                    </p>
+                    <p class="text-xl font-heading text-brota-dark border-l-4 border-brota-main pl-4 py-2 bg-brota-bg rounded-r-lg">
+                        <strong>Una combinación de ideas nuevas y frescas con la seguridad de la experiencia.</strong>
+                    </p>
+                </div>
+                <div class="relative reveal h-80 bg-brota-light rounded-2xl overflow-hidden flex items-center justify-center card-hover">
+                    <!-- Placeholder visual -->
+                    <i data-lucide="users" class="w-32 h-32 text-white opacity-80"></i>
+                    <div class="absolute inset-0 bg-gradient-to-t from-brota-main/50 to-transparent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISIÓN, VISIÓN Y VALORES -->
+    <section id="mision" class="py-20 bg-brota-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brota-dark">Nuestra Esencia</h2>
+                <p class="mt-4 text-gray-600">Lo que nos mueve a hacer crecer tu negocio</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Misión -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-brota-main card-hover reveal">
+                    <div class="w-14 h-14 bg-brota-light rounded-full flex items-center justify-center mb-6 text-brota-dark">
+                        <i data-lucide="target" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brota-dark mb-4">Misión</h3>
+                    <p class="text-gray-600">
+                        Nuestra misión es integrarnos en tu empresa, formando un nuevo departamento de marketing que trabaja para ti como si fuera parte intrínseca de tu organización.
+                    </p>
+                </div>
+
+                <!-- Visión -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-brota-main card-hover reveal" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-brota-light rounded-full flex items-center justify-center mb-6 text-brota-dark">
+                        <i data-lucide="telescope" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brota-dark mb-4">Visión</h3>
+                    <p class="text-gray-600">
+                        En los próximos años, buscamos conseguir la confianza de múltiples empresas y satisfacer sus necesidades en el ámbito del marketing, convirtiéndonos en un referente de crecimiento.
+                    </p>
+                </div>
+
+                <!-- Valores -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-brota-main card-hover reveal" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-brota-light rounded-full flex items-center justify-center mb-6 text-brota-dark">
+                        <i data-lucide="heart-handshake" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brota-dark mb-4">Valores</h3>
+                    <p class="text-gray-600">
+                        Apostamos por la innovación y el marketing juvenil, sin descartar las ideas tradicionales que funcionan. Priorizamos el profesionalismo y el servicio bien hecho.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUESTROS SERVICIOS -->
+    <section id="servicios" class="py-20 bg-white relative overflow-hidden">
+        <!-- Decoración fondo -->
+        <div class="absolute top-1/2 left-0 w-full h-64 bg-brota-light/20 -skew-y-3 z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-brota-dark">Nuestros Servicios</h2>
+                <p class="mt-4 text-gray-600">Soluciones a medida para cada necesidad</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+                
+                <!-- Servicio 1: SEM -->
+                <div class="service-item bg-white border-2 border-gray-100 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg reveal" onclick="toggleService(this)">
+                    <div class="p-6 flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-brota-light/30 p-2 rounded-lg text-brota-dark">
+                                <i data-lucide="mouse-pointer-2" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">SEM</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="service-icon text-brota-main transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="pb-6 text-gray-600 text-sm">
+                            Gestionamos tus campañas de publicidad pagada en Google Ads y buscadores. Optimizamos tu inversión para conseguir conversiones inmediatas y tráfico cualificado desde el primer día.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: SEO -->
+                <div class="service-item bg-white border-2 border-gray-100 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg reveal" onclick="toggleService(this)">
+                    <div class="p-6 flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-brota-light/30 p-2 rounded-lg text-brota-dark">
+                                <i data-lucide="search" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">SEO</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="service-icon text-brota-main transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="pb-6 text-gray-600 text-sm">
+                            Mejoramos tu visibilidad orgánica en Google. Trabajamos contenidos, estructura web y palabras clave para que tus clientes te encuentren sin necesidad de pagar por cada clic a largo plazo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Gestión de RRSS -->
+                <div class="service-item bg-white border-2 border-gray-100 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg reveal" onclick="toggleService(this)">
+                    <div class="p-6 flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-brota-light/30 p-2 rounded-lg text-brota-dark">
+                                <i data-lucide="smartphone" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Gestión de RRSS</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="service-icon text-brota-main transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="pb-6 text-gray-600 text-sm">
+                            Creamos comunidad alrededor de tu marca. Diseñamos calendarios de contenido, interactuamos con tus seguidores y mantenemos tus perfiles de Instagram, LinkedIn o TikTok activos y profesionales.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Creación de Logotipos -->
+                <div class="service-item bg-white border-2 border-gray-100 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg reveal" onclick="toggleService(this)">
+                    <div class="p-6 flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-brota-light/30 p-2 rounded-lg text-brota-dark">
+                                <i data-lucide="pen-tool" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Creación de Logotipos</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="service-icon text-brota-main transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="pb-6 text-gray-600 text-sm">
+                            Diseñamos la cara de tu empresa. Buscamos una identidad visual única, moderna y adaptable que transmita tus valores y te diferencie de la competencia desde el primer vistazo.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Creación de Cartelería -->
+                <div class="service-item bg-white border-2 border-gray-100 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg reveal" onclick="toggleService(this)">
+                    <div class="p-6 flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-brota-light/30 p-2 rounded-lg text-brota-dark">
+                                <i data-lucide="image" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Creación de Cartelería</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="service-icon text-brota-main transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="pb-6 text-gray-600 text-sm">
+                            Diseño publicitario para eventos, ofertas o promociones. Ya sea para impresión física o banners digitales, creamos piezas visuales impactantes que captan la atención.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Diseño Gráfico -->
+                <div class="service-item bg-white border-2 border-gray-100 rounded-xl overflow-hidden cursor-pointer transition-all duration-300 hover:shadow-lg reveal" onclick="toggleService(this)">
+                    <div class="p-6 flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-brota-light/30 p-2 rounded-lg text-brota-dark">
+                                <i data-lucide="palette" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Diseño Gráfico</h3>
+                        </div>
+                        <i data-lucide="chevron-down" class="service-icon text-brota-main transition-transform duration-300"></i>
+                    </div>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="pb-6 text-gray-600 text-sm">
+                            Soluciones visuales completas: maquetación de catálogos, tarjetas de visita, branding corporativo y cualquier elemento visual que tu empresa necesite para lucir profesional.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Enlace final a contacto -->
+            <div class="mt-12 text-center reveal">
+                <a href="#contacto" class="inline-flex items-center gap-2 text-gray-500 hover:text-brota-main transition-colors duration-300 font-medium group">
+                    ¿No encuentras lo que buscas? Pregúntanos
+                    <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO (MOVIDO AQUÍ, ANTES DEL FAQ) -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Información -->
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-brota-dark mb-6">Contáctanos</h2>
+                    <p class="text-gray-600 mb-8">
+                        ¿Necesitas ayuda? ¿Tienes dudas?
+                        <a href="#faq" class="text-brota-main font-bold hover:underline">Consulta nuestras preguntas frecuentes</a>
+                        o escríbenos directamente.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-brota-light/30 rounded-full flex items-center justify-center text-brota-dark">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p class="font-semibold text-gray-800">info@brotamarketing.es</p>
+                            </div>
+                        </div>
+                        <!-- Bloques de teléfono y oficina eliminados -->
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <div class="bg-brota-bg p-8 rounded-2xl shadow-inner reveal relative min-h-[450px] flex items-center justify-center" style="transition-delay: 200ms;">
+                    
+                    <!-- Mensaje de Éxito (Oculto inicialmente) -->
+                    <div id="successMessage" class="hidden text-center w-full">
+                        <div class="checkmark-circle">
+                            <div class="background"></div>
+                            <div class="checkmark draw"></div>
+                        </div>
+                        <h3 class="text-2xl font-bold text-brota-dark mb-2">¡Enviado!</h3>
+                        <p class="text-gray-600">Te contestaremos lo antes posible.</p>
+                    </div>
+
+                    <!-- El Formulario Real - NETLIFY ORIGINAL -->
+                    <form name="contacto" method="POST" action="/" data-netlify="true" id="contactForm" class="space-y-4 w-full">
+                        <!-- Campo oculto necesario para Netlify cuando se usa AJAX -->
+                        <input type="hidden" name="form-name" value="contacto">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+                                <input type="text" name="nombre" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brota-main focus:border-transparent outline-none transition" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" name="email" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brota-main focus:border-transparent outline-none transition" placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        
+                        <!-- NUEVA FILA: Teléfono y Empresa -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                             <div>
+                                 <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono <span class="text-gray-400 font-normal text-xs">(Opcional)</span></label>
+                                 <input type="tel" name="telefono" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brota-main focus:border-transparent outline-none transition" placeholder="600 123 456">
+                             </div>
+                             <div>
+                                 <label class="block text-sm font-medium text-gray-700 mb-1">Empresa</label>
+                                 <input type="text" name="empresa" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brota-main focus:border-transparent outline-none transition" placeholder="Tu empresa">
+                             </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+                            <!-- ASUNTO LIBRE -->
+                            <input type="text" name="subject" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brota-main focus:border-transparent outline-none transition" placeholder="Escribe aquí el motivo de tu consulta">
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+                            <textarea name="mensaje" rows="4" required class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brota-main focus:border-transparent outline-none transition" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                        </div>
+
+                        <!-- Checkbox de Privacidad (Requisito legal RGPD) -->
+                        <div class="flex items-start gap-2 py-2">
+                            <!-- QUITADO el atributo 'name' para que no salga en el email, pero manteniendo 'required' para obligar a marcarlo -->
+                            <input type="checkbox" id="privacidad" required class="mt-1 w-4 h-4 text-brota-main border-gray-300 rounded focus:ring-brota-main cursor-pointer accent-brota-main">
+                            <label for="privacidad" class="text-sm text-gray-600 cursor-pointer select-none">
+                                He leído y acepto la <a href="#" class="text-brota-main hover:underline">política de privacidad</a>.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full py-3 bg-brota-main text-white font-bold rounded-lg hover:bg-brota-dark hover:scale-[1.02] transform transition duration-300 shadow-md">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ (PREGUNTAS FRECUENTES) -->
+    <section id="faq" class="py-16 bg-brota-bg">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+            <h2 class="text-3xl font-heading font-bold text-brota-dark text-center mb-10">Preguntas Frecuentes</h2>
+            
+            <div class="space-y-4">
+                <!-- Pregunta 1 -->
+                <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-700">¿Cuánto tiempo tardaré en ver resultados?</span>
+                        <i data-lucide="chevron-down" class="faq-icon text-brota-main"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="py-4 text-gray-600 text-sm">Depende del plan escogido. El marketing orgánico (SEO, redes) es como plantar un árbol, requiere tiempo (3-6 meses). Las campañas de pago pueden dar frutos inmediatos.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-700">¿Trabajáis con empresas pequeñas?</span>
+                        <i data-lucide="chevron-down" class="faq-icon text-brota-main"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="py-4 text-gray-600 text-sm">¡Por supuesto! Nuestro "Plan Semilla" está diseñado específicamente para startups y PYMES que necesitan optimizar su presupuesto.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-700">¿Puedo personalizar mi plan?</span>
+                        <i data-lucide="chevron-down" class="faq-icon text-brota-main"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="py-4 text-gray-600 text-sm">Sí, los planes son guías. Podemos hacer un injerto a medida para cubrir exactamente lo que tu empresa necesita.</p>
+                    </div>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div class="faq-item bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-semibold text-gray-700">¿Qué hace diferente al equipo de Brota?</span>
+                        <i data-lucide="chevron-down" class="faq-icon text-brota-main"></i>
+                    </button>
+                    <div class="accordion-content bg-gray-50 px-6">
+                        <p class="py-4 text-gray-600 text-sm">Nuestra mezcla única: la energía inagotable de estudiantes nativos digitales supervisada por la estrategia senior de veteranos del sector.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ACTUALIZADO -->
+    <footer class="bg-brota-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <!-- Columna 1: Logo y Tagline -->
+            <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="sprout" class="w-8 h-8 text-brota-main"></i>
+                    <span class="font-heading font-bold text-2xl">Brota Marketing</span>
+                </div>
+                <!-- TEXTO ACTUALIZADO -->
+                <p class="text-brota-light max-w-sm text-sm">
+                    Nos integramos en tu empresa como un departamento nuevo para ayudarte a florecer con éxito.
+                </p>
+                <!-- Iconos Sociales (ACTUALIZADO: Solo Instagram y TikTok) -->
+                <div class="flex gap-4 mt-2">
+                    <a href="#" class="text-white hover:text-brota-main transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                    <!-- SVG para TikTok (para asegurar que se vea sin dependencias extra) -->
+                    <a href="#" class="text-white hover:text-brota-main transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna 2: Enlaces Legales y Copyright -->
+            <div class="text-left md:text-right">
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 mb-4 text-sm font-semibold">
+                    <a href="#" class="hover:text-brota-main transition">Aviso Legal</a>
+                    <a href="#" class="hover:text-brota-main transition">Política de Privacidad</a>
+                    <a href="#" class="hover:text-brota-main transition">Cookies</a>
+                </div>
+                <p class="text-sm text-brota-light">
+                    © 2026 Brota Marketing. Todos los derechos reservados.<br>
+                    Hecho con pasión por estudiantes y expertos.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts de Funcionalidad -->
+    <script>
+        // Inicializar Iconos
+        lucide.createIcons();
+
+        // Lógica para los Servicios (Acordeón)
+        function toggleService(element) {
+            const isExpanded = element.classList.contains('expanded'); // Usamos .expanded en JS
+            
+            // Si quieres que se cierren los otros al abrir uno, descomenta esto:
+            // document.querySelectorAll('.service-item').forEach(el => el.classList.remove('expanded'));
+
+            if (isExpanded) {
+                element.classList.remove('expanded');
+            } else {
+                element.classList.add('expanded');
+            }
+        }
+
+        // Lógica del Formulario con Netlify y Animación
+        const form = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Recoger datos
+            const myForm = e.target;
+            const formData = new FormData(myForm);
+
+            // Enviar a Netlify mediante Fetch (AJAX) siguiendo la documentación
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString()
+            })
+            .then(response => {
+                // CAMBIO CRUCIAL: Verificamos si Netlify realmente aceptó el formulario
+                if (response.ok) {
+                    // Si va bien (código 200), ocultamos form y mostramos mensaje
+                    form.style.display = 'none';
+                    successMessage.classList.remove('hidden');
+                    successMessage.querySelector('.checkmark-circle').classList.add('animate-success');
+                } else {
+                    // Si Netlify da error (ej. 404, 500), lanzamos error para que vaya al catch
+                    return Promise.reject('Error en el servidor de Netlify: ' + response.statusText);
+                }
+            })
+            .catch((error) => {
+                alert('Hubo un error al enviar. Por favor revisa que estés en la versión online y no en local.');
+                console.error("Error detallado:", error);
+            });
+        });
+
+        // Lógica del Acordeón FAQ
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isExpanded = item.classList.contains('expanded');
+            
+            // Cerrar todos
+            document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('expanded'));
+            
+            // Abrir el clickeado si no estaba abierto
+            if (!isExpanded) {
+                item.classList.add('expanded');
+            }
+        }
+
+        // Lógica de Animación al hacer Scroll (usa .active)
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

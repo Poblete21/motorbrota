@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo de Google y Salud: Criterios E-E-A-T | Brota Marketing</title>
+    <meta name="description" content="Descubre cómo el algoritmo E-E-A-T de Google afecta al SEO de tu clínica. Aprende a posicionar tu contenido médico con autoridad y rigor científico.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Algoritmo de Google y Salud: Criterios E-E-A-T">
+    <meta property="og:description" content="Descubre cómo el algoritmo E-E-A-T de Google afecta al SEO de tu clínica. Aprende a posicionar tu contenido médico con autoridad y rigor científico.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">SEO Médico</span>
+                    <span class="text-gray-400 text-sm font-semibold">5 min de lectura</span>
+                    <span class="text-gray-300 mx-1">•</span>
+                    <span class="text-gray-400 text-sm font-semibold flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> 16 Jul, 2026</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Algoritmo de Google y Salud: Criterios <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">E-E-A-T</span> para tu clínica
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/seo_medico_ai.jpg" 
+                         alt="Algoritmo de Google y Salud Criterios EEAT" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Cuando un usuario busca información sobre síntomas, diagnósticos o tratamientos estéticos en internet, Google asume una responsabilidad máxima. Una información errónea en el sector de la salud puede tener consecuencias graves para la vida de las personas.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Por ello, el buscador clasifica a las páginas web de centros sanitarios dentro de la categoría <strong>YMYL (Your Money or Your Life / Tu dinero o tu vida)</strong> y les aplica un filtro de calidad implacable conocido como <strong>E-E-A-T</strong>.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si el blog de tu centro está redactado sin tener en cuenta estas directrices, el algoritmo ocultará tus artículos de los resultados de búsqueda, por muy bien escritos que parezcan. Para lograr un posicionamiento web para clínicas sólido, es obligatorio entender cómo piensa el motor de búsqueda actual.
+                </p>
+            </section>
+
+            <!-- Sección 1 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    ¿Qué significan las siglas E-E-A-T en el SEO médico?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    E-E-A-T es el acrónimo que utilizan los evaluadores de calidad de Google para medir la fiabilidad de un sitio web. Se compone de cuatro pilares fundamentales:
+                </p>
+                
+                <div class="mb-6 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <div class="bg-brota-light border-l-4 border-brota-green p-5 rounded-r-xl flex items-start gap-3 mb-4">
+                        <i data-lucide="user-check" class="text-brota-green mt-1 flex-shrink-0"></i>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong class="text-brota-dark">Experiencia (Experience):</strong> Demostrar que el creador del contenido tiene experiencia real y práctica en el tema que trata (por ejemplo, un cirujano explicando un postoperatorio).
+                        </p>
+                    </div>
+                    <div class="bg-brota-light border-l-4 border-brota-green p-5 rounded-r-xl flex items-start gap-3 mb-4">
+                        <i data-lucide="award" class="text-brota-green mt-1 flex-shrink-0"></i>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong class="text-brota-dark">Especialización (Expertise):</strong> El contenido debe estar respaldado por credenciales, títulos o un conocimiento técnico profundo de la materia sanitaria.
+                        </p>
+                    </div>
+                    <div class="bg-brota-light border-l-4 border-brota-green p-5 rounded-r-xl flex items-start gap-3 mb-4">
+                        <i data-lucide="star" class="text-brota-green mt-1 flex-shrink-0"></i>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong class="text-brota-dark">Autoridad (Authoritativeness):</strong> La reputación del autor y de la clínica en internet, medida a través de menciones en portales médicos o enlaces desde otros medios oficiales.
+                        </p>
+                    </div>
+                    <div class="bg-brota-light border-l-4 border-brota-green p-5 rounded-r-xl flex items-start gap-3">
+                        <i data-lucide="shield-check" class="text-brota-green mt-1 flex-shrink-0"></i>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            <strong class="text-brota-dark">Confiabilidad (Trustworthiness):</strong> El pilar central. La web debe ser segura, transparente, honesta y precisa en sus datos médicos.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 2 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    Cómo adaptar tu contenido a las exigencias de Google YMYL
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Para cumplir con el SEO sanitario YMYL y lograr que el algoritmo premie a tu plataforma con las primeras posiciones, es obligatorio aplicar cambios estructurales en la forma de publicar información:
+                </p>
+
+                <div class="mb-10 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4">
+                        La firma de autoría obligatoria
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-5">
+                        Cada artículo de salud debe ir firmado por un profesional médico real. Al final del texto debe incluirse una caja de autor con el nombre del doctor, su fotografía, su número de colegiado oficial y un enlace a su perfil profesional o currículum académico.
+                    </p>
+                </div>
+
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Además, los textos deben cuidar el rigor científico mediante dos acciones técnicas:
+                </p>
+
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="text-brota-green mt-1 flex-shrink-0"></i>
+                        <span class="text-lg text-gray-700"><strong>Fuentes bibliográficas y enlaces externos:</strong> Cita estudios científicos y añade enlaces salientes hacia organismos oficiales de salud (OMS, ministerios, revistas médicas internacionales) que respalden las afirmaciones del artículo.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="check-circle-2" class="text-brota-green mt-1 flex-shrink-0"></i>
+                        <span class="text-lg text-gray-700"><strong>Actualización constante de contenidos:</strong> Google penaliza la información médica obsoleta. Es necesario realizar auditorías periódicas para renovar los datos de salud de los artículos antiguos del blog.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Sección 3 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    El peligro de delegar la redacción médica en la IA sin supervisión
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Con el auge de las nuevas tendencias de IA y los motores generativos de búsqueda, muchas clínicas han saturado internet con artículos de salud genéricos. Google detecta con facilidad el contenido masivo que carece de criterio clínico.
+                </p>
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    La Inteligencia Artificial es una excelente aliada para estructurar ideas, pero el posicionamiento web de clínicas actual exige que el 100% del contenido de salud sea revisado y validado por un profesional sanitario colegiado antes de ser publicado. La automatización sin supervisión destruye la confianza (Trustworthiness) del algoritmo.
+                </blockquote>
+            </section>
+
+            <!-- Sección 4 Tabla -->
+            <section class="mb-16">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    El peso de los factores de posicionamiento en Salud
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Google analiza de manera distinta una web corporativa convencional de una clínica médica. Aquí se detallan los factores diferenciales que prioriza el algoritmo:
+                </p>
+
+                <div class="overflow-x-auto rounded-2xl shadow-sm border border-gray-200 mb-8">
+                    <table class="w-full text-left border-collapse bg-white min-w-[600px]">
+                        <thead>
+                            <tr class="bg-brota-dark text-white font-heading text-lg">
+                                <th class="p-4 border-b border-gray-700">Factor SEO Tradicional</th>
+                                <th class="p-4 border-b border-gray-700">Impacto en Webs Comunes</th>
+                                <th class="p-4 border-b border-gray-700 bg-brota-green">Impacto en Sector Salud (YMYL)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-base">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Palabras clave repetidas</td>
+                                <td class="p-4">Medio (Sustituido por contexto)</td>
+                                <td class="p-4 font-semibold text-red-600">Muy bajo (Penalizado si hay saturación)</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Firma con número de colegiado</td>
+                                <td class="p-4">No aplica</td>
+                                <td class="p-4 font-semibold text-brota-green">Crítico (Filtro de entrada de E-E-A-T)</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Enlaces de autoridad médica</td>
+                                <td class="p-4">Alto</td>
+                                <td class="p-4 font-semibold text-brota-green">Muy Alto (Transfiere reputación sectorial)</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Opiniones y respuestas de usuarios</td>
+                                <td class="p-4">Alto</td>
+                                <td class="p-4 font-semibold text-brota-green">Crítico (Las reseñas de Google definen el SEO local)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Conclusión y CTA -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Lidera el sector salud con rigor y estrategia</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    El éxito del <strong>marketing sanitario profesional</strong> en buscadores ya no depende de trucos técnicos artificiales. Google busca proteger al usuario ofreciéndole únicamente fuentes de absoluta solvencia. Demostrar el valor, la formación y el rigor de tu cuadro médico a través de los criterios E-E-A-T es la única estrategia sólida para liderar internet.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto relative z-10">
+                    En <strong>Brota Marketing</strong> somos especialistas en optimizar la estructura técnica y editorial de páginas web médicas. Diseñamos tu estrategia de contenidos adaptada a las directrices de los evaluadores de Google para multiplicar tu visibilidad orgánica y atraer pacientes de calidad a tu consulta.
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Optimizar mi Clínica
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

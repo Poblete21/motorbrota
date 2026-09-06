@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branding para Pymes: Cómo Construir una Marca que tu Cliente Prefiera | Brota Marketing</title>
+    <meta name="description" content="Descubre por qué el branding no es un lujo de grandes empresas. Aprende los 5 pilares para diferenciar tu pyme y dejar de competir por precio en tu mercado local.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Branding para Pymes: Construye una Marca que Prefieran">
+    <meta property="og:description" content="Sin marca, eres un commodity y siempre habrá alguien dispuesto a cobrar menos. Conoce los 5 pilares del branding local para pymes.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Identidad Corporativa</span>
+                    <span class="text-gray-400 text-sm font-semibold">4 min de lectura</span>
+                    <span class="text-gray-300 mx-1">•</span> <span class="text-gray-400 text-sm font-semibold flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> 06 Ago, 2026</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Branding para Pymes: Cómo Construir una Marca que tu Cliente <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">Recuerde y Prefiera</span>
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/branding-para-pymes_ai.jpg" 
+                         alt="Fachada de pequeño negocio local con identidad visual cuidada y atractiva" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Hay dos fontaneros en tu ciudad. Los dos tienen las mismas herramientas, la misma experiencia y precios similares. Uno tiene una furgoneta con su logo, una web clara, una estética reconocible en Instagram y un nombre que sus clientes recomiendan con naturalidad. El otro no tiene nada de eso: solo un número de teléfono y un perfil de WhatsApp.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    ¿A cuál llamas cuando tienes una urgencia un domingo?
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Eso es el branding. No es un lujo de grandes empresas. Es la razón por la que un negocio se recuerda y otro se olvida. Y es exactamente lo que separa a una pyme que compite por precio de una que compite por preferencia.
+                </p>
+            </section>
+
+            <!-- Sección: Qué es y qué no es -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Qué es el branding y qué NO es
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    El <strong>branding</strong> es el proceso de construir y gestionar la percepción que tienen los demás de tu negocio. Es la suma de todo: tu nombre, tu logo, tu tono de voz, la experiencia del cliente y la promesa que haces.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div class="bg-red-50 p-6 rounded-2xl border border-red-100">
+                        <h3 class="font-bold text-red-700 mb-4 flex items-center gap-2"><i data-lucide="x-circle" class="w-5 h-5"></i> Lo que NO es</h3>
+                        <ul class="space-y-3 text-red-900/80">
+                            <li>• Solo el logo. El logo es una mínima parte.</li>
+                            <li>• Solo diseño. El diseño es la capa visual, el branding va más profundo.</li>
+                            <li>• Solo para grandes corporaciones. Una panadería de barrio puede tener un branding brutal.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-brota-light p-6 rounded-2xl border border-brota-green/20">
+                        <h3 class="font-bold text-brota-green mb-4 flex items-center gap-2"><i data-lucide="check-circle-2" class="w-5 h-5"></i> Lo que SÍ es</h3>
+                        <ul class="space-y-3 text-brota-dark/80">
+                            <li>• La razón por la que te eligen a ti.</li>
+                            <li>• Lo que dicen de ti cuando no estás.</li>
+                            <li>• Que te busquen por tu nombre, no por lo que haces.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <blockquote class="italic text-xl text-brota-dark bg-gray-50 border-l-4 border-gray-800 p-6 rounded-r-xl my-8 shadow-sm">
+                    Sin marca, eres un commodity. Un commodity se elige por precio. Y siempre habrá alguien dispuesto a cobrar menos que tú.
+                </blockquote>
+            </section>
+
+            <!-- Sección: Los 5 pilares -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    Los 5 pilares del branding para pymes
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Construir una marca no requiere gastar miles de euros en agencias de Madrid. Requiere responder con honestidad a cinco preguntas clave:
+                </p>
+
+                <div class="space-y-8">
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-3 flex items-center gap-3">
+                            <span class="text-brota-green">1.</span> Propósito: ¿Por qué existes?
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            No es "para ganar dinero", eso es una consecuencia. Una clínica dental no existe para poner empastes, existe para devolver la confianza en la sonrisa. Define tu propósito real.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-3 flex items-center gap-3">
+                            <span class="text-brota-green">2.</span> Valores: ¿Qué no negocias?
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Transparencia, rapidez, personalización... No son palabras para poner en la web, son comportamientos. Si dices que eres "cercano" pero tardas tres días en responder un email, es mentira.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-3 flex items-center gap-3">
+                            <span class="text-brota-green">3.</span> Propuesta de valor: ¿Por qué tú?
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                            Qué haces, para quién y qué resultado consigues.
+                        </p>
+                        <div class="bg-gray-50 p-4 rounded-xl text-sm">
+                            <p class="mb-2"><span class="text-red-500 font-bold">Débil:</span> "Agencia de marketing con amplia experiencia."</p>
+                            <p><span class="text-brota-green font-bold">Fuerte:</span> "El departamento de marketing externo de pymes que quieren crecer sin contratar a nadie más."</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-3 flex items-center gap-3">
+                            <span class="text-brota-green">4.</span> Personalidad: ¿Cómo hablas?
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            ¿Formal o cercana? ¿Con humor o seria? Lo que destruye la confianza es cambiar de registro según el día o el canal. Mantén una voz consistente.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-3 flex items-center gap-3">
+                            <span class="text-brota-green">5.</span> Identidad visual: Reconocible
+                        </h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Logo, colores, tipografías. Lo que más daña a una pyme es tener cinco logos distintos y cambiar de colores cada mes. Sé consistente.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección: Branding Local -->
+            <section class="mb-16">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Branding Local: Tu súper poder contra las franquicias
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Hay algo que ninguna multinacional puede copiar: tu historia, tu arraigo y tu conocimiento del barrio o ciudad.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Una zapatería de Murcia que lleva tres generaciones en la misma calle tiene un activo brutal. El error es no contarlo. Tu historia local es tu diferenciador más auténtico. ¡Úsalo!
+                </p>
+
+                <div class="bg-brota-light border-l-4 border-brota-green p-6 md:p-8 rounded-r-2xl shadow-sm my-10">
+                    <strong class="font-heading text-xl text-brota-dark block mb-4">Empieza esta semana:</strong>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex gap-2"><i data-lucide="check" class="text-brota-green shrink-0 mt-1"></i> Audita tu web, Instagram y local: ¿dicen lo mismo?</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="text-brota-green shrink-0 mt-1"></i> Define tu propuesta en una sola frase.</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="text-brota-green shrink-0 mt-1"></i> Unifica tus colores y logo hoy mismo.</li>
+                        <li class="flex gap-2"><i data-lucide="check" class="text-brota-green shrink-0 mt-1"></i> Empieza a contar tu historia real.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- CTA / Conclusión -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">¿Tu negocio tiene marca o solo tiene logo?</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Puedes tener la mejor campaña de Google Ads, pero si cuando el usuario llega a tu web no entiende quién eres ni por qué eres diferente, el dinero se evapora.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-semibold">
+                    En Brota Marketing ayudamos a pymes a definir su identidad y dejar de competir por precio. Pide tu consultoría y analizamos cómo te perciben hoy.
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Reservar Consultoría Gratuita
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

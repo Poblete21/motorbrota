@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Brota Marketing | Novedades y SEO</title>
+    <meta name="description" content="Artículos sobre Marketing, tendencias, SEO y estrategias reales para hacer brotar tu negocio de forma constante.">
+    
+    <!-- Mejoras SEO Avanzadas -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://brotamarketing.es/blog/" />
+
+    <!-- Favicon Unificado -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    
+    <meta property="og:title" content="Blog de Brota Marketing">
+    <meta property="og:description" content="Estrategias reales de Marketing digital para tu negocio.">
+    <meta property="og:image" content="https://i.imgur.com/fWRgqFz.png">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config Unificado -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .glass { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+        }
+    </style>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray overflow-x-hidden antialiased">
+
+    <!-- Background Blobs -->
+    <div class="fixed inset-0 w-full h-full pointer-events-none z-[-1] overflow-hidden">
+        <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-brota-green opacity-20 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+        <div class="absolute top-[20%] right-[-10%] w-96 h-96 bg-teal-200 opacity-30 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+        <div class="absolute bottom-[-20%] left-[20%] w-96 h-96 bg-yellow-100 opacity-40 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Vista del Blog -->
+    <main class="pt-40 pb-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <span class="text-brota-green font-bold tracking-wider uppercase text-sm">Novedades y Noticias</span>
+                <h1 class="font-heading text-5xl lg:text-6xl font-black mt-2 mb-6 text-brota-dark">Nuestro <span class="text-brota-green">Blog</span></h1>
+                <p class="text-gray-600 text-lg">Estrategias reales de marketing digital sin humo ni tecnicismos innecesarios para escalar tu negocio.</p>
+            </div>
+
+            <!-- Buscador de Artículos -->
+            <div class="max-w-2xl mx-auto mb-12 relative z-50 reveal">
+                <div class="relative">
+                    <i data-lucide="search" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                    <input type="text" id="blog-search-input" placeholder="Buscar artículos por título o temática..." class="w-full pl-12 pr-4 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-brota-green focus:border-transparent shadow-sm bg-white text-gray-700 transition-all text-lg">
+                </div>
+                <!-- Resultados del buscador -->
+                <div id="search-results-container" class="absolute w-full mt-2 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden hidden flex-col max-h-[400px] overflow-y-auto">
+                    <!-- Los resultados se inyectan aquí con JS -->
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/gestionar-opiniones-google.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="/blog/images/gestionar_opiniones_ai.jpg" alt="Mujer escribiendo una reseña en su teléfono" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <div class="flex items-center gap-3 mb-4">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit">Reputación Online</span>
+                        <span class="text-xs text-gray-500 font-semibold flex items-center gap-1"><i data-lucide="calendar" class="w-3 h-3"></i> 30 Jun, 2026</span>
+                    </div>
+                        <a href="/blog/gestionar-opiniones-google.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">Cómo gestionar las opiniones de Google en tu negocio</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Una reseña negativa puede costarte clientes. Aprende a gestionar tu reputación online, responder críticas y conseguir más valoraciones en Google.</p>
+                        <a href="/blog/gestionar-opiniones-google.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/seo-vs-geo-marketing-inteligencia-artificial.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="/blog/images/seo_geo_ai.jpg" alt="SEO vs GEO en Inteligencia Artificial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">SEO y Tendencias</span>
+                        <a href="/blog/seo-vs-geo-marketing-inteligencia-artificial.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">SEO vs. GEO: Adapta el contenido de tu empresa a la Inteligencia Artificial</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">¿Sabías que el posicionamiento web ha cambiado? Descubre la diferencia entre SEO y GEO y haz que la IA de Google recomiende tu empresa.</p>
+                        <a href="/blog/seo-vs-geo-marketing-inteligencia-artificial.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/calcular-roi-marketing-digital.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="/blog/images/calcular_roi_ai.jpg" alt="Calcular ROI de una campaña de marketing digital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">Analítica y Estrategia</span>
+                        <a href="/blog/calcular-roi-marketing-digital.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">¿Cómo calcular el ROI de una campaña de marketing digital?</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Descubre de forma sencilla cómo medir la rentabilidad real de tus campañas de marketing digital y deja de tirar el dinero en publicidad.</p>
+                        <a href="/blog/calcular-roi-marketing-digital.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/whatsapp-business-captar-clientes.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="/blog/images/whatsapp_business_ai.jpg" alt="WhatsApp Business para empresas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">Ventas Digitales</span>
+                        <a href="/blog/whatsapp-business-captar-clientes.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">WhatsApp Business para Empresas: Capta Clientes Rápidamente</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Descubre cómo configurar WhatsApp Business, automatizar mensajes y cerrar más ventas con esta guía práctica para negocios y pymes.</p>
+                        <a href="/blog/whatsapp-business-captar-clientes.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/analisis-competencia-digital-seo.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="/blog/images/analisis_competencia_ai.jpg" alt="Análisis de competencia digital" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">Estrategia SEO</span>
+                        <a href="/blog/analisis-competencia-digital-seo.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">Cómo analizar a tu competencia digital: Guía SEO</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Descubre paso a paso cómo auditar a tu competencia en internet antes de invertir en publicidad o SEO. Detecta sus debilidades y capta a sus clientes.</p>
+                        <a href="/blog/analisis-competencia-digital-seo.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/web-pierde-ventas-3-segundos.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600&h=400" alt="Conversión Web en 3 segundos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">Conversión Web</span>
+                        <a href="/blog/web-pierde-ventas-3-segundos.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">Cómo una web pierde ventas en 3 segundos (y cómo evitarlo)</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Descubre los 5 errores críticos de diseño web que destruyen tus ventas nada más entrar el usuario y cómo convertir tu página en un activo de captación.</p>
+                        <a href="/blog/web-pierde-ventas-3-segundos.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/neuromarketing-ventas-digitales.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=600&h=400" alt="Neuromarketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">Estrategia</span>
+                        <a href="/blog/neuromarketing-ventas-digitales.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">Qué es el neuromarketing y cómo aumenta tus ventas</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Descubre cómo el neuromarketing te ayuda a conectar con tus clientes en los primeros 3 segundos, mejorar tu web y generar más ventas sin humo.</p>
+                        <a href="/blog/neuromarketing-ventas-digitales.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal">
+                    <a href="/blog/plan-marketing-paso-a-paso.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="/blog/images/plan-marketing.png" alt="Plan de marketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">Estrategia</span>
+                        <a href="/blog/plan-marketing-paso-a-paso.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">Cómo elaborar un plan de marketing paso a paso: La guía definitiva</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Muchos empresarios sienten que están invirtiendo tiempo y dinero en redes sociales o publicidad sin ver retorno. Descubre cómo trazar una ruta clara.</p>
+                        <a href="/blog/plan-marketing-paso-a-paso.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+<article class="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col group reveal delay-100">
+                    <a href="/blog/elegir-agencia-marketing-2026.html" class="block h-52 overflow-hidden relative bg-brota-light">
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=600&h=400" alt="Elegir agencia de marketing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </a>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <span class="text-xs font-bold uppercase text-brota-green bg-brota-green/10 px-3 py-1 rounded-full w-fit mb-4">Agencias</span>
+                        <a href="/blog/elegir-agencia-marketing-2026.html">
+                            <h2 class="font-heading text-xl font-bold text-brota-dark mb-3 leading-tight group-hover:text-brota-green transition-colors">Cómo elegir la mejor agencia de marketing digital en 2026</h2>
+                        </a>
+                        <p class="text-gray-500 text-sm mb-6 line-clamp-3">Buscar una agencia se ha convertido en un campo de minas. Aprende qué métricas importan realmente y huye de promesas imposibles.</p>
+                        <a href="/blog/elegir-agencia-marketing-2026.html" class="mt-auto inline-flex items-center text-brota-dark font-bold group-hover:text-brota-green transition-colors w-fit">
+                            Leer artículo <i data-lucide="arrow-right" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </article>
+</div>
+<div class="flex justify-center items-center space-x-2 mt-12">
+<a href="index.html" class="px-4 py-2 rounded-lg font-bold shadow-sm bg-white text-brota-dark hover:bg-brota-light transition-colors">1</a>
+<a href="index-2.html" class="px-4 py-2 rounded-lg font-bold shadow-sm bg-white text-brota-dark hover:bg-brota-light transition-colors">2</a>
+<a href="index-3.html" class="px-4 py-2 rounded-lg font-bold shadow-sm bg-brota-green text-white transition-colors">3</a>
+<a href="index-4.html" class="px-4 py-2 rounded-lg font-bold shadow-sm bg-white text-brota-dark hover:bg-brota-light transition-colors">4</a>
+</div>
+</main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-brota-dark text-white pt-16 pb-12 relative overflow-hidden mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-3 gap-8 pt-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-8 w-auto hover:opacity-80 transition-opacity"></a>
+                    </div>
+                    <p class="text-gray-500 text-sm">Tu departamento de Marketing externo. Acompañando a las pymes de nuestra Región.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brota-green shrink-0"></i> info@brotamarketing.es</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brota-green shrink-0"></i> +34 641 44 22 87</li>
+                        <li class="flex items-center gap-2 mt-4 pt-4 border-t border-white/10"><i data-lucide="instagram" class="w-4 h-4 text-brota-green shrink-0"></i> <a href="https://instagram.com/brota.marketing" target="_blank" rel="noopener noreferrer" class="hover:text-brota-green transition-colors">@brota.Marketing</a></li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brota-green shrink-0 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                            <a href="https://tiktok.com/@brota.marketing" target="_blank" rel="noopener noreferrer" class="hover:text-brota-green transition-colors">@brota.Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-brota-green transition-colors">Aviso Legal</a></li>
+                        <li><a href="/privacidad/" class="hover:text-brota-green transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/cookies/" class="hover:text-brota-green transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm mt-12 border-t border-white/10 pt-8">
+                &copy; <span id="year"></span> Brota Marketing. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp Flotante Animado -->
+    <a href="https://wa.me/34641442287" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all z-50 group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.551 4.152 1.597 5.96L.103 23.864l5.992-1.493a11.97 11.97 0 005.936 1.57h.005c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.942c-1.802 0-3.565-.484-5.112-1.401l-.367-.217-3.801.947.962-3.706-.239-.379a9.981 9.981 0 01-1.536-5.268c0-5.505 4.48-9.985 9.985-9.985 2.668 0 5.176 1.04 7.062 2.926A9.92 9.92 0 0122.016 12c0 5.505-4.48 9.985-9.985 9.985zm5.475-7.48c-.3-.15-1.776-.877-2.05-.978-.275-.1-.476-.15-.676.15-.2.3-.776.978-.952 1.178-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.488-.89-.794-1.49-1.775-1.666-2.075-.175-.3-.02-.463.13-.613.136-.136.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.587-.492-.507-.676-.516-.175-.009-.375-.009-.575-.009s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.875 1.225 3.075c.15.2 2.1 3.2 5.087 4.487.712.306 1.267.488 1.7.625.714.225 1.365.194 1.877.118.572-.084 1.776-.725 2.026-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    
+
+    <!-- Scripts unificados -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Intersection Observer para las animaciones Reveal
+        // Animación de scroll (Reveal)
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Ejecutar al cargar
+
+        // Menú Móvil
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        
+    </script>
+    <script src="/cookie-banner.js"></script>
+    <script>
+        (function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.querySelectorAll('article[data-publish-date]').forEach(article => {
+                if (article.dataset.publishDate <= today) {
+                    article.style.display = '';
+                    setTimeout(() => article.classList.add('active'), 100);
+                }
+            });
+        })();
+    </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById('blog-search-input');
+        const resultsContainer = document.getElementById('search-results-container');
+        let articlesData = [];
+        if(searchInput && resultsContainer) {
+            fetch('/blog/search_index.json')
+                .then(res => res.json())
+                .then(data => { articlesData = data; })
+                .catch(err => console.error("Error cargando buscador:", err));
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                resultsContainer.innerHTML = '';
+                if (query.length < 2) {
+                    resultsContainer.classList.add('hidden');
+                    resultsContainer.classList.remove('flex');
+                    return;
+                }
+                const filtered = articlesData.filter(art => 
+                    art.title.toLowerCase().includes(query) || 
+                    art.description.toLowerCase().includes(query) || 
+                    art.category.toLowerCase().includes(query)
+                );
+                if (filtered.length === 0) {
+                    resultsContainer.innerHTML = '<div class="p-4 text-center text-gray-500">No se encontraron artículos.</div>';
+                } else {
+                    filtered.forEach(art => {
+                        const resultEl = document.createElement('a');
+                        resultEl.href = art.url;
+                        resultEl.className = "block p-4 hover:bg-brota-light transition-colors border-b border-gray-50 last:border-0";
+                        resultEl.innerHTML = `
+                            <div class="text-xs text-brota-green font-bold uppercase mb-1">${art.category}</div>
+                            <div class="font-bold text-brota-dark">${art.title}</div>
+                            <div class="text-sm text-gray-500 line-clamp-1">${art.description}</div>
+                        `;
+                        resultsContainer.appendChild(resultEl);
+                    });
+                }
+                resultsContainer.classList.remove('hidden');
+                resultsContainer.classList.add('flex');
+                if(typeof lucide !== 'undefined') lucide.createIcons();
+            });
+            document.addEventListener('click', (e) => {
+                if (!searchInput.contains(e.target) && !resultsContainer.contains(e.target)) {
+                    resultsContainer.classList.add('hidden');
+                    resultsContainer.classList.remove('flex');
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

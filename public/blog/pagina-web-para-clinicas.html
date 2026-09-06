@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño de página web para clínicas: 4 claves para convertir | Brota Marketing</title>
+    <meta name="description" content="¿Tu web médica recibe visitas, pero no genera citas? Descubre los elementos esenciales de diseño y conversión en una página web para clínicas.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Diseño de página web para clínicas: 4 claves para convertir">
+    <meta property="og:description" content="¿Tu web médica recibe visitas, pero no genera citas? Descubre los elementos esenciales de diseño y conversión en una página web para clínicas.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Desarrollo Web</span>
+                    <span class="text-gray-400 text-sm font-semibold">3 min de lectura</span>
+                    <span class="text-gray-300 mx-1">•</span>
+                    <span class="text-gray-400 text-sm font-semibold flex items-center gap-1"><i data-lucide="calendar" class="w-4 h-4"></i> 07 Jul, 2026</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Página web para clínicas: <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">4 elementos clave</span> para convertir visitas en pacientes
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/pagina_web_clinicas_ai.jpg" 
+                         alt="Diseño web para clínicas médicas y estéticas" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Muchos centros de salud y estética cometen el error de tratar su sitio web como un simple folleto digital institucional.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Sin embargo, en el marketing sanitario, una <strong>página web para clínicas</strong> debe funcionar como el activo más importante de tu embudo de ventas. Si un usuario local llega a tu portal buscando un tratamiento y lo abandona sin pedir cita, tu plataforma está fallando en la conversión.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Para evitarlo, existen cuatro pilares que transforman una web informativa en una auténtica máquina de generación de consultas médicas.
+                </p>
+            </section>
+
+            <!-- 1. Sistema de reserva de citas -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    1. Sistema de reserva de citas intuitivo y visible
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    El principal objetivo de conversión de cualquier <strong>diseño web médico</strong> es facilitar la acción del usuario. 
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si el proceso para agendar una consulta requiere rellenar formularios interminables o realizar llamadas en horarios comerciales estrictos, la tasa de abandono se disparará de inmediato.
+                </p>
+                
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 mb-8">
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="mouse-pointer-click" class="text-brota-green w-6 h-6 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <strong class="text-brota-dark text-xl block mb-2">Botones de Acción (CTA) fijos</strong>
+                                <p class="text-gray-600">El botón de "Pedir Cita" o "Contacto" debe estar siempre visible en el menú superior (sticky header) y especialmente adaptado al formato móvil.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <i data-lucide="calendar-check" class="text-brota-green w-6 h-6 mt-1 flex-shrink-0"></i>
+                            <div>
+                                <strong class="text-brota-dark text-xl block mb-2">Integración de agenda en tiempo real</strong>
+                                <p class="text-gray-600">Ofrecer la posibilidad de elegir doctor, día y hora directamente desde la web (mediante integraciones con softwares médicos) reduce la fricción brutalmente y automatiza tu gestión interna.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 2. Secciones de tratamientos -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    2. Secciones de tratamientos orientadas al beneficio
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Un paciente no compra un procedimiento técnico complejo; compra la solución a un problema o la consecución de un deseo estético o de salud. 
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Las páginas de servicios de tu clínica deben equilibrar el rigor médico con un lenguaje persuasivo de marketing.
+                </p>
+
+                <div class="bg-brota-light border-l-4 border-brota-green p-6 rounded-r-xl shadow-sm my-8">
+                    <h3 class="font-heading font-bold text-xl text-brota-dark mb-3">Estructura recomendada para tus tratamientos:</h3>
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        Cada tratamiento debe contar con su propia página indexable (esto es clave para el posicionamiento web local), estructurada con un H1 claro, los beneficios directos del tratamiento, fases del proceso, preguntas frecuentes reales y casos de éxito de la clínica.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 3. Autoridad médica -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    3. Autoridad médica y cumplimiento normativo
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    La salud es un sector estrictamente regulado. Los buscadores como Google lo clasifican como YMYL (Your Money or Your Life) y son muy exigentes. Además, están las normativas legales vigentes.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Para generar confianza real en tus pacientes y no ser penalizado por Google, tu sitio web debe reflejar transparencia absoluta:
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <i data-lucide="stethoscope" class="text-brota-green w-8 h-8 mb-4"></i>
+                        <h3 class="font-heading font-bold text-xl text-brota-dark mb-2">Cuadro médico transparente</h3>
+                        <p class="text-gray-600">Páginas de perfil detalladas de los doctores con sus respectivos números de colegiado y especialidades oficiales.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                        <i data-lucide="scale" class="text-brota-green w-8 h-8 mb-4"></i>
+                        <h3 class="font-heading font-bold text-xl text-brota-dark mb-2">Textos legales rigurosos</h3>
+                        <p class="text-gray-600">Cumplimiento estricto del RGPD y de las normativas específicas de publicidad médica de tu comunidad autónoma.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. Prueba social -->
+            <section class="mb-16">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    4. Prueba social adaptada al sector salud
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Complementando la importancia vital que tienen las valoraciones externas en Google Maps, tu propia plataforma debe actuar como el mejor escaparate de confianza.
+                </p>
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    Incluir de manera nativa testimonios detallados y fotografías de antes y después de los tratamientos (si la normativa de tu colegio profesional lo permite), es el <strong>factor definitivo</strong> que empuja al usuario indeciso a realizar la reserva.
+                </blockquote>
+            </section>
+
+            <!-- Conclusión / CTA -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Convierte tu web en el mejor comercial de tu clínica</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Una página web para clínicas de alto rendimiento combina la velocidad de carga extrema, una optimización SEO local impecable y una experiencia de usuario diseñada específicamente para el sector salud.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10 font-bold">
+                    No se trata solo de tener una web estética, sino de buscar rentabilidad pura.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10">
+                    En <strong>Brota Marketing</strong> desarrollamos y optimizamos sitios web médicos enfocados obsesivamente en la experiencia del paciente y en la maximización de la conversión. ¿Hablamos de tu caso?
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Solicitar Asesoría para tu Web
+                    <i data-lucide="rocket" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

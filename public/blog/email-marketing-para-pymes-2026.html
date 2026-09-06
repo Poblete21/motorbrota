@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Marketing para Pymes: Cómo Vender Más sin Depender de las Redes Sociales | Brota Marketing</title>
+    <meta name="description" content="Descubre qué es el email marketing, cómo crear tu lista de contactos desde cero y por qué sigue siendo el canal con mayor ROI para las pymes españolas.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brota-green': '#A3E635',
+                        'brota-dark': '#1C1C1C',
+                        'brota-light': '#F4F5F0'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'heading': ['Space Grotesk', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1C1C1C 0%, #2A2A2A 100%);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Estilos específicos para el contenido del blog */
+        .prose h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1C1C1C;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        .prose h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1C1C1C;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .prose p {
+            margin-bottom: 1.5rem;
+            color: #4B5563;
+            font-size: 1.125rem;
+            line-height: 1.75;
+        }
+        .prose ul {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+            list-style-type: none;
+        }
+        .prose li {
+            margin-bottom: 0.75rem;
+            color: #4B5563;
+            font-size: 1.125rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .prose li::before {
+            content: "•";
+            color: #A3E635;
+            font-weight: bold;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -5px;
+        }
+        .prose strong {
+            color: #1C1C1C;
+            font-weight: 600;
+        }
+        .prose blockquote {
+            border-left: 4px solid #A3E635;
+            padding-left: 1.5rem;
+            font-style: italic;
+            color: #1C1C1C;
+            background-color: #F4F5F0;
+            padding: 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body class="bg-brota-light text-gray-800 font-sans antialiased selection:bg-brota-green selection:text-brota-dark">
+
+    <!-- Navegación -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white border-b border-gray-100 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="/" class="flex-shrink-0">
+                        <img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-8 w-auto">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="/#servicios" class="text-gray-600 hover:text-brota-dark font-medium transition-colors">Servicios</a>
+                    <a href="/#casos-exito" class="text-gray-600 hover:text-brota-dark font-medium transition-colors">Casos de Éxito</a>
+                    <a href="/#metodologia" class="text-gray-600 hover:text-brota-dark font-medium transition-colors">Metodología</a>
+                    <a href="/blog/" class="text-brota-dark font-bold">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-bold hover:bg-brota-green hover:text-brota-dark transition-all transform hover:scale-105 shadow-sm">
+                        Auditoría Gratuita
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brota-dark" onclick="toggleMobileMenu()">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-xl">
+                <a href="/#servicios" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brota-green hover:bg-gray-50 rounded-lg">Servicios</a>
+                <a href="/#casos-exito" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brota-green hover:bg-gray-50 rounded-lg">Casos de Éxito</a>
+                <a href="/#metodologia" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-brota-green hover:bg-gray-50 rounded-lg">Metodología</a>
+                <a href="/blog/" class="block px-3 py-3 text-base font-bold text-brota-green bg-gray-50 rounded-lg">Blog</a>
+                <a href="/#contacto" class="block w-full text-center mt-4 bg-brota-dark text-white px-6 py-3 rounded-full font-bold hover:bg-brota-green hover:text-brota-dark transition-colors">
+                    Auditoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Progreso de lectura -->
+    <div class="fixed top-0 left-0 w-full h-1 z-[60] bg-gray-100">
+        <div id="progress-bar" class="h-full bg-brota-green w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Cabecera del Artículo -->
+    <header class="pt-32 pb-16 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-brota-green/20 via-transparent to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <a href="/blog/" class="inline-flex items-center text-sm font-bold text-gray-500 hover:text-brota-green transition-colors mb-8">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i> Volver al blog
+            </a>
+            
+            <div class="flex items-center gap-4 mb-6">
+                <span class="bg-brota-green/20 text-brota-dark font-bold px-3 py-1 rounded-full text-sm">Estrategia Digital</span>
+                <span class="text-gray-500 text-sm flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-1"></i> 5 min de lectura</span>
+            </div>
+            
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-brota-dark leading-tight mb-6 reveal">
+                Email Marketing para Pymes: Cómo Vender Más sin Depender de las Redes Sociales
+            </h1>
+            
+            <p class="text-xl text-gray-600 mb-10 reveal delay-100">
+                Descubre qué es el email marketing, cómo crear tu lista desde cero y por qué sigue siendo el canal con mayor ROI para las pymes españolas.
+            </p>
+
+            <div class="w-full aspect-video rounded-3xl overflow-hidden shadow-2xl reveal delay-200">
+                <img src="/blog/images/email_marketing_ai.jpg" alt="Email Marketing Pymes" class="w-full h-full object-cover">
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="py-16 bg-brota-light">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <article class="prose prose-lg max-w-none reveal">
+                <p>Hay un canal de marketing que genera hasta <strong>42 euros por cada euro invertido</strong>, llega directamente al cliente sin depender de ningún algoritmo y funciona igual de bien para una clínica dental que para una ferretería de barrio.</p>
+                <p>Se llama email marketing. Y la mayoría de las pymes españolas lo ignoran por completo.</p>
+                <p>Si dependes únicamente de Instagram, TikTok o Google Ads para captar clientes, estás construyendo tu negocio sobre terreno alquilado. Mañana Meta puede cambiar su algoritmo, subir el coste del anuncio o cerrar tu cuenta sin previo aviso. <strong>Tu lista de email, en cambio, es tuya para siempre.</strong></p>
+                <p>En este artículo te explicamos qué es el email marketing, cómo empezar desde cero y qué estrategias funcionan realmente para pymes en 2026.</p>
+
+                <h2>Qué es el email marketing y por qué sigue siendo el canal con mayor ROI</h2>
+                <p>El <strong>email marketing</strong> es el uso estratégico del correo electrónico para comunicarte con clientes potenciales o actuales con el objetivo de generar ventas, fidelización o confianza de marca.</p>
+                <p>No es mandar correos masivos sin permiso. Eso es spam y en España está sancionado por la AEPD con multas de hasta 300.000 euros bajo la normativa RGPD.</p>
+                <p>El email marketing real consiste en tener una <strong>lista de contactos que han dado su permiso</strong> para recibir tus comunicaciones y enviarles mensajes útiles, personalizados y con valor. Esa es la diferencia entre molestar y vender.</p>
+                
+                <p>¿Por qué sigue siendo el canal con mayor retorno de inversión en 2026, por delante de Google Ads, Instagram o TikTok? Por tres razones concretas:</p>
+                <ul>
+                    <li><strong>Alcance garantizado.</strong> Cuando envías un email, llega a la bandeja de entrada de tu contacto. En Instagram, una publicación orgánica llega al 3-5% de tus seguidores. Con email, la tasa de entrega media supera el 95%.</li>
+                    <li><strong>Propiedad del canal.</strong> Tu lista de contactos no depende de ninguna plataforma. Si mañana Instagram desaparece, pierdes todos tus seguidores. Si desaparece tu proveedor de email, exportas la lista y la usas en otro servicio en diez minutos.</li>
+                    <li><strong>Segmentación y personalización.</strong> Puedes enviar mensajes diferentes según el comportamiento del usuario, su historial de compra, su zona geográfica o la fase del embudo en la que se encuentra. Eso multiplica la relevancia y, con ella, las ventas.</li>
+                </ul>
+
+                <h2>El error más común: confundir newsletter con email marketing</h2>
+                <p>Una newsletter es una comunicación periódica con noticias o contenido de valor. El email marketing es una estrategia completa que incluye newsletters, pero va mucho más allá.</p>
+                <p>Una <strong>estrategia de email marketing para pymes</strong> bien construida incluye al menos tres tipos de correos:</p>
+                <ul>
+                    <li><strong>Emails de bienvenida.</strong> El correo que recibe un nuevo suscriptor nada más apuntarse a tu lista. Es el email con mayor tasa de apertura de toda tu estrategia (puede superar el 50%) porque el interés del usuario está en su punto más alto. Úsalo para presentarte, explicar qué van a recibir y hacer una primera oferta.</li>
+                    <li><strong>Emails de nutrición.</strong> Una serie de correos programados con antelación que van educando al potencial cliente sobre tu propuesta de valor, resolviendo sus dudas más frecuentes y construyendo confianza. No venden directamente: preparan el terreno para que la venta sea natural.</li>
+                    <li><strong>Emails de venta o promoción.</strong> Ofertas, lanzamientos, servicios nuevos, plazas limitadas. Son los correos que generan ingresos directos a corto plazo, pero solo funcionan bien si los anteriores han hecho su trabajo.</li>
+                </ul>
+
+                <h2>Cómo construir una lista de contactos desde cero (sin comprarla)</h2>
+                <p>Comprar listas de email es ilegal en España bajo el RGPD y, además, no funciona. Las personas en una lista comprada no te conocen, no te han dado permiso y marcarán tus correos como spam, lo que destruye tu reputación de envío.</p>
+                <p>La lista de email hay que construirla. Y hay formas muy sencillas de hacerlo:</p>
+                <ul>
+                    <li><strong>Lead magnet.</strong> Ofrece algo de valor a cambio del email: una guía descargable, un descuento de bienvenida, un diagnóstico gratuito, una lista de recursos. Cuanto más específico sea el lead magnet para tu público objetivo, mayor será la tasa de conversión.</li>
+                    <li><strong>Formulario en la web.</strong> Añade un formulario de suscripción en los puntos de mayor tráfico de tu página: el footer, la página de inicio y dentro de los artículos del blog. Un formulario emergente (popup) con una oferta clara puede multiplicar por 3 las suscripciones.</li>
+                    <li><strong>WhatsApp y redes sociales.</strong> Usa tus canales activos para derivar seguidores hacia tu lista de email. Un story en Instagram con "descarga gratis nuestra guía dejando tu email" puede darte decenas de suscriptores cualificados en un solo día.</li>
+                    <li><strong>Clientes actuales.</strong> Si ya tienes una base de clientes con su email, tienes una lista. Pídeles permiso explícito para enviarles comunicaciones comerciales (es un requisito legal) y empieza a activar ese canal.</li>
+                </ul>
+
+                <h2>Las mejores herramientas de email marketing para pymes en España</h2>
+                <p>No necesitas invertir en herramientas caras para empezar. Estas son las opciones más recomendadas para pymes:</p>
+                <ul>
+                    <li><strong>Brevo (antes Sendinblue).</strong> Es la herramienta que más recomendamos a pymes españolas. Tiene servidores en Europa, cumple el RGPD de forma nativa, tiene una versión gratuita hasta 300 envíos diarios y su interfaz en español es muy intuitiva. Incluye automatizaciones, segmentación y estadísticas completas.</li>
+                    <li><strong>Mailchimp.</strong> La más conocida a nivel global. La versión gratuita permite hasta 500 contactos y 1.000 envíos mensuales. Su punto débil para España es que sus servidores son americanos, lo que complica el cumplimiento estricto del RGPD.</li>
+                    <li><strong>ActiveCampaign.</strong> Para pymes que ya tienen volumen y quieren automatizaciones avanzadas. Es de pago desde el inicio, pero su potencia de segmentación y CRM integrado la convierte en una inversión rentable a partir de cierto punto.</li>
+                </ul>
+                <p>Para empezar, <strong>Brevo es la opción más equilibrada</strong> en relación calidad-precio para el mercado español.</p>
+
+                <h2>Métricas que debes medir en tu estrategia de email marketing</h2>
+                <p>No puedes mejorar lo que no mides. Estas son las cuatro métricas fundamentales de cualquier campaña de email marketing:</p>
+                <ul>
+                    <li><strong>Tasa de apertura.</strong> El porcentaje de personas que abren tu correo sobre el total de entregados. Una tasa de apertura saludable en España está entre el 20% y el 35% dependiendo del sector. Si estás por debajo del 15%, el problema suele estar en el asunto del correo.</li>
+                    <li><strong>Tasa de clics (CTR).</strong> El porcentaje de personas que hacen clic en algún enlace dentro del correo. Un CTR entre el 2% y el 5% es un buen punto de referencia para campañas B2C. Si estás por debajo, el problema está en el contenido o en el llamado a la acción.</li>
+                    <li><strong>Tasa de bajas.</strong> El porcentaje de personas que se dan de baja tras recibir un correo. Si supera el 0,5%, estás enviando correos demasiado frecuentes, poco relevantes o a personas que no recuerdan haberse suscrito.</li>
+                    <li><strong>Tasa de conversión.</strong> El porcentaje de personas que realizan la acción deseada (compra, reserva, llamada) tras recibir el correo. Es la métrica más importante y la que conecta directamente con el ROI de tu estrategia.</li>
+                </ul>
+
+                <h2>5 buenas prácticas de email marketing que marcan la diferencia</h2>
+                <ol>
+                    <li><strong>El asunto lo es todo.</strong> El 47% de las personas decide si abre un correo solo por el asunto. Escribe asuntos cortos (menos de 50 caracteres), específicos y que generen curiosidad o urgencia. Evita palabras como "gratis", "oferta" o "promoción" en el asunto: los filtros de spam las detectan.</li>
+                    <li><strong>Personaliza más allá del nombre.</strong> Llamar al contacto por su nombre es el mínimo. La personalización real está en enviar contenido relevante según el comportamiento del usuario: si alguien visitó tu página de servicios tres veces sin contactar, ese es el momento de enviarle un correo con un testimonio real y una consulta gratuita.</li>
+                    <li><strong>Un correo, una acción.</strong> Cada email debe tener un único objetivo y llamado a la acción. Cuando un correo tiene cinco botones diferentes, el usuario no hace clic en ninguno.</li>
+                    <li><strong>Optimiza para móvil.</strong> El 60% de los emails se abren desde el teléfono. Si tu correo no se ve bien en pantalla pequeña, estás perdiendo más de la mitad de tus aperturas. Usa plantillas responsive y comprueba siempre el resultado en móvil antes de enviar.</li>
+                    <li><strong>Prueba y mejora.</strong> Haz tests A/B con los asuntos, los horarios de envío y los llamados a la acción. La diferencia entre un asunto que funciona y uno que no puede suponer el doble de aperturas con exactamente el mismo esfuerzo.</li>
+                </ol>
+
+                <h2>Conclusión: el email marketing es el activo digital más infravalorado por las pymes</h2>
+                <p>Mientras la mayoría de los negocios pelean por atención en redes sociales pagando cada vez más caro, las empresas que construyen y trabajan su lista de email tienen un canal directo, predecible y rentable con sus clientes.</p>
+                <p>No necesitas miles de contactos para empezar. Necesitas un lead magnet útil, una herramienta como Brevo y una estrategia mínima de tres tipos de correo. Con eso ya estás por delante del 80% de las pymes de tu sector.</p>
+
+                <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm mt-12 text-center">
+                    <h3 class="font-heading text-2xl font-bold mb-4">¿Tu negocio todavía no tiene estrategia de email marketing?</h3>
+                    <p class="mb-6">En Brota Marketing diseñamos e implementamos estrategias de email marketing completas para pymes: desde la captación de leads hasta las secuencias de venta automatizadas.</p>
+                    <a href="https://brotamarketing.es/#contacto" class="inline-flex items-center justify-center bg-brota-dark text-white px-8 py-4 rounded-full font-bold hover:bg-brota-green hover:text-brota-dark transition-all transform hover:scale-105">
+                        📞 Pide tu consultoría gratuita
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-brota-dark text-white pt-16 pb-12 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-3 gap-8 pt-8">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-8 w-auto hover:opacity-80 transition-opacity"></a>
+                    </div>
+                    <p class="text-gray-500 text-sm">Tu departamento de Marketing externo. Acompañando a las pymes de nuestra Región.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-3 text-gray-500 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-brota-green shrink-0"></i> info@brotamarketing.es</li>
+                        <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-brota-green shrink-0"></i> +34 641 44 22 87</li>
+                        <li class="flex items-center gap-2 mt-4 pt-4 border-t border-white/10"><i data-lucide="instagram" class="w-4 h-4 text-brota-green shrink-0"></i> <a href="https://instagram.com/brota.marketing" target="_blank" rel="noopener noreferrer" class="hover:text-brota-green transition-colors">@brota.Marketing</a></li>
+                        <li class="flex items-center gap-2">
+                            <svg class="w-4 h-4 text-brota-green shrink-0 fill-current" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+                            <a href="https://tiktok.com/@brota.marketing" target="_blank" rel="noopener noreferrer" class="hover:text-brota-green transition-colors">@brota.Marketing</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-500 text-sm">
+                        <li><a href="#" class="hover:text-brota-green transition-colors">Aviso Legal</a></li>
+                        <li><a href="/privacidad/" class="hover:text-brota-green transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/cookies/" class="hover:text-brota-green transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-600 text-sm mt-12 border-t border-white/10 pt-8">
+                &copy; <span id="year"></span> Brota Marketing. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón de WhatsApp Flotante Animado -->
+    <a href="https://wa.me/34641442287" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all z-50 group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.551 4.152 1.597 5.96L.103 23.864l5.992-1.493a11.97 11.97 0 005.936 1.57h.005c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.942c-1.802 0-3.565-.484-5.112-1.401l-.367-.217-3.801.947.962-3.706-.239-.379a9.981 9.981 0 01-1.536-5.268c0-5.505 4.48-9.985 9.985-9.985 2.668 0 5.176 1.04 7.062 2.926A9.92 9.92 0 0122.016 12c0 5.505-4.48 9.985-9.985 9.985zm5.475-7.48c-.3-.15-1.776-.877-2.05-.978-.275-.1-.476-.15-.676.15-.2.3-.776.978-.952 1.178-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.488-.89-.794-1.49-1.775-1.666-2.075-.175-.3-.02-.463.13-.613.136-.136.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.587-.492-.507-.676-.516-.175-.009-.375-.009-.575-.009s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.875 1.225 3.075c.15.2 2.1 3.2 5.087 4.487.712.306 1.267.488 1.7.625.714.225 1.365.194 1.877.118.572-.084 1.776-.725 2.026-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Navbar shadow on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+
+        // Intersection Observer para las animaciones Reveal
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Lógica para el Menú Móvil
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                menu.classList.add('hidden');
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        }
+
+        // Barra de progreso de lectura
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

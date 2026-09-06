@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo calcular el ROI de una campaña de marketing digital? Guía para empresas | Brota Marketing</title>
+    <meta name="description" content="Descubre de forma sencilla cómo medir la rentabilidad real de tus campañas de marketing digital y deja de tirar el dinero en publicidad.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="¿Cómo calcular el ROI de una campaña de marketing digital?">
+    <meta property="og:description" content="Descubre de forma sencilla cómo medir la rentabilidad real de tus campañas de marketing digital y deja de tirar el dinero en publicidad.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Analítica y Estrategia</span>
+                    <span class="text-gray-400 text-sm font-semibold">5 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    ¿Cómo calcular el <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">ROI de una campaña</span> de marketing digital?
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/calcular_roi_ai.jpg" 
+                         alt="Cálculo del retorno de inversión y rentabilidad" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Muchos empresarios sienten que la publicidad en internet es como una "caja negra": sabes el dinero que metes cada mes, pero es muy difícil saber con exactitud cuánto dinero te está devolviendo. En el mercado actual, medir el éxito de tu empresa basándote solo en "me gusta", clics o visitas ya no es suficiente.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Para que tu negocio crezca de forma segura, necesitas hablar el lenguaje de los números reales. En <strong>Brota Marketing</strong> trabajamos bajo una regla de oro: el marketing no debe ser un gasto que te cueste dinero, sino una inversión que te traiga clientes y beneficios.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    A continuación, te explicamos de forma muy sencilla cómo calcular la rentabilidad de tus campañas para que sepas exactamente qué beneficio te está aportando cada euro invertido.
+                </p>
+            </section>
+
+            <!-- Sección 1 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    1. La diferencia entre el ROI y el ROAS (Contar las ventas vs. Contar el beneficio)
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Para saber si estás ganando dinero de verdad, no debes confundir estos dos términos que usan los profesionales del marketing. Aunque suenan parecidos, miden cosas totalmente diferentes:
+                </p>
+
+                <!-- Cajas -->
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-xl text-brota-dark mb-3 flex items-center gap-3">
+                        <i data-lucide="bar-chart" class="text-brota-green w-6 h-6 flex-shrink-0"></i>
+                        ROAS (Retorno de la Inversión en Anuncios)
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Te dice cuánto dinero bruto facturas por cada euro que pagas a las plataformas de anuncios (como Google o Facebook).
+                    </p>
+                    <div class="bg-brota-light border-l-4 border-brota-green p-4 rounded-r-xl">
+                        <p class="text-lg text-gray-700 font-semibold">Fórmula: Ingresos de la campaña / Dinero gastado en anuncios</p>
+                    </div>
+                </div>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-xl text-brota-dark mb-3 flex items-center gap-3">
+                        <i data-lucide="pie-chart" class="text-brota-green w-6 h-6 flex-shrink-0"></i>
+                        ROI (Retorno de la Inversión Global)
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Te dice el beneficio neto real que le queda a tu empresa tras restar todos los gastos de la campaña.
+                    </p>
+                    <div class="bg-brota-light border-l-4 border-brota-green p-4 rounded-r-xl">
+                        <p class="text-lg text-gray-700 font-semibold">Fórmula: [(Ingresos - Gastos Totales) / Gastos Totales] x 100</p>
+                    </div>
+                </div>
+
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    <strong>El peligro de confundirlos:</strong> Si pones 1.000 € en anuncios y vendes 4.000 €, tu ROAS es de 4 a 1 (parece una victoria). Pero si para lograr eso has tenido que pagar las herramientas web, el producto y los honorarios de la agencia, puede que tu ROI sea negativo y estés perdiendo dinero sin saberlo.
+                </blockquote>
+            </section>
+
+            <!-- Sección 2 -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    2. Pasos sencillos para medir la rentabilidad de tu publicidad
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Si quieres calcular tu beneficio real sin cometer errores, sigue estos tres pasos básicos:
+                </p>
+
+                <!-- Fuga 1 -->
+                <div class="mb-10 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex gap-4">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0 font-heading font-bold">1</span>
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-2">Suma todos los costes, no solo los anuncios</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Mete en el mismo saco el dinero de los anuncios, lo que te cuesta la agencia de marketing, las herramientas informáticas que uses y el tiempo que tu propio equipo le dedica al proyecto.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Fuga 2 -->
+                <div class="mb-10 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex gap-4">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0 font-heading font-bold">2</span>
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-2">Sigue el rastro del cliente</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Asegúrate de que tu web esté bien configurada para saber exactamente de dónde vienen tus clientes. Si alguien te compra o te pide una cita, tu sistema debe registrar si esa persona llegó a través de un anuncio concreto de Google o de una red social.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Fuga 3 -->
+                <div class="mb-10 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 flex gap-4">
+                    <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0 font-heading font-bold">3</span>
+                    <div>
+                        <h3 class="font-heading font-bold text-2xl text-brota-dark mb-2">Calcula el valor total de un cliente</h3>
+                        <p class="text-lg text-gray-600 leading-relaxed">
+                            Un cliente no suele comprar una sola vez. Si conseguir un cliente nuevo te cuesta 150 €, pero sabes que ese mismo cliente volverá a tu negocio a lo largo del año y te dejará 1.200 €, la inversión inicial habrá valido la pena.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección 3 -->
+            <section class="mb-16">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    3. Métricas de vanidad frente a Indicadores de negocio
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Tanto Google como los nuevos buscadores con Inteligencia Artificial prefieren los artículos que organizan la información en tablas sencillas. Aquí puedes ver de un vistazo en qué números debes fijarte y cuáles son solo "para quedar bien":
+                </p>
+
+                <div class="overflow-x-auto rounded-2xl shadow-sm border border-gray-200 mb-8">
+                    <table class="w-full text-left border-collapse bg-white min-w-[600px]">
+                        <thead>
+                            <tr class="bg-brota-dark text-white font-heading text-lg">
+                                <th class="p-4 border-b border-gray-700 w-1/4">¿En qué te fijas?</th>
+                                <th class="p-4 border-b border-gray-700 w-2/5">Métricas de Vanidad (Cuidado aquí)</th>
+                                <th class="p-4 border-b border-gray-700 bg-brota-green w-2/5">Indicadores de Negocio (Los que importan)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-base">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark flex items-center gap-2">
+                                    <i data-lucide="help-circle" class="w-5 h-5 text-brota-green"></i> ¿Qué son?
+                                </td>
+                                <td class="p-4">Datos visuales que suben el ego, pero no pagan las facturas de la empresa.</td>
+                                <td class="p-4 font-semibold">Números financieros que afectan directamente a la cuenta del banco.</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark flex items-center gap-2">
+                                    <i data-lucide="list" class="w-5 h-5 text-brota-green"></i> Ejemplos
+                                </td>
+                                <td class="p-4">"Me gusta" en redes, clics en los anuncios, número de seguidores o visitas a la web.</td>
+                                <td class="p-4 font-semibold">Coste por cliente nuevo, número de ventas reales, beneficio neto y ROI.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark flex items-center gap-2">
+                                    <i data-lucide="target" class="w-5 h-5 text-brota-green"></i> Su utilidad
+                                </td>
+                                <td class="p-4">Sirven solo para saber si la gente empieza a conocer el nombre de tu marca.</td>
+                                <td class="p-4 font-semibold">Son los únicos que te dicen si estás ganando dinero o perdiéndolo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- CTA / Conclusión -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Conclusión y Próximos Pasos</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Medir la rentabilidad con números reales es la única manera de hacer crecer tu negocio sin jugar a la lotería. Las empresas actuales no pueden permitirse tomar decisiones a ciegas ni conformarse con informes llenos de visitas que no se convierten en ventas.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto relative z-10">
+                    Si no tienes claro cuánto dinero te están devolviendo tus campañas actuales o necesitas un sistema sencillo que te diga la verdad sobre tus inversiones en publicidad, en Brota Marketing somos la solución que tu negocio necesita. Diseñamos sistemas de medición claros y optimizamos tus campañas para asegurarnos de que cada euro que gastas se transforme en ingresos reales para tu empresa.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-semibold">
+                    Da el paso y toma el control de tus números. Entra en Brota Marketing y solicita hoy mismo una revisión de tus campañas para empezar a ganar dinero de verdad.
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Solicitar Revisión de Campañas
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

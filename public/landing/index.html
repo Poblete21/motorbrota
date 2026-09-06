@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth bg-[#101820]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brota Marketing | Tu equipo de Marketing</title>
+    
+    <!-- Meta SEO y Open Graph -->
+    <meta name="description" content="Saca el Marketing de tu cabeza. Nosotros lo hacemos brotar. Tu departamento de marketing externo.">
+    <meta property="og:title" content="Brota Marketing | Tu equipo de Marketing">
+    <meta property="og:description" content="Saca el Marketing de tu cabeza. Nosotros lo hacemos brotar. Tu departamento de marketing externo.">
+    <meta property="og:image" content="https://i.imgur.com/fWRgqFz.png">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+    
+    <!-- Google Fonts: Nunito (Secundaria según dossier) y Outfit (para títulos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- GSAP for advanced animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Tailwind Config based on Dossier -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom utilities */
+        .glass-dark {
+            background: rgba(16, 24, 32, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(118, 188, 33, 0.1);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #a8e063 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brota-gradient-text {
+            background: linear-gradient(to right, #76bc21, #a8e063);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Ocultar contenido principal hasta que termine el loader */
+        #main-content {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Estilos para el texto rotativo */
+        .word-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .card-hover:hover {
+            box-shadow: 0 0 30px rgba(118, 188, 33, 0.15);
+            border-color: rgba(118, 188, 33, 0.4);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-sans text-white bg-brota-dark overflow-x-hidden antialiased selection:bg-brota-green selection:text-brota-dark flex flex-col min-h-screen">
+
+    <!-- PRELOADER ANIMADO -->
+    <div id="preloader" class="fixed inset-0 z-[100] bg-brota-dark flex flex-col items-center justify-center">
+        <div class="font-heading text-4xl md:text-6xl font-black flex flex-col items-center gap-2">
+            <div class="overflow-hidden">
+                <span class="loader-word block text-white opacity-50 translate-y-full">Nace,</span>
+            </div>
+            <div class="overflow-hidden">
+                <span class="loader-word block text-white opacity-75 translate-y-full">crece,</span>
+            </div>
+            <div class="overflow-hidden flex items-center gap-3">
+                <span class="loader-word block text-brota-green translate-y-full">brota.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content" class="relative flex-grow flex flex-col">
+        
+        <!-- Blobs de fondo para dinamismo oscuro -->
+        <div class="fixed inset-0 w-full h-full pointer-events-none z-0 overflow-hidden">
+            <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-brota-green opacity-[0.07] rounded-full mix-blend-screen filter blur-[100px] animate-blob"></div>
+            <div class="absolute bottom-[-20%] right-[-10%] w-[600px] h-[600px] bg-brota-green opacity-[0.05] rounded-full mix-blend-screen filter blur-[120px] animate-blob animation-delay-4000"></div>
+        </div>
+
+        <!-- Cursor Glow interactivo -->
+        <div class="cursor-glow fixed top-0 left-0 w-[400px] h-[400px] bg-brota-green opacity-[0.12] rounded-full mix-blend-screen filter blur-[100px] pointer-events-none z-0 hidden lg:block"></div>
+
+        <!-- Navegación -->
+        <nav class="fixed w-full z-50 glass-dark transition-all duration-300 border-b border-white/5" id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-center items-center h-24">
+                    <a href="../index.html" class="flex-shrink-0 flex items-center cursor-pointer nav-item hover:opacity-80 transition-opacity">
+                        <img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-12 w-auto filter brightness-0 invert">
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <section class="relative flex-grow flex items-center pt-32 pb-20 overflow-hidden z-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Text Content -->
+                    <div class="hero-content">
+                        <h1 class="font-heading text-5xl lg:text-7xl font-black leading-[1.1] mb-6">
+                            <div class="word-clip"><span class="hero-title-line block">Saca el Marketing</span></div>
+                            <div class="word-clip"><span class="hero-title-line block text-gray-400">de tu cabeza.</span></div>
+                            <div class="word-clip mt-2"><span class="hero-title-line block brota-gradient-text">Nosotros lo hacemos brotar.</span></div>
+                        </h1>
+
+                        <p class="hero-desc text-xl text-gray-400 mb-10 max-w-lg leading-relaxed font-light">
+                            No somos una agencia externa, somos tu nuevo departamento. Nos integramos en tu empresa como un miembro más para remar juntos y escalar tu negocio con estrategias reales y transparentes.
+                        </p>
+                        
+                        <div class="hero-buttons flex flex-col sm:flex-row gap-5">
+                            <a href="../index.html" class="group relative inline-flex items-center justify-center bg-brota-green text-brota-dark px-8 py-4 rounded-full font-bold text-lg overflow-hidden transition-transform transition-shadow duration-300 hover:scale-105 shadow-[0_0_30px_rgba(118,188,33,0.2)] hover:shadow-[0_0_40px_rgba(118,188,33,0.4)]">
+                                <span class="relative z-10 flex items-center gap-2">
+                                    Visita nuestra web
+                                    <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                </span>
+                            </a>
+                            <a href="../index.html#contacto" class="inline-flex items-center justify-center text-white px-8 py-4 rounded-full font-bold text-lg border border-white/20 hover:bg-white/5 transition-colors duration-300">
+                                <span class="flex items-center gap-2">
+                                    Contáctanos
+                                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual / Abstract elements -->
+                    <div class="relative hidden lg:block h-[600px] hero-visuals">
+                        <!-- Floating Glass Cards -->
+                        <div class="absolute top-[10%] right-[5%] w-64 glass-dark p-5 rounded-2xl border border-brota-green/30 shadow-2xl animate-float z-20 float-card-1">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brota-green/20 rounded-xl flex shrink-0 items-center justify-center text-brota-green">
+                                    <i data-lucide="search" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Optimización<br><span class="text-brota-green">SEO y SEM</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="absolute top-[45%] left-[5%] w-64 glass-dark p-5 rounded-2xl border border-white/10 shadow-2xl animate-float z-30 float-card-2" style="animation-delay: -1.5s;">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-white/10 rounded-xl flex shrink-0 items-center justify-center text-white">
+                                    <i data-lucide="smartphone" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Gestión de<br><span class="text-gray-300">Redes Sociales</span></h3>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-[10%] right-[15%] w-64 glass-dark p-5 rounded-2xl border border-brota-green/20 shadow-2xl animate-float z-20 float-card-3" style="animation-delay: -3s;">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-brota-green/10 rounded-xl flex shrink-0 items-center justify-center text-brota-green">
+                                    <i data-lucide="palette" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="font-heading font-bold text-lg text-white leading-tight">Creación de<br><span class="text-gray-300">Materiales Gráficos</span></h3>
+                            </div>
+                        </div>
+
+                        <!-- Central Abstract Leaf Shape -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-tr from-brota-green/20 to-transparent rounded-full blur-2xl z-0 hero-glow"></div>
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 hero-leaf text-brota-green opacity-20">
+                            <svg width="400" height="400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 12"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mini Footer Legal -->
+        <footer class="relative z-10 border-t border-white/10 py-6 mt-auto">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© <span id="year"></span> Brota Marketing. Todos los derechos reservados.</p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="/privacidad/" class="hover:text-brota-green transition-colors">Política de Privacidad</a>
+                    <a href="/cookies/" class="hover:text-brota-green transition-colors">Política de Cookies</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Botón de WhatsApp Flotante -->
+    <a href="https://wa.me/34641442287" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 hover:shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all z-50 group">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.126.551 4.152 1.597 5.96L.103 23.864l5.992-1.493a11.97 11.97 0 005.936 1.57h.005c6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm0 21.942c-1.802 0-3.565-.484-5.112-1.401l-.367-.217-3.801.947.962-3.706-.239-.379a9.981 9.981 0 01-1.536-5.268c0-5.505 4.48-9.985 9.985-9.985 2.668 0 5.176 1.04 7.062 2.926A9.92 9.92 0 0122.016 12c0 5.505-4.48 9.985-9.985 9.985zm5.475-7.48c-.3-.15-1.776-.877-2.05-.978-.275-.1-.476-.15-.676.15-.2.3-.776.978-.952 1.178-.175.2-.35.225-.65.075-.3-.15-1.267-.467-2.413-1.488-.89-.794-1.49-1.775-1.666-2.075-.175-.3-.02-.463.13-.613.136-.136.3-.35.45-.525.15-.175.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.676-1.625-.926-2.225-.244-.587-.492-.507-.676-.516-.175-.009-.375-.009-.575-.009s-.525.075-.8.375c-.275.3-1.05 1.025-1.05 2.5s1.075 2.875 1.225 3.075c.15.2 2.1 3.2 5.087 4.487.712.306 1.267.488 1.7.625.714.225 1.365.194 1.877.118.572-.084 1.776-.725 2.026-1.425.25-.7.25-1.3.175-1.425-.075-.125-.275-.2-.575-.35z"/>
+        </svg>
+    </a>
+
+    
+
+    <script>
+        // Inicializar Iconos Lucide
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Lógica del Banner de Cookies
+        function checkCookies() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                setTimeout(() => {
+                    document.getElementById('cookie-banner').classList.remove('translate-y-full');
+                }, 1000);
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.add('translate-y-full');
+        }
+
+        // GSAP Animations
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            checkCookies(); // Llamamos al chequeo de cookies
+
+            // --- 1. PRELOADER ANIMATION ---
+            const tlLoader = gsap.timeline({
+                onComplete: () => {
+                    initPageAnimations();
+                    gsap.set("#main-content", { visibility: "visible" });
+                    
+                    gsap.to("#preloader", {
+                        yPercent: -100,
+                        duration: 1,
+                        ease: "power4.inOut"
+                    });
+                    
+                    gsap.to("#main-content", {
+                        opacity: 1,
+                        duration: 0.5
+                    });
+                }
+            });
+
+            tlLoader.to(".loader-word", {
+                y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.4,
+                ease: "power3.out"
+            })
+            .to(".loader-word", {
+                y: -50,
+                opacity: 0,
+                duration: 0.5,
+                stagger: 0.1,
+                ease: "power2.in",
+                delay: 0.5
+            });
+
+            // Cursor interactivo
+            gsap.set(".cursor-glow", { xPercent: -50, yPercent: -50 });
+            let xTo = gsap.quickTo(".cursor-glow", "x", {duration: 0.8, ease: "power3"});
+            let yTo = gsap.quickTo(".cursor-glow", "y", {duration: 0.8, ease: "power3"});
+
+            window.addEventListener("mousemove", (e) => {
+                xTo(e.clientX);
+                yTo(e.clientY);
+            });
+
+            // --- 2. PAGE ANIMATIONS ---
+            function initPageAnimations() {
+                gsap.from(".nav-item", {
+                    y: -20,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: "power3.out",
+                    delay: 0.4
+                });
+
+                const tlHero = gsap.timeline({ delay: 0.5 });
+                
+                tlHero.from(".hero-title-line", {
+                    y: 100,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: "power4.out"
+                })
+                .from(".hero-desc", {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.6,
+                    ease: "power2.out"
+                }, "-=0.4")
+                .fromTo(".hero-buttons", 
+                    { y: 20, opacity: 0 },
+                    { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.5)" }
+                , "-=0.4")
+                .from(".hero-visuals", {
+                    x: 50,
+                    opacity: 0,
+                    duration: 1,
+                    ease: "power3.out"
+                }, "-=0.8")
+                .from(".float-card-1", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.2)"
+                }, "-=0.5")
+                .from(".float-card-2", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.2)"
+                }, "-=0.6")
+                .from(".float-card-3", {
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "back.out(1.2)"
+                }, "-=0.6")
+                .from(".hero-glow", {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 1.5,
+                    ease: "power2.out"
+                }, "-=1");
+            }
+        });
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

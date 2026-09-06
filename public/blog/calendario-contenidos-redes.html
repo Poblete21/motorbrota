@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo crear un calendario de contenidos para redes sociales en 2026 | Brota Marketing</title>
+    <meta name="description" content="Aprende a crear un calendario de contenidos para redes sociales paso a paso. Deja de improvisar y descubre la estrategia para planificar tu mes en una tarde.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Cómo crear un calendario de contenidos para redes sociales en 2026 (+ Estrategia)">
+    <meta property="og:description" content="El algoritmo ya no premia publicar todos los días contenido mediocre; premia la estrategia. Conoce los 4 pasos para crear tu calendario editorial.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Social Media</span>
+                    <span class="text-gray-400 text-sm font-semibold">6 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Cómo crear un calendario de contenidos para <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">redes sociales en 2026</span> (+ Estrategia)
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Persona planificando una estrategia de contenidos en un calendario visual" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Llegas a la oficina, enciendes el ordenador, miras la pantalla del móvil y piensas: <em>"Hace una semana que no publico nada en Instagram... ¿Qué subo hoy?"</em>. Acabas publicando una foto genérica de tu producto con un texto rápido y sin sentido, solo para "cumplir". Pasan las horas, 12 likes, cero comentarios y, por supuesto, cero ventas.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si esta situación te resulta familiar, estás sufriendo las consecuencias de trabajar sin un calendario de contenidos para redes sociales.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    En nuestra agencia de marketing en Murcia, vemos a diario cómo empresas excelentes queman su imagen digital por culpa de la improvisación. En 2026, el algoritmo ya no premia publicar todos los días contenido mediocre; <strong>premia la estrategia, la retención y el valor</strong>. Hoy te enseñamos paso a paso cómo planificar un mes entero de publicaciones en una sola tarde.
+                </p>
+            </section>
+
+            <!-- Por qué publicar sobre la marcha te hace perder clientes -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    ¿Por qué publicar "sobre la marcha" te está haciendo perder clientes?
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Improvisar en redes sociales es el equivalente digital a abrir tu tienda física cada día a una hora distinta y sin los productos colocados en los estantes. Un plan de redes sociales o calendario editorial te aporta tres beneficios inmediatos:
+                </p>
+                
+                <div class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100 mb-8">
+                    <ul class="space-y-5">
+                        <li class="flex items-start">
+                            <i data-lucide="brain-circuit" class="text-brota-green mr-4 mt-1 flex-shrink-0 w-6 h-6"></i>
+                            <div>
+                                <strong class="text-brota-dark font-heading block text-xl mb-1">Foco y paz mental</strong>
+                                <span class="text-lg text-gray-600 leading-relaxed">Sabes exactamente qué se va a publicar, cuándo y en qué formato. Adiós al estrés diario.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="layout-template" class="text-brota-green mr-4 mt-1 flex-shrink-0 w-6 h-6"></i>
+                            <div>
+                                <strong class="text-brota-dark font-heading block text-xl mb-1">Estrategia visual y narrativa</strong>
+                                <span class="text-lg text-gray-600 leading-relaxed">Tus redes dejarán de parecer un mercadillo desordenado. Todo tendrá un hilo conductor que guíe al usuario hacia la venta.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="clock" class="text-brota-green mr-4 mt-1 flex-shrink-0 w-6 h-6"></i>
+                            <div>
+                                <strong class="text-brota-dark font-heading block text-xl mb-1">Ahorro masivo de tiempo</strong>
+                                <span class="text-lg text-gray-600 leading-relaxed">Al planificar y crear en bloque (batch content), lo que antes te llevaba una hora diaria, ahora te llevará un par de horas al mes.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 4 Pasos para crear tu calendario -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    4 Pasos para crear tu calendario de contenidos (Guía definitiva)
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    No necesitas herramientas súper complejas para empezar; un simple Excel o Notion es suficiente. Lo importante es la metodología. Sigue estos pasos:
+                </p>
+
+                <!-- Paso 1 -->
+                <div class="mb-10">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mt-8 mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">1</span>
+                        Define tus "Pilares de Contenido" (De qué vas a hablar)
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        No puedes estar vendiendo el 100% del tiempo. A nadie le gusta seguir a un catálogo comercial. Divide lo que vas a contar en 3 o 4 temáticas principales o "pilares". Por ejemplo, si tienes una clínica de estética:
+                    </p>
+                    <ul class="space-y-4 bg-white p-6 rounded-3xl shadow-sm border border-gray-50">
+                        <li class="flex items-start">
+                            <i data-lucide="book-open" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Pilar Educativo (40%):</strong> Mitos sobre el cuidado de la piel, cómo aplicar el protector solar correctamente.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="shield-check" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Pilar de Autoridad/Confianza (30%):</strong> Casos de éxito (Antes y Después), mostrar las instalaciones, presentar al equipo médico.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="tag" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Pilar de Venta (20%):</strong> Promociones del mes, nuevo tratamiento disponible, enlace para pedir cita.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="smile" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Pilar de Entretenimiento/Conexión (10%):</strong> Un trend divertido del equipo, anécdotas del día a día.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Paso 2 -->
+                <div class="mb-10">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mt-8 mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">2</span>
+                        Elige la frecuencia y los formatos realistas
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Sé honesto con el tiempo del que dispones. Es mejor publicar 2 Reels excelentes a la semana que 5 fotos mediocres de banco de imágenes. En 2026, los formatos que mejor funcionan son:
+                    </p>
+                    <ul class="space-y-4 bg-white p-6 rounded-3xl shadow-sm border border-gray-50">
+                        <li class="flex items-start">
+                            <i data-lucide="smartphone" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Instagram Reels / TikToks:</strong> Para llegar a público nuevo (Alcance).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="gallery-horizontal-end" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Carruseles (Imágenes deslizables):</strong> Para educar y conseguir que la gente guarde tu publicación (Retención).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-lucide="camera" class="text-brota-green mr-3 mt-1 flex-shrink-0"></i>
+                            <span class="text-lg text-gray-600 leading-relaxed"><strong class="text-brota-dark">Stories:</strong> Para el día a día, mostrar cercanía y vender a los que ya te siguen (Conversión).</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Paso 3 -->
+                <div class="mb-10">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mt-8 mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">3</span>
+                        Distribuye las ideas en el calendario (La regla del 80/20)
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Abre tu plantilla (o un calendario en blanco) y empieza a rellenar los días basándote en la regla del <strong>80/20</strong>: el 80% de tu contenido debe aportar valor (educar, entretener, inspirar) y solo el 20% debe ser puramente promocional.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">Asigna a cada día:</p>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <li class="flex items-center bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            <i data-lucide="calendar-days" class="text-brota-green mr-3"></i>
+                            <span class="text-gray-700 font-semibold">Fecha y hora de publicación.</span>
+                        </li>
+                        <li class="flex items-center bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            <i data-lucide="layers" class="text-brota-green mr-3"></i>
+                            <span class="text-gray-700 font-semibold">Pilar de contenido.</span>
+                        </li>
+                        <li class="flex items-center bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            <i data-lucide="file-video" class="text-brota-green mr-3"></i>
+                            <span class="text-gray-700 font-semibold">Formato (Reel, Carrusel, Story).</span>
+                        </li>
+                        <li class="flex items-center bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
+                            <i data-lucide="pen-tool" class="text-brota-green mr-3"></i>
+                            <span class="text-gray-700 font-semibold">El Copy (texto) y los hashtags.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Paso 4 -->
+                <div class="mb-10">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mt-8 mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">4</span>
+                        Creación por bloques (Batch Cooking digital)
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Aquí está el gran secreto de los Community Managers. No grabes un vídeo hoy, lo edites y lo subas. Dedica un martes por la mañana a grabar todos los vídeos del mes. Dedica el miércoles a diseñar todos los gráficos y escribir todos los textos. Y el jueves, déjalo todo programado.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Herramientas -->
+            <section class="mb-16">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-8">
+                    Las mejores herramientas para programar tus redes en 2026
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Para que no tengas que estar pegado al móvil el fin de semana, utiliza herramientas de programación. Aquí tienes nuestras favoritas:
+                </p>
+
+                <div class="overflow-x-auto rounded-2xl shadow-sm border border-gray-200 mb-10">
+                    <table class="w-full text-left border-collapse bg-white min-w-[750px]">
+                        <thead>
+                            <tr class="bg-brota-dark text-white font-heading text-lg">
+                                <th class="p-4 border-b border-gray-700 w-1/5">Herramienta</th>
+                                <th class="p-4 border-b border-gray-700 w-1/6">Nivel de dificultad</th>
+                                <th class="p-4 border-b border-gray-700 bg-brota-green w-1/2">Mejor para...</th>
+                                <th class="p-4 border-b border-gray-700 w-1/6">Precio base</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-base">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Meta Business Suite</td>
+                                <td class="p-4"><span class="bg-green-100 text-green-800 px-2 py-1 rounded-md text-sm font-semibold">Fácil</span></td>
+                                <td class="p-4">Programar gratis en Facebook e Instagram.</td>
+                                <td class="p-4 font-semibold">Gratuito</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Metricool</td>
+                                <td class="p-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-md text-sm font-semibold">Medio</span></td>
+                                <td class="p-4">Ver analíticas claras, planificar visualmente y programar en todas las redes (incluido Google Maps).</td>
+                                <td class="p-4 font-semibold text-brota-green">Freemium<br><span class="text-xs font-normal text-gray-500">(Opción gratis muy buena)</span></td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Notion / Trello</td>
+                                <td class="p-4"><span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-md text-sm font-semibold">Medio</span></td>
+                                <td class="p-4">Organizar las ideas, los guiones y el estado de cada publicación con tu equipo.</td>
+                                <td class="p-4 font-semibold">Freemium</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">CapCut</td>
+                                <td class="p-4">
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded-md text-sm font-semibold mr-1">Fácil</span>
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-md text-sm font-semibold">Medio</span>
+                                </td>
+                                <td class="p-4">Editar los vídeos cortos para Reels o Tik Tok desde el móvil o PC de forma profesional.</td>
+                                <td class="p-4 font-semibold">Freemium</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Tip SEO -->
+                <div class="bg-brota-light border-l-4 border-brota-green p-6 md:p-8 rounded-r-2xl shadow-sm flex flex-col md:flex-row items-center gap-6">
+                    <div class="bg-white p-4 rounded-full shadow-sm flex-shrink-0">
+                        <i data-lucide="search" class="w-10 h-10 text-brota-green"></i>
+                    </div>
+                    <div>
+                        <strong class="font-heading text-2xl text-brota-dark block mb-2">El Tip SEO de nuestra Agencia:</strong>
+                        <p class="text-lg text-gray-800 italic">
+                            Las redes sociales también funcionan como buscadores. Asegúrate de incluir tus palabras clave principales (ej. "Agencia de marketing en Murcia", "Peluquería canina") en tu biografía, en los textos de tus posts y, muy importante, habladas en voz alta en tus vídeos, ya que el algoritmo transcribe el audio para saber de qué trata tu contenido.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA / Conclusión -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <!-- Decorative background shapes -->
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h2 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Tu negocio necesita estrategia, no improvisación</h2>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Crear un calendario de contenidos, diseñar creatividades profesionales, editar vídeos que enganchen y analizar métricas es un trabajo a tiempo completo. Si eres el gerente o dueño de tu empresa, tu tiempo es demasiado valioso para pasarlo peleando con las plantillas de Canva o intentando entender por qué tu último vídeo no ha tenido visualizaciones.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto relative z-10">
+                    En nuestra <strong>agencia de marketing en Murcia</strong>, contamos con un equipo de Community Managers, creadores de contenido (UGC) y estrategas digitales listos para tomar las riendas de tus redes sociales. Nosotros planificamos, creamos y medimos; tú solo te encargas de atender a los nuevos clientes.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-bold">
+                    ¿Hablamos y le damos una vuelta de 180 grados a la imagen de tu empresa en internet?
+                </p>
+                
+                <a href="https://brotamarketing.es/contacto/" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Delegar mis Redes Sociales
+                    <i data-lucide="calendar-check" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

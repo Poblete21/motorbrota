@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu web pierde ventas en 3 segundos: Cómo solucionarlo | Brota Marketing</title>
+    <meta name="description" content="Descubre los 5 errores críticos de diseño web que destruyen tus ventas en los primeros 3 segundos y cómo convertir tu página en una máquina de clientes.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Tu web pierde ventas en 3 segundos: Cómo solucionarlo">
+    <meta property="og:description" content="Descubre los 5 errores críticos de diseño web que destruyen tus ventas en los primeros 3 segundos y cómo convertir tu página en una máquina de clientes.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+<nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Conversión Web</span>
+                    <span class="text-gray-400 text-sm font-semibold">5 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    Cómo una web puede <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">perder ventas en 3 segundos</span> (y cómo evitarlo)
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200" 
+                         alt="Personas analizando resultados de ventas y diseño web" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    En el universo del marketing digital hay una verdad incómoda que muchas empresas siguen ignorando: tu web no tiene minutos para convencer a un usuario... tiene <strong>segundos</strong>.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    La realidad es drástica. En los primeros 3 segundos de visita, una persona ya ha decidido de forma inconsciente si confía en tu marca o si se marcha para siempre. Y lo peor es que lo hace sin avisar y sin intención de volver.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Ante este panorama, viene la pregunta obligada para tu negocio: ¿Tu web está ganando clientes o los está perdiendo sin que te des cuenta?
+                </p>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    La primera impresión en marketing digital lo es todo
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Cuando un usuario entra en una página web, no se detiene a realizar un análisis racional; simplemente está reaccionando a estímulos.
+                </p>
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    El cerebro humano toma decisiones ultrarrápidas basadas en cuatro pilares: <strong>diseño visual, claridad del mensaje, confianza transmitida y velocidad de carga.</strong>
+                </blockquote>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    No es un proceso lógico, es completamente automático. Por eso, dominar esos primeros segundos es un factor crítico para la supervivencia de cualquier negocio online.
+                </p>
+            </section>
+
+            <!-- 5 Errores -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    Los 5 errores críticos que destruyen la conversión de tu web
+                </h2>
+                
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    Si las visitas llegan a tu sitio, pero no se transforman en contactos o ventas, lo más probable es que estés cometiendo alguno de estos errores de diseño y optimización:
+                </p>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">1</span>
+                        Baja velocidad web: si tarda, pierdes al cliente
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Si tu web tarda más de lo normal en cargar, el usuario no va a esperar. En la era de la inmediatez, no hay excusas que valgan. Una mala velocidad se traduce directamente en menos ventas y un aumento drástico de la tasa de rebote.
+                    </p>
+                </div>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">2</span>
+                        Diseño que no transmite confianza
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        El usuario escanea. Piensa en esto: ¿Tu web parece moderna o desactualizada? Si no generas una confianza visual instantánea, el usuario cerrará la pestaña antes de conocer tu producto.
+                    </p>
+                </div>
+
+                <!-- Imagen Intermedia 1 -->
+                <figure class="my-10">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&q=80&w=1200" 
+                         alt="Experiencia móvil y diseño responsive" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-lg border border-gray-100">
+                </figure>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">3</span>
+                        Nefasta experiencia móvil (Responsive)
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        La mayoría del tráfico llega por móvil. Hazte estas preguntas: ¿Se navega fácilmente desde un smartphone? ¿Los botones se pulsan cómodamente? Si la respuesta es "no", estás perdiendo dinero a diario.
+                    </p>
+                </div>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">4</span>
+                        Mensaje poco claro y confuso
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Si un usuario aterriza y no entiende en pocos segundos qué haces, qué ofreces y por qué debería quedarse contigo, se va. La claridad siempre vende mucho más que un diseño innecesariamente complejo.
+                    </p>
+                </div>
+
+                <div class="mb-8 bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-gray-100">
+                    <h3 class="font-heading font-bold text-2xl text-brota-dark mb-4 flex items-center gap-3">
+                        <span class="bg-brota-dark text-white w-10 h-10 rounded-full flex items-center justify-center text-xl shadow-md flex-shrink-0">5</span>
+                        Demasiado ruido visual y falta de estrategia
+                    </h3>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Intentar decirlo todo a la vez es el camino más rápido al fracaso. Menús infinitos y botones brillando saturan al visitante. Si el usuario tiene que pensar demasiado, no compra.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Lo que realmente pasa -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Lo que realmente está pasando en tu negocio
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    No optimizar esos primeros instantes tiene consecuencias graves. Estás sufriendo una fuga constante de:
+                </p>
+                
+                <ul class="list-none space-y-3 mb-8 bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                    <li class="flex items-start gap-3"><i data-lucide="alert-triangle" class="text-red-500 mt-1 flex-shrink-0"></i><span class="text-lg text-gray-700">Potenciales clientes cualificados cada día.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="alert-triangle" class="text-red-500 mt-1 flex-shrink-0"></i><span class="text-lg text-gray-700">Ventas directas que van a parar a tus competidores.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="alert-triangle" class="text-red-500 mt-1 flex-shrink-0"></i><span class="text-lg text-gray-700">Confianza y reputación de tu marca.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="alert-triangle" class="text-red-500 mt-1 flex-shrink-0"></i><span class="text-lg text-gray-700">Posicionamiento frente a la competencia.</span></li>
+                </ul>
+
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si no logras impactar en los primeros 3 segundos, la venta probablemente se ha perdido. Una web casi nunca falla por falta de tráfico; falla por falta de estrategia clara al inicio.
+                </p>
+            </section>
+
+            <!-- CTA Final -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Transforma tu web en una máquina de ventas</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Llegados a este punto: ¿Tu web capta clientes o solo la tienes para "estar online"? Si sientes que no devuelve resultados, el culpable no es el tráfico, sino esos 3 segundos.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-10 max-w-2xl mx-auto relative z-10 font-semibold">
+                    En <strong>Brota Marketing</strong> optimizamos la experiencia de usuario (UX), aplicamos estrategias de conversión reales y pulimos tu mensaje. ¿A qué esperas para que cada segundo cuente?
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Solicitar Auditoría Gratuita
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                </a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>
