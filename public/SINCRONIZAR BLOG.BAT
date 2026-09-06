@@ -1,12 +1,17 @@
 @echo off
 echo ==============================================
-echo Sincronizando nuevos articulos con GitHub...
+echo 1. Descargando publicaciones automaticas de la nube...
+echo ==============================================
+git pull origin main
+echo.
+echo ==============================================
+echo 2. Subiendo nuevos articulos programados...
 echo ==============================================
 git add .
 git commit -m "Nuevos articulos programados subidos"
 git push
 echo.
 echo ==============================================
-echo ¡Listo! Los articulos ya estan en el taller en la nube.
+echo ¡Listo! Tu ordenador y la nube estan 100% sincronizados.
 echo ==============================================
 pause
