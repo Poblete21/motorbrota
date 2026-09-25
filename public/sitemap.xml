@@ -252,4 +252,39 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+    <url>
+        <loc>https://brotamarketing.es/blog/como-usar-tiktok-reels-vender-negocio-local.html</loc>
+        <lastmod>2026-09-08</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://brotamarketing.es/blog/google-ads-vs-facebook-ads-mejor-publicidad-2026.html</loc>
+        <lastmod>2026-09-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://brotamarketing.es/blog/plan-marketing-digital-pymes-guia-paso-a-paso.html</loc>
+        <lastmod>2026-09-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://brotamarketing.es/blog/por-que-tu-pagina-web-no-aparece-en-google.html</loc>
+        <lastmod>2026-09-17</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <url>
+        <loc>https://brotamarketing.es/blog/seo-local-como-aparecer-google-maps.html</loc>
+        <lastmod>2026-09-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
