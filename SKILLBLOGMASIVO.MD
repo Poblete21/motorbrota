@@ -13,7 +13,7 @@ CTA Final: Enlace obligatorio a la sección de contacto indexada de la web media
 FLUJO DE TRABAJO (EJECUCIÓN ESTRICTA EN LOTE):
 Cuando te mencione que proceses los archivos PDF de la carpeta public/blog/pdf/, debes ejecutar este proceso de forma autónoma para TODOS los archivos, uno por uno:
 
-ASIGNACIÓN DE FECHAS (PROGRAMACIÓN): Analiza la fecha actual. Debes asignar a cada PDF una fecha de publicación futura siguiendo estrictamente el calendario de "Martes y Jueves". Por ejemplo, si procesas 4 PDFs un domingo, al primer artículo le asignarás el próximo martes, al segundo el próximo jueves, al tercero el siguiente martes, y al cuarto el siguiente jueves.
+ASIGNACIÓN DE FECHAS (PROGRAMACIÓN): Antes de asignar fechas, revisa los archivos existentes en la carpeta `public/blog/programados/` para encontrar la fecha programada más lejana. Debes continuar asignando fechas futuras a partir de esa última fecha (o desde la fecha actual si la carpeta está vacía), siguiendo estrictamente el calendario de "Martes y Jueves". Esto evita que las nuevas sincronizaciones se mezclen con las ya programadas.
 
 ANALIZAR PLANTILLA BASE: Lee el archivo public/blog/agencia-sem-campanas-ads.html para entender y replicar exactamente su estructura HTML: etiquetas del <head>, configuración de Tailwind, tipografías, menú superior (<nav>), footer, e inserción de iconos <i data-lucide="..."></i>.[cite: 1]
 
@@ -28,6 +28,8 @@ CABECERA Y FECHA: En el HTML del artículo, incluye la fecha programada en forma
 METADATOS PARA EL PUBLICADOR: Al principio del archivo HTML creado (justo antes del <!DOCTYPE html>), debes inyectar un comentario HTML oculto con los datos que necesitará el script publicador. Debe tener este formato exacto:
 <!-- BROTA-META: {"title": "Título SEO", "description": "Descripción SEO", "image": "/blog/images/[slug]_ai.jpg"} -->
 
-LIMPIEZA: Una vez generados todos los HTML en la carpeta "programados" y todas las imágenes en la carpeta "images", borra los archivos PDF originales de la carpeta public/blog/pdf/.[cite: 1]
+LIMPIEZA: Una vez generados todos los HTML en la carpeta "programados" y todas las imágenes en la carpeta "images", borra los archivos PDF originales de la carpeta public/blog/pdf/.
+
+MODO REORDENACIÓN: Si en el chat te pido "reordenar programados" o "cambiar el orden", debes listar todos los archivos actuales en la carpeta `public/blog/programados/` con su fecha de publicación. Luego, esperarás mis instrucciones sobre qué artículos quiero intercambiar o mover. Tras mi confirmación, deberás actualizar tanto el nombre de los archivos (el prefijo YYYY-MM-DD) como la fecha insertada en el interior de cada HTML (con formato [Día] [Mes Abreviado], [Año]) para ajustarlos al nuevo orden, respetando siempre la regla de Martes y Jueves.[cite: 1]
 
 IMPORTANTE: TU TRABAJO TERMINA AQUÍ. NO modifiques el archivo index.html, NO modifiques el sitemap.xml, NO ejecutes el script de repaginar y NO lances el deploy en Firebase. El sistema automatizado de GitHub se encargará de realizar esos pasos el día que corresponda la publicación.
