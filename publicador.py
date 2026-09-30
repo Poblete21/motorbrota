@@ -17,10 +17,20 @@ hoy_str = datetime.date.today().strftime("%Y-%m-%d")
 # Verificar si existe la carpeta de programados (si no, la crea para evitar errores)
 if not os.path.exists(PROGRAMADOS_DIR):
     os.makedirs(PROGRAMADOS_DIR)
-    print("Carpeta de programados creada. No hay artículos para publicar.")
-    exit()
+
+# BLINDAJE: Buscar artículos programados que se hayan guardado por error directamente en public/blog
+archivos_blog = os.listdir(BLOG_DIR)
+for archivo_suelto in archivos_blog:
+    if archivo_suelto.endswith(".html") and re.match(r'^20\d{2}-\d{2}-\d{2}_', archivo_suelto):
+        ruta_erronea = os.path.join(BLOG_DIR, archivo_suelto)
+        ruta_correcta = os.path.join(PROGRAMADOS_DIR, archivo_suelto)
+        shutil.move(ruta_erronea, ruta_correcta)
+        print(f"Blidanje: Movido archivo mal ubicado {archivo_suelto} a la carpeta de programados.")
 
 archivos = os.listdir(PROGRAMADOS_DIR)
+if not archivos:
+    print("No hay artículos para publicar en la carpeta de programados.")
+    exit()
 archivos_publicados = 0
 
 for archivo in archivos:
