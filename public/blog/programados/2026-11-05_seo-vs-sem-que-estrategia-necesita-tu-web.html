@@ -1,0 +1,217 @@
+<!-- BROTA-META: {"title": "SEO vs SEM: Qué estrategia necesita tu web para crecer", "description": "Descubre las diferencias reales entre SEO orgánico y SEM de pago en Google Ads. Cuál elegir según tu presupuesto y cómo combinarlos para ganar clientes.", "image": "/blog/images/seo-vs-sem-que-estrategia-necesita-tu-web_ai.jpg"} -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO vs SEM: Qué estrategia necesita tu web para crecer | Brota Marketing</title>
+    <meta name="description" content="Descubre las diferencias reales entre SEO orgánico y SEM de pago en Google Ads. Cuál elegir según tu presupuesto y cómo combinarlos para ganar clientes.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="SEO vs SEM: Qué estrategia necesita tu web para crecer">
+    <meta property="og:description" content="Descubre las diferencias reales entre SEO orgánico y SEM de pago en Google Ads. Cuál elegir según tu presupuesto y cómo combinarlos para ganar clientes.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Posicionamiento Web</span>
+                    <span class="text-gray-300 mx-1">•</span>
+                    <span class="text-gray-400 text-sm font-semibold flex items-center gap-1">
+                        <i data-lucide="calendar" class="w-4 h-4"></i> 5 Nov, 2026
+                    </span>
+                    <span class="text-gray-300 mx-1">•</span>
+                    <span class="text-gray-400 text-sm font-semibold">5 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    SEO vs. SEM: Qué estrategia necesita tu web para <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">atraer más tráfico y clientes</span>
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/seo-vs-sem-que-estrategia-necesita-tu-web_ai.jpg" 
+                         alt="Comparativa entre posicionamiento SEO y publicidad SEM en Google" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Tener una página web brillante, rápida y bien estructurada no sirve de nada si tus clientes potenciales no son capaces de encontrarla en Google.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    En el ecosistema de los motores de búsqueda existen dos grandes vías para captar tráfico cualificado y aumentar la visibilidad: el posicionamiento orgánico (<strong>SEO</strong>) y la publicidad de pago (<strong>SEM / Google Ads</strong>). Comprender con precisión sus diferencias es crucial para asignar correctamente cada euro de tu presupuesto.
+                </p>
+            </section>
+
+            <!-- Tabla Comparativa -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Comparativa directa: SEO frente a SEM
+                </h2>
+
+                <div class="overflow-x-auto rounded-3xl shadow-sm border border-gray-200 my-8">
+                    <table class="w-full text-left border-collapse bg-white min-w-[550px]">
+                        <thead>
+                            <tr class="bg-brota-dark text-white font-heading text-lg">
+                                <th class="p-4 border-b border-gray-700 w-1/3">Característica</th>
+                                <th class="p-4 border-b border-gray-700 w-1/3 text-brota-green font-bold">SEO (Orgánico)</th>
+                                <th class="p-4 border-b border-gray-700 w-1/3">SEM (Google Ads)</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700 text-base">
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Tiempo de resultados</td>
+                                <td class="p-4">Medio / Largo plazo (meses de trabajo técnico).</td>
+                                <td class="p-4">Inmediato (en cuanto se activa la campaña).</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Coste por clic</td>
+                                <td class="p-4">Gratuito (inversión en optimización y contenido).</td>
+                                <td class="p-4">Se paga a Google por cada visita recibida.</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Durabilidad</td>
+                                <td class="p-4">Alta. Una vez posicionado, el tráfico es sostenido.</td>
+                                <td class="p-4">Baja. Si detienes la inversión, desapareces al instante.</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
+                                <td class="p-4 font-bold text-brota-dark">Posición visual</td>
+                                <td class="p-4">Debajo de los bloques publicitarios patrocinados.</td>
+                                <td class="p-4">Primeras posiciones absolutas de la página.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- La estrategia ganadora: Sinergia total -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    La estrategia ganadora: Sinergia total, no rivalidad
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    En Brota Marketing siempre aconsejamos huir de la pregunta trampa: <em>"¿Qué es mejor, SEO o SEM?"</em>. La verdadera pregunta estratégica es: <strong>"¿Cómo los combinamos de forma inteligente?"</strong>.
+                </p>
+
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    Una estrategia digital solvente utiliza el SEM para generar ingresos y visibilidad a corto plazo testeando qué palabras clave convierten mejor. Simultáneamente, el SEO técnico y la creación de contenidos construyen los cimientos sólidos para que tu empresa no dependa exclusivamente del gasto publicitario.
+                </blockquote>
+
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Mientras Google Ads te permite atacar fechas estacionales puntuales (Black Friday, campañas de rebajas o lanzamientos urgentes), el posicionamiento orgánico consolida la autoridad de tu dominio en el sector y garantiza clientes recurrentes con coste de adquisición decreciente.
+                </p>
+            </section>
+
+            <!-- CTA -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Construye un flujo constante de clientes hacia tu web</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Combinamos la inmediatez de Google Ads con el crecimiento sostenido del posicionamiento SEO para que tu negocio domine las búsquedas de tu sector.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto relative z-10 font-semibold">
+                    ¿Quieres saber qué porcentaje de tu presupuesto deberías destinar a cada canal?
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Solicita tu Auditoría Web Gratuita
+                    <i data-lucide="search" class="w-5 h-5"></i>
+                </a>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

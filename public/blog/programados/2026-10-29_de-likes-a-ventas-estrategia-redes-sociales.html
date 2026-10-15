@@ -1,0 +1,237 @@
+<!-- BROTA-META: {"title": "De likes a ventas: El poder de un plan en redes sociales", "description": "Olvida las métricas de vanidad. Aprende a crear un plan estratégico en redes sociales que transforme seguidores y 'likes' en clientes y facturación real.", "image": "/blog/images/de-likes-a-ventas-estrategia-redes-sociales_ai.jpg"} -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De likes a ventas: El poder de un plan en redes sociales | Brota Marketing</title>
+    <meta name="description" content="Olvida las métricas de vanidad. Aprende a crear un plan estratégico en redes sociales que transforme seguidores y 'likes' en clientes y facturación real.">
+    <meta name="author" content="Brota Marketing">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="De likes a ventas: El poder de un plan en redes sociales">
+    <meta property="og:description" content="Olvida las métricas de vanidad. Aprende a crear un plan estratégico en redes sociales que transforme seguidores y 'likes' en clientes y facturación real.">
+    <meta property="og:type" content="article">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Outfit:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brota: {
+                            green: '#76bc21',
+                            dark: '#101820',
+                            light: '#f4f9f1',
+                            gray: '#f9fafb'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-brota-dark bg-brota-gray antialiased selection:bg-brota-green selection:text-white">
+    <nav class="fixed w-full z-50 bg-white/70 backdrop-blur-md border-b border-white/50 transition-all duration-300 shadow-md" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="/"><img src="https://i.imgur.com/fWRgqFz.png" alt="Brota Marketing" class="h-10 w-auto hover:opacity-80 transition-opacity"></a>
+                </div>
+                
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="/#quienes-somos" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">¿Quiénes somos?</a>
+                    <a href="/servicios/" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Servicios</a>
+                    <a href="/#precios" class="text-brota-dark hover:text-brota-green font-semibold transition-colors">Planes</a>
+                    <a href="/blog/" class="text-brota-green font-bold transition-colors">Blog</a>
+                    <a href="/#contacto" class="bg-brota-dark text-white px-6 py-2.5 rounded-full font-semibold hover:bg-brota-green hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                        Consultoría Gratuita
+                    </a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="text-brota-dark hover:text-brota-green focus:outline-none">
+                        <i data-lucide="menu" class="w-8 h-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="md:hidden hidden absolute w-full bg-white shadow-2xl border-t border-gray-100 left-0 top-20 transition-all origin-top">
+            <div class="px-4 py-4 space-y-2 flex flex-col">
+                <a href="/#quienes-somos" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">¿Quiénes somos?</a>
+                <a href="/servicios/" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Servicios</a>
+                <a href="/#precios" class="block px-4 py-3 text-brota-dark font-bold hover:bg-brota-light rounded-xl transition-colors">Planes</a>
+                <a href="/blog/" class="block px-4 py-3 text-brota-green font-black hover:bg-brota-light rounded-xl transition-colors">Blog</a>
+                <a href="/#contacto" class="block mt-4 text-center bg-brota-dark text-white px-6 py-4 rounded-xl font-bold hover:bg-brota-green transition-all">
+                    Consultoría Gratuita
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article class="max-w-3xl mx-auto px-4 py-16 sm:py-24">
+            
+            <!-- Cabecera del artículo -->
+            <header class="mb-10">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="bg-brota-light text-brota-green font-bold px-3 py-1 rounded-full text-sm tracking-wide uppercase">Social Media</span>
+                    <span class="text-gray-300 mx-1">•</span>
+                    <span class="text-gray-400 text-sm font-semibold flex items-center gap-1">
+                        <i data-lucide="calendar" class="w-4 h-4"></i> 29 Oct, 2026
+                    </span>
+                    <span class="text-gray-300 mx-1">•</span>
+                    <span class="text-gray-400 text-sm font-semibold">5 min de lectura</span>
+                </div>
+                
+                <h1 class="font-heading font-black text-4xl lg:text-5xl text-brota-dark mb-8 leading-tight">
+                    De likes a ventas: La importancia de un <span class="text-transparent bg-clip-text bg-gradient-to-r from-brota-green to-teal-500">plan estratégico en redes sociales</span>
+                </h1>
+
+                <!-- Imagen Destacada -->
+                <figure class="mb-10">
+                    <img src="/blog/images/de-likes-a-ventas-estrategia-redes-sociales_ai.jpg" 
+                         alt="Plan estratégico de redes sociales y métricas comerciales" 
+                         class="w-full h-auto object-cover aspect-video rounded-3xl shadow-xl border border-gray-100 mb-2">
+                </figure>
+            </header>
+
+            <!-- Introducción -->
+            <section class="mb-12">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Las métricas de vanidad son el gran espejismo del marketing digital actual. Acumular miles de "me gusta", millones de reproducciones y una cifra llamativa de seguidores puede inflar el ego de cualquier marca, pero seamos sinceros: <strong>los likes no pagan las nóminas de tu equipo</strong>.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Si esas interacciones no se traducen en presupuestos solicitados, reservas en tu agenda o compras recurrentes, tu esfuerzo en redes carece de valor comercial. Las redes sociales no son solo un catálogo estético; son un canal de adquisición que exige método, foco y rentabilidad.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Publicar sobre la marcha según lo que te inspire cada mañana, sin calendario ni objetivos claros, es el error más costoso que cometen las pymes.
+                </p>
+            </section>
+
+            <!-- La frase clave -->
+            <section class="mb-12">
+                <blockquote class="italic text-xl text-brota-dark bg-brota-green/10 border-l-4 border-brota-green p-6 rounded-r-xl my-8 shadow-sm">
+                    "El contenido visual llamativo capta la atención del usuario en el feed, pero es el plan estratégico y la coherencia del mensaje lo que finalmente abre la billetera del cliente."
+                </blockquote>
+            </section>
+
+            <!-- El embudo en redes sociales -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-3xl lg:text-4xl text-brota-dark mt-16 mb-8 border-b-2 border-brota-green/20 pb-4">
+                    El embudo de conversión: Cada publicación con un propósito
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    En Brota Marketing estructuramos la presencia social de nuestros clientes dentro de un embudo claro donde cada post cumple un rol específico:
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-6 my-8">
+                    <!-- Fase 1 -->
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-brota-green text-white font-bold flex items-center justify-center text-sm">1</span>
+                            <h3 class="font-heading font-bold text-xl text-brota-dark">Atracción</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Contenido diseñado para que personas que nunca han oído hablar de ti descubran tu marca. Formatos de alto alcance como vídeos cortos, consejos prácticos o curiosidades de tu sector.
+                        </p>
+                    </div>
+
+                    <!-- Fase 2 -->
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-brota-green text-white font-bold flex items-center justify-center text-sm">2</span>
+                            <h3 class="font-heading font-bold text-xl text-brota-dark">Interacción</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Generación de comunidad, debate y confianza. Aquí resolvemos dudas frecuentes, mostramos el proceso de trabajo interno (behind the scenes) y conectamos a nivel humano con la audiencia.
+                        </p>
+                    </div>
+
+                    <!-- Fase 3 -->
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-brota-green text-white font-bold flex items-center justify-center text-sm">3</span>
+                            <h3 class="font-heading font-bold text-xl text-brota-dark">Conversión</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Presentación directa de ofertas, promociones específicas, casos de éxito demostrables y llamadas a la acción claras dirigidas a tu página web o a WhatsApp Business.
+                        </p>
+                    </div>
+
+                    <!-- Fase 4 -->
+                    <div class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100">
+                        <div class="flex items-center gap-3 mb-3">
+                            <span class="w-8 h-8 rounded-full bg-brota-green text-white font-bold flex items-center justify-center text-sm">4</span>
+                            <h3 class="font-heading font-bold text-xl text-brota-dark">Fidelidad</h3>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Contenido exclusivo para clientes habituales, encuestas de satisfacción y testimonios reales que refuerzan la decisión de seguir eligiendo tus servicios una y otra vez.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pilares de contenido y sinergia -->
+            <section class="mb-12">
+                <h2 class="font-heading font-bold text-2xl lg:text-3xl text-brota-dark mt-10 mb-6">
+                    Sinergia total: Las redes no pueden ser una isla
+                </h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Otro fallo común es aislar las redes sociales del resto del ecosistema digital. Un perfil social eficaz debe nutrir de tráfico a la <strong>página web</strong> y retroalimentarse con las fichas de <strong>Google Business</strong> y las campañas de publicidad de pago (Meta Ads y Google Ads).
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Cuando el contenido orgánico y los anuncios pagados trabajan juntos compartiendo la misma identidad visual y el mismo mensaje, el coste por cliente potencial se reduce drásticamente.
+                </p>
+            </section>
+
+            <!-- CTA -->
+            <section class="bg-white p-8 md:p-12 rounded-3xl mt-16 border border-gray-100 text-center shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 rounded-full bg-brota-green opacity-5 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-10 -mb-10 w-40 h-40 rounded-full bg-teal-500 opacity-5 pointer-events-none"></div>
+                
+                <h3 class="font-heading font-bold text-3xl text-brota-dark mb-6 relative z-10">Convierte tus redes sociales en un motor de clientes</h3>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl mx-auto relative z-10">
+                    Basta de publicar sin rumbo. Es momento de medir el retorno real de cada euro y cada hora invertida en tus canales sociales.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto relative z-10 font-semibold">
+                    En Brota Marketing diseñamos el plan editorial y gráfico completo adaptado al tipo de cliente que tu negocio necesita.
+                </p>
+                
+                <a href="https://brotamarketing.es/#contacto" class="bg-brota-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-brota-dark hover:-translate-y-1 transition-all duration-300 shadow-lg inline-flex items-center gap-2 relative z-10">
+                    Solicita tu Plan Estratégico
+                    <i data-lucide="share-2" class="w-5 h-5"></i>
+                </a>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- Inicializar iconos -->
+    <script>
+        lucide.createIcons();
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+    <script src="/cookie-banner.js"></script>
+</body>
+</html>

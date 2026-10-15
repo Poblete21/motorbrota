@@ -1,5 +1,53 @@
 [
   {
+    "title": "Más que un logotipo: Cómo el diseño genera confianza",
+    "url": "/blog/mas-que-un-logotipo-diseno-genera-confianza.html",
+    "description": "Descubre por qué un logo no basta. Claves del diseño corporativo profesional para generar confianza inmediata y aumentar las ventas de tu negocio.",
+    "category": "Marketing"
+  },
+  {
+    "title": "Optimización AIO: Cómo hacer que ChatGPT recomiende tu empresa",
+    "url": "/blog/optimizacion-motores-ia-aio-chatgpt-google.html",
+    "description": "Aprende qué es el AIO (Artificial Intelligence Optimization) y los 4 pasos clave para que los modelos como ChatGPT y Google posicionen tu marca en 2026.",
+    "category": "Marketing"
+  },
+  {
+    "title": "CRO con IA: Cómo duplicar tu conversión sin gastar más en tráfico",
+    "url": "/blog/cro-con-inteligencia-artificial-conversion-web.html",
+    "description": "Descubre cómo el CRO con Inteligencia Artificial permite duplicar las conversiones de tu web de forma predictiva y sin aumentar la inversión en anuncios.",
+    "category": "Marketing"
+  },
+  {
+    "title": "SEO Local: Cómo aparecer en Google Maps y atraer clientes",
+    "url": "/blog/seo-local-como-aparecer-google-maps.html",
+    "description": "Descubre la guía definitiva de SEO Local para posicionar tu negocio en Google Maps. Domina el Local Pack y supera a tu competencia en 2026.",
+    "category": "Marketing"
+  },
+  {
+    "title": "Por qué tu página web no aparece en Google (y cómo solucionarlo)",
+    "url": "/blog/por-que-tu-pagina-web-no-aparece-en-google.html",
+    "description": "Tu web es invisible en Google. Descubre los 5 problemas SEO más comunes que penalizan a tu negocio y cómo nuestra agencia puede solucionarlo hoy mismo.",
+    "category": "Marketing"
+  },
+  {
+    "title": "Plan de marketing digital para pymes: Guía paso a paso [2026]",
+    "url": "/blog/plan-marketing-digital-pymes-guia-paso-a-paso.html",
+    "description": "Aprende a crear un plan de marketing digital efectivo y realista para tu pyme. Deja de improvisar y empieza a captar clientes con esta guía en 5 pasos.",
+    "category": "Marketing"
+  },
+  {
+    "title": "Google Ads vs Facebook Ads: ¿Qué publicidad es mejor en 2026?",
+    "url": "/blog/google-ads-vs-facebook-ads-mejor-publicidad-2026.html",
+    "description": "Descubre las diferencias entre Google Ads y Facebook Ads (Meta). Te explicamos dónde invertir tu presupuesto para captar clientes en 2026 sin perder dinero.",
+    "category": "Marketing"
+  },
+  {
+    "title": "TikTok y Reels para negocios locales: Vende más en 2026",
+    "url": "/blog/como-usar-tiktok-reels-vender-negocio-local.html",
+    "description": "Descubre cómo usar TikTok y Reels para atraer clientes reales a tu negocio local en 2026. Deja los likes y céntrate en llenar tu local con nuestra guía.",
+    "category": "Marketing"
+  },
+  {
     "title": "Cómo elegir la mejor agencia de marketing digital en 2026",
     "url": "/blog/como-elegir-agencia-marketing-digital-2026.html",
     "description": "Descubre qué exigir a una agencia de marketing en 2026. Huye de falsas garantías, exige ROI, estrategia a medida y transparencia total para tu negocio.",
